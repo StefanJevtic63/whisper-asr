@@ -1,0 +1,4621 @@
+[INFO] Evaluated openai/whisper-small with mozilla-foundation/common_voice_17_0 with language sr/sr
+
+WER : 104.9939
+
+Reference: Ја сам сам!
+Prediction:  Yeah, some some
+----------------------------------------
+Reference: И понесе шест товара блага;
+Prediction:  I povijese še ist tovara blaga.
+----------------------------------------
+Reference: Реци и мени!
+Prediction:  Reci i meni.
+----------------------------------------
+Reference: Хајде, хајде тамо.
+Prediction:  חי די חי דתאמו
+----------------------------------------
+Reference: Здравље је најважније у животу.
+Prediction:  Zdravlja je najvažnije u životu.
+----------------------------------------
+Reference: О, не можеш.
+Prediction:  О, не можешь.
+----------------------------------------
+Reference: О, врло лепо.
+Prediction:  All will go left.
+----------------------------------------
+Reference: Та одлука донета је после неколико месеци спорења.
+Prediction:  Ta odluka donete je posled nekoliko meseci sporenja.
+----------------------------------------
+Reference: О не, не!
+Prediction:  O ne ne.
+----------------------------------------
+Reference: Како ми стоји?
+Prediction:  Jak mi stoi?
+----------------------------------------
+Reference: а сада се чува још само у Литавској
+Prediction:  A sada se čuva još samo u Litamskoj.
+----------------------------------------
+Reference: Ти не видиш.
+Prediction:  Dinebilir.
+----------------------------------------
+Reference: Нису били лепи?
+Prediction:  Nisu bilo lep.
+----------------------------------------
+Reference: Да видиш само.
+Prediction:  Да видишь самое.
+----------------------------------------
+Reference: Црно на бело.
+Prediction:  Sernona bello
+----------------------------------------
+Reference: Хапшење оптужених је формално дужност локалне полиције.
+Prediction:  Hapsenja obtuženih je formalno dužnost lokalne policije.
+----------------------------------------
+Reference: Како сте ви?
+Prediction:  Kakostevi
+----------------------------------------
+Reference: Реците нам, молим вас.
+Prediction:  Let's get them more in the list.
+----------------------------------------
+Reference: Груевски је изразио сличну наду.
+Prediction:  Grubbs case that I use is actually not.
+----------------------------------------
+Reference: Моје дете воли да иде код доктора.
+Prediction:  Moje dete voli da ide ko doktora.
+----------------------------------------
+Reference: Мислим да радим.
+Prediction:  Mislim da radim.
+----------------------------------------
+Reference: Како је она.
+Prediction:  C'è una.
+----------------------------------------
+Reference: А, ено га.
+Prediction:  Ah, and no God.
+----------------------------------------
+Reference: То тако изгледа.
+Prediction:  ТО ТАКО ИЗ ГЛЕДА
+----------------------------------------
+Reference: А треба ли?
+Prediction:  Отребалый
+----------------------------------------
+Reference: И све што?
+Prediction:  I słe, sztó?
+----------------------------------------
+Reference: Гледао је како су их покосили митраљези.
+Prediction:  Gledao je kako su ih pokosili mi tragezi.
+----------------------------------------
+Reference: Светског конгреса о медицинским законима.
+Prediction:  Svetskog Kongresa o medicinskim zaconima.
+----------------------------------------
+Reference: Али, није могао.
+Prediction:  I'll leave me a mongo.
+----------------------------------------
+Reference: Друго полувреме донео је нова узбуђења.
+Prediction:  Drugo polu vrime donjelo novog uzbudženja.
+----------------------------------------
+Reference: Идемо корак по корак.
+Prediction:  Idę o korak po korak.
+----------------------------------------
+Reference: Не мора бити!
+Prediction:  N-am o rabiti.
+----------------------------------------
+Reference: Тамо у соби.
+Prediction:  Como sobe.
+----------------------------------------
+Reference: То више није мој дом.
+Prediction:  To više nije moj dom.
+----------------------------------------
+Reference: Ти си мој?
+Prediction: ディッシュモイ
+----------------------------------------
+Reference: Пред нама је дуг пут.
+Prediction:  Pred nama je du put.
+----------------------------------------
+Reference: Као лава из вулкана.
+Prediction:  kalabis vulkanu
+----------------------------------------
+Reference: Шта то ради?
+Prediction:  Στα το ράδει.
+----------------------------------------
+Reference: Опасне поплаве и одрони након великог снијега
+Prediction:  Opasti poplave i odroni nakon veliku kusnijega.
+----------------------------------------
+Reference: Је ли тако.
+Prediction:  Ieli tako.
+----------------------------------------
+Reference: Ма, знам то.
+Prediction:  Znam to.
+----------------------------------------
+Reference: Колико је он?
+Prediction:  Koliko jeon.
+----------------------------------------
+Reference: Имамо велику одговорност.
+Prediction:  Imamo veliku odpovornost.
+----------------------------------------
+Reference: И ја желим.
+Prediction:  И я желаю.
+----------------------------------------
+Reference: Русија је реалност.
+Prediction:  Rusie är realnast.
+----------------------------------------
+Reference: Хранили су се.
+Prediction:  خراني لصوسة
+----------------------------------------
+Reference: Шта си урадио!
+Prediction:  Estássio Radio
+----------------------------------------
+Reference: А нисам била.
+Prediction:  Anisambila
+----------------------------------------
+Reference: А од кога?
+Prediction:  Outkoga
+----------------------------------------
+Reference: А за њега?
+Prediction:  A za niego...
+----------------------------------------
+Reference: Да је жив?
+Prediction:  Дай я жив!
+----------------------------------------
+Reference: То ћу ја.
+Prediction:  도추야
+----------------------------------------
+Reference: Међутим, овом одлуком се истворемено продужава агонија...
+Prediction:  Međutim, ovom odlukom se isto vremeno produža ova agonija.
+----------------------------------------
+Reference: Тражио га је.
+Prediction:  Traži OK.
+----------------------------------------
+Reference: Нема никаквих знакова.
+Prediction:  Nema nikakvih znakova.
+----------------------------------------
+Reference: Нисам била ја.
+Prediction:  Nice and billy. Yeah
+----------------------------------------
+Reference: Сваки пут је све већа и већа гужва.
+Prediction:  Svaki puti se veće veća gužva.
+----------------------------------------
+Reference: по архивима разних наших виших надлештава
+Prediction:  Porhivimo raznih naših višših nadleštava.
+----------------------------------------
+Reference: То ниси ти.
+Prediction:  Tony city
+----------------------------------------
+Reference: Све више и више!
+Prediction:  Sławisze i wisze.
+----------------------------------------
+Reference: Па, хајде сад.
+Prediction:  Pa, haïdesod
+----------------------------------------
+Reference: Можете мислити како смо се сви у кући изненадили
+Prediction:  Možete misleti kako smo se svi u kući je znanadili.
+----------------------------------------
+Reference: Нјегова иницијатива наишла је на добар пријем.
+Prediction:  Njegova inicijotiva najšla je na Dobar Prije.
+----------------------------------------
+Reference: Ко си ти.
+Prediction: 我是D
+----------------------------------------
+Reference: Ако волиш животиње, можда ћеш једног дана бити ветеринар.
+Prediction:  Ako voliš životinje, možda ćeš jednog dana biti vetrinar.
+----------------------------------------
+Reference: То се не?
+Prediction:  तो से ने
+----------------------------------------
+Reference: Не разумем шта је све ово.
+Prediction:  Не разумеем, что я сделал?
+----------------------------------------
+Reference: Како ти стоји?
+Prediction:  Как вот ты стоишь?
+----------------------------------------
+Reference: Како ти то мислиш?
+Prediction:  Κάπου τι το μιслиσεις.
+----------------------------------------
+Reference: У таквом једном?
+Prediction:  У таком не одно.
+----------------------------------------
+Reference: То се носи!
+Prediction:  To się nosi.
+----------------------------------------
+Reference: Добар дан, госп.
+Prediction:  Dobar dan, gossip.
+----------------------------------------
+Reference: Они то нису учинили.
+Prediction:  Oni to nisu učinili.
+----------------------------------------
+Reference: А зашто не?
+Prediction:  A zaszczone?
+----------------------------------------
+Reference: Буди воља твоја.
+Prediction:  Будеволь оттой.
+----------------------------------------
+Reference: И сигурно је?
+Prediction:  dan, sigurno ya
+----------------------------------------
+Reference: Да, што пре.
+Prediction:  Да, што при?
+----------------------------------------
+Reference: То је не?
+Prediction: と言えね
+----------------------------------------
+Reference: Тек што сам стигла.
+Prediction:  Tek što sam stigla.
+----------------------------------------
+Reference: Ко на пример?
+Prediction:  Ko na primer?
+----------------------------------------
+Reference: Па не знам!
+Prediction:  Paneznam!
+----------------------------------------
+Reference: Да је млад.
+Prediction:  Die, young lad.
+----------------------------------------
+Reference: Ја не бих!
+Prediction:  Janębich.
+----------------------------------------
+Reference: Оно што је било.
+Prediction:  Ono što je bilo.
+----------------------------------------
+Reference: Где су биле?
+Prediction:  Gde su bile?
+----------------------------------------
+Reference: Морамо да се суочимо са стварношћу.
+Prediction:  Moramo da se sočimo sa stvarnošću.
+----------------------------------------
+Reference: Мислиш да не?
+Prediction:  Мисло изданное
+----------------------------------------
+Reference: Јеси ли свршио?
+Prediction:  Yeah, silly to shoot
+----------------------------------------
+Reference: Па добро, кад?
+Prediction:  Падор, кат.
+----------------------------------------
+Reference: То није доста?
+Prediction:  то не достал
+----------------------------------------
+Reference: Да, на себи.
+Prediction:  Da, na sebi.
+----------------------------------------
+Reference: Ма, дај ми!
+Prediction:  Ma daimi.
+----------------------------------------
+Reference: Знам шта је ово.
+Prediction:  Znam sztajewo.
+----------------------------------------
+Reference: Да видимо шта?
+Prediction:  Na vidimo šta.
+----------------------------------------
+Reference: Тада се све променило.
+Prediction:  Tata se se promeniu.
+----------------------------------------
+Reference: Филм је бољи него што мислиш.
+Prediction:  Film je bolje nego što mislis.
+----------------------------------------
+Reference: А ми не.
+Prediction:  Aminé!
+----------------------------------------
+Reference: То је сасвим друго.
+Prediction:  To je sasim drugo.
+----------------------------------------
+Reference: Мишљења се разликују.
+Prediction:  Mislenja se razlikuju.
+----------------------------------------
+Reference: Али, ко си ти?
+Prediction:  Alla quasi te!
+----------------------------------------
+Reference: Да, зато је.
+Prediction:  Да, зато я.
+----------------------------------------
+Reference: И за сина.
+Prediction:  E se enganar?
+----------------------------------------
+Reference: Е баш да.
+Prediction:  Ebaš da.
+----------------------------------------
+Reference: И одакле су?
+Prediction:  You're the cause.
+----------------------------------------
+Reference: Е, па нема.
+Prediction:  e parliamo
+----------------------------------------
+Reference: Тако не иде!
+Prediction:  Tá com nele.
+----------------------------------------
+Reference: Одговор ће дати време.
+Prediction:  Odgovor će dati vrema.
+----------------------------------------
+Reference: Ко је ко?
+Prediction: コイコ
+----------------------------------------
+Reference: А не ми?
+Prediction: パネミ
+----------------------------------------
+Reference: За сада је све добро.
+Prediction:  Za sade sve dobra.
+----------------------------------------
+Reference: Што је бог?
+Prediction:  Sztuje bog
+----------------------------------------
+Reference: Хвала вам господине.
+Prediction:  Hvala vam, gospodine.
+----------------------------------------
+Reference: Не верујемо им.
+Prediction:  Nie wieruje moim.
+----------------------------------------
+Reference: Па, шта да радимо!
+Prediction:  Pa šta da radimo?
+----------------------------------------
+Reference: И то је.
+Prediction:  И то и...
+----------------------------------------
+Reference: Не брините ништа.
+Prediction:  Не брените нищо.
+----------------------------------------
+Reference: И је ли истина?
+Prediction:  And the truth
+----------------------------------------
+Reference: Само с њим.
+Prediction:  Самы с ним.
+----------------------------------------
+Reference: Желите помфрит?
+Prediction:  Želite pomfrit?
+----------------------------------------
+Reference: Не зна се!
+Prediction:  Naznę się.
+----------------------------------------
+Reference: Има још много!
+Prediction:  I ma już mnogów.
+----------------------------------------
+Reference: И ништа више.
+Prediction:  и ничто выше.
+----------------------------------------
+Reference: И више пута.
+Prediction:  i wywysze puta.
+----------------------------------------
+Reference: У основној школи.
+Prediction:  В основной школе.
+----------------------------------------
+Reference: И за мене.
+Prediction:  Is a mini
+----------------------------------------
+Reference: Галичка свадба је комбинација хришћанских и паганских обичаја.
+Prediction:  Galiczka swadba i kombinacja christscianski i paganski hobicze.
+----------------------------------------
+Reference: Па шта да радим.
+Prediction:  Что другое?
+----------------------------------------
+Reference: Не, само њега.
+Prediction:  Не, все мне...
+----------------------------------------
+Reference: Шта си урадио?
+Prediction:  Šta si u radio?
+----------------------------------------
+Reference: Е, ја нисам.
+Prediction:  에, 양이쌈
+----------------------------------------
+Reference: Или не би.
+Prediction:  You leave me be.
+----------------------------------------
+Reference: Не кажем да је.
+Prediction:  Найкажем дай.
+----------------------------------------
+Reference: Овде немамо живот.
+Prediction:  Ovde nemamo život.
+----------------------------------------
+Reference: И ја теби.
+Prediction:  Ya tebi.
+----------------------------------------
+Reference: То је спас.
+Prediction:  To jest pas.
+----------------------------------------
+Reference: И што је?
+Prediction:  И что есть?
+----------------------------------------
+Reference: Шта се тачно десило?
+Prediction:  Šta se tačno desilo?
+----------------------------------------
+Reference: Реците ми молим вас.
+Prediction: これを一体動いてみます
+----------------------------------------
+Reference: А, а, а.
+Prediction:  Uh, uh, uh.
+----------------------------------------
+Reference: Не знаш шта је то?
+Prediction:  Не знаю что это.
+----------------------------------------
+Reference: И много више.
+Prediction:  אין לגוריש
+----------------------------------------
+Reference: Не, не, пусти!
+Prediction:  Ne, ne, pusti.
+----------------------------------------
+Reference: Разуме се, душо.
+Prediction:  לרזומה סדושה
+----------------------------------------
+Reference: Ко си ти?
+Prediction:  Cod City
+----------------------------------------
+Reference: Алергична сам на кикирики.
+Prediction:  Alergicna sam nakikiriki.
+----------------------------------------
+Reference: Сама од себе?
+Prediction:  Samo ciebie.
+----------------------------------------
+Reference: Не може ни тако.
+Prediction:  Nemoženi tako.
+----------------------------------------
+Reference: Као што је?
+Prediction:  Kao sztoye.
+----------------------------------------
+Reference: Где си брате!
+Prediction:  Idesi, brate.
+----------------------------------------
+Reference: Како да нисам?
+Prediction:  Kako danísem.
+----------------------------------------
+Reference: То сте ви.
+Prediction:  Toast to V.
+----------------------------------------
+Reference: Знате како је?
+Prediction:  Znatek akuj.
+----------------------------------------
+Reference: Нико не гледа.
+Prediction:  நீ குன்று குழந்தா.
+----------------------------------------
+Reference: И ти мени!
+Prediction:  E.T. Mary
+----------------------------------------
+Reference: Она је све.
+Prediction:  Ona yesve.
+----------------------------------------
+Reference: Какво је ваше мишљење о томе?
+Prediction:  Jak mój waszy misjanie w tym?
+----------------------------------------
+Reference: Ко је он!
+Prediction:  고요
+----------------------------------------
+Reference: Ти, и сви.
+Prediction:  D, you see.
+----------------------------------------
+Reference: Ја сам готов.
+Prediction:  Я санготов.
+----------------------------------------
+Reference: Ни он сам.
+Prediction:  Neon sub
+----------------------------------------
+Reference: Зар не би било?
+Prediction:  Зарне би було.
+----------------------------------------
+Reference: Које би било?
+Prediction:  Koje bibilo?
+----------------------------------------
+Reference: Колико је стар.
+Prediction:  Koy ko jest star.
+----------------------------------------
+Reference: Е тако је.
+Prediction:  I tak oje.
+----------------------------------------
+Reference: И још више.
+Prediction:  Её швиши.
+----------------------------------------
+Reference: Неко у бирократији је недодирљив.
+Prediction:  Neko birokratije nedodirljiv.
+----------------------------------------
+Reference: Само један тренутак!
+Prediction:  Самый этот дренуток.
+----------------------------------------
+Reference: Добро, хајде, хајде.
+Prediction:  Dobro, chajcie, chajcie.
+----------------------------------------
+Reference: Да не зна.
+Prediction:  Done as well.
+----------------------------------------
+Reference: Све до сад!
+Prediction:  Das wäre interessant.
+----------------------------------------
+Reference: Али, то је само почетак.
+Prediction:  Ali to je samo početak.
+----------------------------------------
+Reference: А шта друго?
+Prediction:  А что, друг?
+----------------------------------------
+Reference: О, господе боже.
+Prediction:  O Gosto de Bosch
+----------------------------------------
+Reference: Бобетко је одбио да се преда.
+Prediction:  Bópeto com o ódio da sepreda.
+----------------------------------------
+Reference: Време је највећи господар.
+Prediction:  Vremi je najveći gospodar.
+----------------------------------------
+Reference: Ја не разумем?
+Prediction:  Ja narazumę.
+----------------------------------------
+Reference: Шта се ово догађа?
+Prediction:  Está suado agora.
+----------------------------------------
+Reference: Е па немој.
+Prediction:  Epanemos
+----------------------------------------
+Reference: Ти, ти, ти!
+Prediction:  T T T
+----------------------------------------
+Reference: А и ја!
+Prediction:  I ya
+----------------------------------------
+Reference: Ко, на пример?
+Prediction:  Ко, например.
+----------------------------------------
+Reference: Што да ми кажеш?
+Prediction:  Što da mi kažeš?
+----------------------------------------
+Reference: Имаш нешто да ми кажеш.
+Prediction:  Imaš nešto da mi kažes?
+----------------------------------------
+Reference: А што би?
+Prediction:  Αυτό μπ.
+----------------------------------------
+Reference: Како сте, ви?
+Prediction:  Κάκος τελεί.
+----------------------------------------
+Reference: О, као нешто.
+Prediction:  O, kanješno.
+----------------------------------------
+Reference: Погледајте само.
+Prediction:  Poledajte samo.
+----------------------------------------
+Reference: Да се одморим.
+Prediction:  Dá-se-o, Ademarinho.
+----------------------------------------
+Reference: Не, само они.
+Prediction:  Yeah, some money
+----------------------------------------
+Reference: Мора да су.
+Prediction:  Moro a daço.
+----------------------------------------
+Reference: Е, па да!
+Prediction:  И пока!
+----------------------------------------
+Reference: Да, били су.
+Prediction:  Sim, eu vi isso.
+----------------------------------------
+Reference: Нашао сам те.
+Prediction:  Наше овсъм те.
+----------------------------------------
+Reference: Господе, смилуј ми се!
+Prediction:  Gospode Smilu emisija.
+----------------------------------------
+Reference: Е, ја знам.
+Prediction:  e, e a Znam.
+----------------------------------------
+Reference: Што ти је!
+Prediction:  Что тебе?
+----------------------------------------
+Reference: Баш и јесте.
+Prediction:  Basz jest.
+----------------------------------------
+Reference: Истрага ће показати ко је одговоран.
+Prediction:  Istraga će pokazati koji je odgovoran.
+----------------------------------------
+Reference: Уверени смо да је још увек све могуће...
+Prediction:  Uvjerenismo da je još uvek sve moguće.
+----------------------------------------
+Reference: И мени је.
+Prediction:  Amen.
+----------------------------------------
+Reference: Окрени се, да видим!
+Prediction:  Okrenise da vidim.
+----------------------------------------
+Reference: А како сте ви?
+Prediction:  Acacostevi?
+----------------------------------------
+Reference: А, је ли?
+Prediction:  I am Lee
+----------------------------------------
+Reference: Овде је госп.
+Prediction:  All day goes by.
+----------------------------------------
+Reference: Па, ви сте.
+Prediction:  pa, viste
+----------------------------------------
+Reference: То је природно!
+Prediction:  Då ger prirådna.
+----------------------------------------
+Reference: Шта је видела.
+Prediction:  Šta je videa?
+----------------------------------------
+Reference: Зна ко је.
+Prediction:  Знакомьтесь.
+----------------------------------------
+Reference: Дај ми је!
+Prediction:  Дай мне.
+----------------------------------------
+Reference: Ловили су их.
+Prediction:  Loveless week
+----------------------------------------
+Reference: Шта је онда решење?
+Prediction:  Što je onda rješenje?
+----------------------------------------
+Reference: Како проводите време?
+Prediction:  Kako provodite vreme?
+----------------------------------------
+Reference: То ћеш нам после објаснити.
+Prediction:  To ćeš nam posle objasniti.
+----------------------------------------
+Reference: Видим, да је тако.
+Prediction:  Vidim da je tako.
+----------------------------------------
+Reference: Преузели сте одговорност за проналажење решења.
+Prediction:  Prevuzeliste odgovornost za pronaloženje rešenja.
+----------------------------------------
+Reference: Зашто не може?
+Prediction:  Zašto me može?
+----------------------------------------
+Reference: Да, због мене.
+Prediction:  Da, zbog mene.
+----------------------------------------
+Reference: Ти си у.
+Prediction:  T-C-O.
+----------------------------------------
+Reference: И то је све.
+Prediction:  I to je sve.
+----------------------------------------
+Reference: То би било добро!
+Prediction:  To bi bila dobro.
+----------------------------------------
+Reference: Ја волим то!
+Prediction:  Eu vou limpar.
+----------------------------------------
+Reference: Ми се противимо томе.
+Prediction:  Mi se protivimo tome.
+----------------------------------------
+Reference: Два, три пута.
+Prediction:  2-3 пута
+----------------------------------------
+Reference: Што си ти урадио!
+Prediction:  Što si ti u radio?
+----------------------------------------
+Reference: А наш новац?
+Prediction:  Anash Novats.
+----------------------------------------
+Reference: Ни у сну!
+Prediction:  Не усну.
+----------------------------------------
+Reference: Не знам зашто!
+Prediction:  Nie zamzasz to.
+----------------------------------------
+Reference: А, како то?
+Prediction:  А, как у то?
+----------------------------------------
+Reference: Обоје су незапослени.
+Prediction:  Obaj su ne zaposlili.
+----------------------------------------
+Reference: Будући планови укључују отварање такозваног пословног инкубатора.
+Prediction:  Vodeći plan ovih okcevčo dvarenje tako zvanog poslovnog imku batru.
+----------------------------------------
+Reference: Ено, тамо је!
+Prediction:  É no tamanho.
+----------------------------------------
+Reference: Што, шта је?
+Prediction:  Что? Что это?
+----------------------------------------
+Reference: Ко их има?
+Prediction:  Koihima
+----------------------------------------
+Reference: Што не мене?
+Prediction:  Što ne me ne?
+----------------------------------------
+Reference: Све је то јако важно.
+Prediction:  Sve je to jako važno.
+----------------------------------------
+Reference: Пре неки дан.
+Prediction:  Prze, nek idan.
+----------------------------------------
+Reference: Па, не знамо.
+Prediction:  Nie znam
+----------------------------------------
+Reference: С леве стране!
+Prediction:  С левой стороны.
+----------------------------------------
+Reference: Шта има ново.
+Prediction:  Что имя нового?
+----------------------------------------
+Reference: О да, знаш.
+Prediction:  O, da, znasz.
+----------------------------------------
+Reference: Ни у ста.
+Prediction:  Не уста.
+----------------------------------------
+Reference: које красе текст књиге
+Prediction:  Кое-красное текст книги.
+----------------------------------------
+Reference: Е не може.
+Prediction:  E? Nie może.
+----------------------------------------
+Reference: Изложба је замишљена као поздрав пролећу.
+Prediction:  Izlužba je zamisljena kao pozdrog prolicu.
+----------------------------------------
+Reference: На овај начин.
+Prediction:  Now, why not?
+----------------------------------------
+Reference: Ја бих радо!
+Prediction:  Εγώ είμαι σκοτός.
+----------------------------------------
+Reference: Заузето је.
+Prediction:  Zaoze to je.
+----------------------------------------
+Reference: Па,шта је то?
+Prediction:  А что это?
+----------------------------------------
+Reference: Па, то је он?
+Prediction:  Патрон
+----------------------------------------
+Reference: У њој је.
+Prediction:  Уня я.
+----------------------------------------
+Reference: То што кажем.
+Prediction:  То, что каже.
+----------------------------------------
+Reference: Па, ја не знам.
+Prediction:  Po ja nie znam.
+----------------------------------------
+Reference: Али, ти не.
+Prediction:  Алитина
+----------------------------------------
+Reference: А, он је.
+Prediction:  Oh, yeah.
+----------------------------------------
+Reference: А са овим?
+Prediction:  I solve him
+----------------------------------------
+Reference: То не утиче на нас.
+Prediction:  To ne utičerne nas.
+----------------------------------------
+Reference: И ова је.
+Prediction:  I owoje.
+----------------------------------------
+Reference: Ма где си?
+Prediction:  Mark this.
+----------------------------------------
+Reference: Извештаја о жртвама није било.
+Prediction:  Izvešte, ožutoma nije bilo.
+----------------------------------------
+Reference: Пред тобом је!
+Prediction:  Przed tobą nie.
+----------------------------------------
+Reference: Ко је била?
+Prediction:  Кое било.
+----------------------------------------
+Reference: Како је заправо све текло?
+Prediction:  Kako je zapravo sve tekla?
+----------------------------------------
+Reference: Но што је?
+Prediction:  Nostoje.
+----------------------------------------
+Reference: Биље које је тада на земљи расло, било је бујније
+Prediction:  Bilje koje je tada na zemlji rastlo bilo je bojnije.
+----------------------------------------
+Reference: Ти си ти!
+Prediction:  DCT
+----------------------------------------
+Reference: Има га много?
+Prediction:  In Macamnog
+----------------------------------------
+Reference: А ја не знам?
+Prediction:  А я не знаю.
+----------------------------------------
+Reference: На столу су.
+Prediction:  Να στόλου σου.
+----------------------------------------
+Reference: О, ви сте.
+Prediction:  О, ви сте.
+----------------------------------------
+Reference: Да ли је могуће доказати било шта?
+Prediction:  Dalje moguće dokazati bilošta?
+----------------------------------------
+Reference: Далеко од мене!
+Prediction:  Daleko od mene.
+----------------------------------------
+Reference: Шта да радим!
+Prediction:  Что-то радим.
+----------------------------------------
+Reference: Пусти ме, пусти.
+Prediction:  Pustime, pusti.
+----------------------------------------
+Reference: Не волим те.
+Prediction:  Ne volim te.
+----------------------------------------
+Reference: И тамо је!
+Prediction:  y tamo ya.
+----------------------------------------
+Reference: Да, реците ми.
+Prediction:  Da, recite mi.
+----------------------------------------
+Reference: Никад нисам био.
+Prediction:  Никодни сам бью.
+----------------------------------------
+Reference: Ипак, реформе се не могу спроводити репресивним мерама.
+Prediction:  Ipak reforme se ne mogu sprovoditi represivnim mirama.
+----------------------------------------
+Reference: Док сам жив?
+Prediction:  Doks. G?
+----------------------------------------
+Reference: У његово име.
+Prediction:  У него выимы.
+----------------------------------------
+Reference: Ја сам тај!
+Prediction:  Yes, I'm Thai.
+----------------------------------------
+Reference: Не разумем то!
+Prediction:  ¡Me resumen todo!
+----------------------------------------
+Reference: Очистила сам прву годину.
+Prediction:  Očistila sam prvu godinu.
+----------------------------------------
+Reference: Није, исто је.
+Prediction:  Nie, isto je.
+----------------------------------------
+Reference: Коштуница је својевремено протест беретки окарактерисао као легитиман.
+Prediction:  Koshtunice je sljeme no protest berjetki o karakterisau kao legitiman.
+----------------------------------------
+Reference: Добро, шта да радим?
+Prediction:  Dobro, što je da radim?
+----------------------------------------
+Reference: Мир и тишину.
+Prediction:  Mir und Tischenu.
+----------------------------------------
+Reference: Више о томе.
+Prediction:  Wysze o tome.
+----------------------------------------
+Reference: Гледај, молим те
+Prediction:  Гледай молем тъй!
+----------------------------------------
+Reference: Тако је то?
+Prediction:  ¡Taco y esto!
+----------------------------------------
+Reference: Добар дан, пријатељу.
+Prediction:  Dobar dan, prijetelo.
+----------------------------------------
+Reference: Шта мислите да радите!
+Prediction:  Šta mislite da radite?
+----------------------------------------
+Reference: И, је ли?
+Prediction:  η γέλη
+----------------------------------------
+Reference: Ко је др.
+Prediction:  Kojegro.
+----------------------------------------
+Reference: И то све због мене.
+Prediction:  I to sve zbog mene.
+----------------------------------------
+Reference: Узрок овакоме висинском облику Србије лежи у томе
+Prediction:  Взлуговакуме висинском облику са биолежи в тоне.
+----------------------------------------
+Reference: То је још горе.
+Prediction:  To już gore.
+----------------------------------------
+Reference: Замерке ипак нисам оставио за сам крај.
+Prediction:  Zamirke in pak misem ostavio za sam kraj.
+----------------------------------------
+Reference: Али у исто вријеме, ова одлука продужава агонију...
+Prediction:  ale już jest to wriem, a odległa produżała agonię.
+----------------------------------------
+Reference: То није важно.
+Prediction:  To nie jest ważne.
+----------------------------------------
+Reference: Тај потез очито је наишао на добар пријем потрошача.
+Prediction:  Taj potez očituje najšao na dober prijem potrošača.
+----------------------------------------
+Reference: А с вама?
+Prediction:  A sevana.
+----------------------------------------
+Reference: Да ти опрости?
+Prediction:  That's the opposite.
+----------------------------------------
+Reference: Ох да, видим.
+Prediction:  Ох да, виден!
+----------------------------------------
+Reference: А и ми!
+Prediction:  I mean
+----------------------------------------
+Reference: И која је?
+Prediction:  y colla y
+----------------------------------------
+Reference: Ко не жели?
+Prediction:  Ko ne želi?
+----------------------------------------
+Reference: Не може се.
+Prediction:  Nie może się.
+----------------------------------------
+Reference: Не може боље!
+Prediction:  Nemože bolje.
+----------------------------------------
+Reference: Неки од њих?
+Prediction:  Não é que eu não ia.
+----------------------------------------
+Reference: Шта желиш да будеш кад порастеш?
+Prediction:  Co żyjesz, do budyczka porastać?
+----------------------------------------
+Reference: Који је код.
+Prediction:  Кое-е-код
+----------------------------------------
+Reference: Ја не бих.
+Prediction:  Ja, neb ich.
+----------------------------------------
+Reference: Има ту још пуно посла да се уради.
+Prediction:  Imatujoš puno poslova sa urati.
+----------------------------------------
+Reference: Ко се љути?
+Prediction:  Косолёты
+----------------------------------------
+Reference: За нас је.
+Prediction:  Замассия.
+----------------------------------------
+Reference: И не би.
+Prediction:  In app.
+----------------------------------------
+Reference: О, како сте?
+Prediction:  О как уста!
+----------------------------------------
+Reference: Далеко од света.
+Prediction:  Daleko od svijeta.
+----------------------------------------
+Reference: Како ћете ви радити?
+Prediction:  Kako ćete vi raditi?
+----------------------------------------
+Reference: Мора да је то!
+Prediction:  Mora da je to.
+----------------------------------------
+Reference: И ту другу!
+Prediction:  И ту другу.
+----------------------------------------
+Reference: Да видим како је.
+Prediction:  До видов!
+----------------------------------------
+Reference: Какав је ваш став?
+Prediction:  Kaka wiołasz staw?
+----------------------------------------
+Reference: А код вас?
+Prediction:  A C2
+----------------------------------------
+Reference: То би било све за ову недељу.
+Prediction:  To bi bilo sve za ovu nedlju.
+----------------------------------------
+Reference: Ви то мени!
+Prediction:  Vitamene?
+----------------------------------------
+Reference: И мени је!
+Prediction:  Amen ye.
+----------------------------------------
+Reference: И истина је.
+Prediction:  и истинное.
+----------------------------------------
+Reference: Црно на белом.
+Prediction:  Theranonabelum
+----------------------------------------
+Reference: Што је била?
+Prediction:  Что это было?
+----------------------------------------
+Reference: Ја ово више не могу.
+Prediction:  Ja obaw i jeszcze nie mógłbym.
+----------------------------------------
+Reference: Могу да поднесем!
+Prediction:  Mogu da podnestim.
+----------------------------------------
+Reference: Ви како сте?
+Prediction:  Vi, kako ste?
+----------------------------------------
+Reference: То би била грешка.
+Prediction:  To bi bila greska.
+----------------------------------------
+Reference: Да видим како ти стоји.
+Prediction:  Доведим как у тестарьи.
+----------------------------------------
+Reference: Ја мислим да.
+Prediction:  야미 있습니다
+----------------------------------------
+Reference: Да је добро.
+Prediction:  Daje dobro.
+----------------------------------------
+Reference: Донеси ми је.
+Prediction:  Donessi via.
+----------------------------------------
+Reference: У својој соби?
+Prediction:  O suave sobe.
+----------------------------------------
+Reference: Шта је решење?
+Prediction:  Wsztaj reszty.
+----------------------------------------
+Reference: Посадили смо пасуљ и боранију у башти.
+Prediction:  Posadili smo pasulj i boranije u bašti.
+----------------------------------------
+Reference: А то је твој.
+Prediction:  А то и твой.
+----------------------------------------
+Reference: Цитирање оригиналног извора информација је добродошло.
+Prediction:  Citiranje orijinalog izvora informacije dobrodošli.
+----------------------------------------
+Reference: Али не још!
+Prediction:  ¡Adi neyos!
+----------------------------------------
+Reference: Како сам издржао?
+Prediction:  Как это сам не сдержал?
+----------------------------------------
+Reference: Ако треба, да.
+Prediction:  ako treba da.
+----------------------------------------
+Reference: Ма тако је.
+Prediction:  Matakuje.
+----------------------------------------
+Reference: О, о, о!
+Prediction:  Oh, oh, oh.
+----------------------------------------
+Reference: Ти, мали враже.
+Prediction:  Tee, Molliebrush.
+----------------------------------------
+Reference: Ма, молим те!
+Prediction:  Mamolim 2.
+----------------------------------------
+Reference: Ипак не могу.
+Prediction:  i paktym ok.
+----------------------------------------
+Reference: Јесте ли спремни?
+Prediction:  για στέλισμα.
+----------------------------------------
+Reference: Истанбулски међународни музички фестивал.
+Prediction:  Istem bolským medjunárodným muzičkej festival.
+----------------------------------------
+Reference: Врло су занимљиве.
+Prediction:  Barlosul zanim de la...
+----------------------------------------
+Reference: Па онда, да.
+Prediction:  I think that's it.
+----------------------------------------
+Reference: У овом послу?
+Prediction:  Uova-mi posta.
+----------------------------------------
+Reference: То је та?
+Prediction:  Então, está.
+----------------------------------------
+Reference: Да се удајем.
+Prediction:  До свидания.
+----------------------------------------
+Reference: Још једно разочарење.
+Prediction:  I oś jedno rezyczeryń.
+----------------------------------------
+Reference: А, шта је?
+Prediction:  А что я?
+----------------------------------------
+Reference: Ма није требало.
+Prediction:  Money travel.
+----------------------------------------
+Reference: Све до сад?
+Prediction:  Fender sound.
+----------------------------------------
+Reference: Ја сам та?
+Prediction:  Ja, es sind da.
+----------------------------------------
+Reference: Лепо, врло лепо.
+Prediction:  Very well.
+----------------------------------------
+Reference: Звучна изолација је одлична.
+Prediction:  Dvučne izlati je odlično.
+----------------------------------------
+Reference: Мама, недостајала си ми.
+Prediction:  Mama ne dosta je alasimi.
+----------------------------------------
+Reference: Јеси ли ти род са Прокином кобилом?
+Prediction:  Jesili ti rod sa prokinom kobilom.
+----------------------------------------
+Reference: Не могу да га гледам.
+Prediction:  Nemogu tako gledam.
+----------------------------------------
+Reference: А шта да радимо?
+Prediction:  Ainda está da Rádio.
+----------------------------------------
+Reference: Ипак, није ни напета као пре.
+Prediction:  Ipak nili napetakal pre.
+----------------------------------------
+Reference: Да, не, знам.
+Prediction:  Da, ne znam.
+----------------------------------------
+Reference: А ово је.
+Prediction:  A owoje.
+----------------------------------------
+Reference: Био је и шеф црногорске управе јавних прихода.
+Prediction:  Biu je i šef Cernogorske uprave javnih prihoda.
+----------------------------------------
+Reference: Били смо веома импресионирани његовим понудама и сугестијама...
+Prediction:  Bili smo vemo impressionirani njegovim ponodama i sugestijama.
+----------------------------------------
+Reference: Овако више не иде!
+Prediction:  Ovako više ne ide.
+----------------------------------------
+Reference: Па не знамо баш.
+Prediction:  Panie znamu, baż.
+----------------------------------------
+Reference: То је све за ову недељу.
+Prediction:  Então isso é sobre o NEDL.
+----------------------------------------
+Reference: Зашто не можеш.
+Prediction:  Za to, że nie możesz.
+----------------------------------------
+Reference: Чим будете боље познавали све оно
+Prediction:  Kim budete bolje poznavali sve ono?
+----------------------------------------
+Reference: А где су?
+Prediction:  Agdaço.
+----------------------------------------
+Reference: Моја је жена.
+Prediction:  Моя ежена.
+----------------------------------------
+Reference: Могу без тебе.
+Prediction:  Mogo bestabe.
+----------------------------------------
+Reference: Не говори ми!
+Prediction:  Неговоримі.
+----------------------------------------
+Reference: У оба образа?
+Prediction:  O abalbíraza.
+----------------------------------------
+Reference: Бавио сам се.
+Prediction:  Bavuyorsun sen.
+----------------------------------------
+Reference: У кревет, да.
+Prediction:  ន្្្្្្្្្្្្្្្្្្្្្្្្្្្្្្្្្្្្្្្្្្្្្្្្្្្្្្្្្្្្្្្្្្្្្្្្្្្្្្្្្្្្្្្្្្្្្្្្្្្្្្្្្្្្្្្្្្្្្្្្្្្្្្្្្្្្្្្្្្្្្្្្្្្
+----------------------------------------
+Reference: Ко је данас?
+Prediction:  Кое-то о нас.
+----------------------------------------
+Reference: Не знате ви.
+Prediction:  Ne znate vi.
+----------------------------------------
+Reference: Био је разочаран.
+Prediction:  Bi öyler az o çaran.
+----------------------------------------
+Reference: И ја то кажем!
+Prediction:  E a tu cagem?
+----------------------------------------
+Reference: А он није!
+Prediction:  Au Nie!
+----------------------------------------
+Reference: То сам хтела да вам кажем.
+Prediction:  Tôzinho tela da vonga.
+----------------------------------------
+Reference: Како не би?
+Prediction:  Κακούνευη
+----------------------------------------
+Reference: То је било друго.
+Prediction:  То и биодрука.
+----------------------------------------
+Reference: Двадесет и пет?
+Prediction:  25
+----------------------------------------
+Reference: Као и он.
+Prediction:  Kaoyun
+----------------------------------------
+Reference: Јеси ли за?
+Prediction:  Yes, it is on.
+----------------------------------------
+Reference: Овако више не иде.
+Prediction:  Ovako vi se ne ide.
+----------------------------------------
+Reference: Шта нам фали?
+Prediction:  What do we need?
+----------------------------------------
+Reference: Твој посао је.
+Prediction:  Twój posł ja.
+----------------------------------------
+Reference: Међутим, борба је још увек занимљива.
+Prediction:  Меджутими борьба ей и шувик за нимлива.
+----------------------------------------
+Reference: Наравно, нису они искључиво криви за то.
+Prediction:  Naravno nisu on isključivo krize to.
+----------------------------------------
+Reference: Не, које је?
+Prediction:  Nie, kojej.
+----------------------------------------
+Reference: Ко је стар?
+Prediction:  Co jest star?
+----------------------------------------
+Reference: Знам шта је то.
+Prediction:  Znam, że to jest.
+----------------------------------------
+Reference: Није имао среће.
+Prediction:  Nije imao osreć.
+----------------------------------------
+Reference: Не знам да ти кажем.
+Prediction:  Me znam da ti kažem.
+----------------------------------------
+Reference: О, добро, да.
+Prediction:  O, dobra ta.
+----------------------------------------
+Reference: То није та.
+Prediction:  Tonjetta
+----------------------------------------
+Reference: Сам, ја сам.
+Prediction:  Sam Yasam
+----------------------------------------
+Reference: Удаје се у јулу.
+Prediction:  Ude se u julu.
+----------------------------------------
+Reference: Не у води!
+Prediction:  Não o vodi.
+----------------------------------------
+Reference: Нека буде тако!
+Prediction:  Le cabude, tacul.
+----------------------------------------
+Reference: Кроз три месеца.
+Prediction:  con 3 mesi
+----------------------------------------
+Reference: Други начин јесте да се смањи потражња.
+Prediction:  Drugi način jeste da se smanji potražnja.
+----------------------------------------
+Reference: Бубамара је црвена са црним тачкама.
+Prediction:  Pubamara je crvena sa crnim tačkama.
+----------------------------------------
+Reference: Не у овом тренутку.
+Prediction:  Ne uovom trenutku.
+----------------------------------------
+Reference: Ја сам то!
+Prediction:  Eu sou um tol.
+----------------------------------------
+Reference: Зар не би?
+Prediction:  Zarnepi.
+----------------------------------------
+Reference: Што даље од овога.
+Prediction:  Что далее у Добого?
+----------------------------------------
+Reference: То је он!
+Prediction:  do Leon.
+----------------------------------------
+Reference: Што ми је.
+Prediction:  Что мне?
+----------------------------------------
+Reference: О, волео бих.
+Prediction:  O volar o bicho.
+----------------------------------------
+Reference: Јесте, истина је.
+Prediction:  Ja, ist es ist die Nahrung.
+----------------------------------------
+Reference: У непосредној близини.
+Prediction:  u nepostrednoj blizini.
+----------------------------------------
+Reference: Иди и ти!
+Prediction:  Идите!
+----------------------------------------
+Reference: Зар је то?
+Prediction:  Zar je to?
+----------------------------------------
+Reference: Ниједна институција потребна за њихово спровођење, није формирана.
+Prediction:  Jedna institucija potrebna za nikovo sprođenje nije formirana.
+----------------------------------------
+Reference: Ти си мој.
+Prediction:  Диссимой.
+----------------------------------------
+Reference: Знам и то.
+Prediction:  Znam i to.
+----------------------------------------
+Reference: Било је три.
+Prediction:  Billa 3
+----------------------------------------
+Reference: Увредио си ме!
+Prediction:  U vrediosime.
+----------------------------------------
+Reference: Ено, тамо је.
+Prediction:  y nos estamos ya
+----------------------------------------
+Reference: Па ти види!
+Prediction:  Patei video.
+----------------------------------------
+Reference: Не брините гос.
+Prediction:  Ne brinite gospodine.
+----------------------------------------
+Reference: Јесу ли сунце и месец муж и жена?
+Prediction:  I je Sulisunce i Mesec muži žena.
+----------------------------------------
+Reference: Да ли постоји опасност од нестабилности?
+Prediction:  Dalipostoji opasnost od nestabilnosti?
+----------------------------------------
+Reference: Како да кажем!
+Prediction:  Как удахажем.
+----------------------------------------
+Reference: Ми немамо циљ.
+Prediction:  Minnemozili
+----------------------------------------
+Reference: Шта је љубав!
+Prediction:  Что я любов?
+----------------------------------------
+Reference: Био је у бекству око две недеље.
+Prediction:  Bijo je u begstvu oko dve ne delje.
+----------------------------------------
+Reference: Ево како то функционише.
+Prediction:  Evo kako to funkcioniše.
+----------------------------------------
+Reference: И шта се десило?
+Prediction:  I šta se desilo?
+----------------------------------------
+Reference: За једним столом умијешале су се и четири жене.
+Prediction:  Za jednim stolom umiješali su se i četiri žene.
+----------------------------------------
+Reference: Да те оставим?
+Prediction:  that they all study.
+----------------------------------------
+Reference: Такве деце има још пуно.
+Prediction:  Tag mit der C in den Maior Spund.
+----------------------------------------
+Reference: Вријеме није било једини проблем на дан концерта.
+Prediction:  Nivirime nije bilo jedini problem na dan koncert.
+----------------------------------------
+Reference: Свједоци кажу да је умијешано три лица.
+Prediction:  Sedaci kažu da je umješano tri lice.
+----------------------------------------
+Reference: И то све.
+Prediction:  I to sve.
+----------------------------------------
+Reference: Ох, боже, не.
+Prediction:  O Boże, nie!
+----------------------------------------
+Reference: Гвожђе се кује док је вруће.
+Prediction:  Głożdzie sekuje do kiewruć.
+----------------------------------------
+Reference: Шта ћеш ти?
+Prediction:  Что отчешь ты?
+----------------------------------------
+Reference: Цијене су велике у односу на прошлу годину.
+Prediction:  Cijene su velike godno su na prošlo godinu.
+----------------------------------------
+Reference: Препоручујем да сви узму учешћа у овој кампањи.
+Prediction:  Препоручвам да вси узмучиш тя овои кампани.
+----------------------------------------
+Reference: Други указују на још увијек постојеће политичке проблеме.
+Prediction:  Drugi ukazuje na još uvijek postojeće političke probleme.
+----------------------------------------
+Reference: Са свих страна!
+Prediction:  со всех сторон.
+----------------------------------------
+Reference: Провајдери се жале на слабу зараду.
+Prediction:  Provайдер и сежаля на слабо зарадо.
+----------------------------------------
+Reference: Где је одлетео мој дечак?
+Prediction:  Gde odlete u moj dečak?
+----------------------------------------
+Reference: Грчка то више не може поднијети ...
+Prediction:  Гръчкато више не може подняти.
+----------------------------------------
+Reference: Ипак, циљна група не делује претерано узбуђено.
+Prediction:  Ipak, cijna grupa ne deluje preteran uzbuđen.
+----------------------------------------
+Reference: Не једемо и не пијемо.
+Prediction:  Nie jedemo i nie pijemo.
+----------------------------------------
+Reference: И цијене су порасле.
+Prediction:  i cijene su porastla.
+----------------------------------------
+Reference: Косово покреће вијеће за мањинске заједнице
+Prediction:  Kosovu pokreće vijeće za manjenske zadnice.
+----------------------------------------
+Reference: Турци дете на смрт воде,
+Prediction:  Turci dete na smrtvode.
+----------------------------------------
+Reference: О, није исто.
+Prediction:  Oh, não é isso.
+----------------------------------------
+Reference: Ко зна где је?
+Prediction:  Познакдея.
+----------------------------------------
+Reference: Као што су?
+Prediction:  Кауштуру.
+----------------------------------------
+Reference: Је л да?
+Prediction:  Yalda.
+----------------------------------------
+Reference: Таква си ти.
+Prediction:  Danke, CD.
+----------------------------------------
+Reference: Шта то ради.?
+Prediction:  Stato radi
+----------------------------------------
+Reference: Да, и ви.
+Prediction:  Да. И Ви.
+----------------------------------------
+Reference: Ма молим те.
+Prediction:  Vamoli, mh-tè.
+----------------------------------------
+Reference: Ако бог да.
+Prediction:  Acoboca!
+----------------------------------------
+Reference: Шта радите ви?
+Prediction:  Šta radite vi?
+----------------------------------------
+Reference: А је не?
+Prediction:  Aí é né?
+----------------------------------------
+Reference: До сада нису постајали озбиљни покушаји.
+Prediction:  Da sada nisu postajali ozbiljni pokušaj.
+----------------------------------------
+Reference: Није то све!
+Prediction:  Nie to sve.
+----------------------------------------
+Reference: Добра и зла?
+Prediction:  Dobra, isla.
+----------------------------------------
+Reference: Ко сте ви.
+Prediction:  Kostewi!
+----------------------------------------
+Reference: Хајде да то оставимо судовима да реше.
+Prediction:  Hadi da to stojimo sudovima da reše.
+----------------------------------------
+Reference: Ево ти, на.
+Prediction:  Εβωτίνα
+----------------------------------------
+Reference: Знам да је.
+Prediction:  Znam daje.
+----------------------------------------
+Reference: Није тако добро.
+Prediction:  Nije tako dobra.
+----------------------------------------
+Reference: Окрени се да видим.
+Prediction:  Ukranisi de videom.
+----------------------------------------
+Reference: То је реалност.
+Prediction:  To je realnost.
+----------------------------------------
+Reference: Знам, шта је?
+Prediction:  Знам, что я.
+----------------------------------------
+Reference: Шта је с тобом.
+Prediction:  Šta je sa tobe?
+----------------------------------------
+Reference: Ја сам само.
+Prediction:  Yasin Samo.
+----------------------------------------
+Reference: Али не ми!
+Prediction:  Alin Ami
+----------------------------------------
+Reference: Они се хране мржњом.
+Prediction:  Oni są chranem mrżnym.
+----------------------------------------
+Reference: То си ти урадио!
+Prediction:  Toi senti il radio.
+----------------------------------------
+Reference: Али не мисли.
+Prediction:  Ali ne misli.
+----------------------------------------
+Reference: Да, само тренутак.
+Prediction:  Да, само тренуток.
+----------------------------------------
+Reference: О, није добро.
+Prediction:  Ja, ni är da bra.
+----------------------------------------
+Reference: Рекла сам вам!
+Prediction:  Рекла с вами!
+----------------------------------------
+Reference: Међутим, сви смо изненађени овим поступком за затварање.
+Prediction:  Meďže tým svetom je znanáčený ovým postupkom za zatváranie.
+----------------------------------------
+Reference: Узела је ружу.
+Prediction:  Usa-la em arujo.
+----------------------------------------
+Reference: Али, зашто ја?
+Prediction:  Alle, sagst du ja!
+----------------------------------------
+Reference: Мора да је добро.
+Prediction:  Morat eivät ole bra.
+----------------------------------------
+Reference: Шта је то љубав?
+Prediction:  Sztályatoljó, bár.
+----------------------------------------
+Reference: И не воли.
+Prediction:  Inevali.
+----------------------------------------
+Reference: А ево је.
+Prediction:  А, эвое.
+----------------------------------------
+Reference: Стотинак викендица већ је оспособљено за издавање туристима.
+Prediction:  Stati na kvikendica je već je osposobljeno za izdavanje turistima.
+----------------------------------------
+Reference: И то је истина?
+Prediction:  И то и истина.
+----------------------------------------
+Reference: Финалисти су или магистрирали или раде на докторатима.
+Prediction:  Finalisti su ili magistrilali ili radene doktoratima.
+----------------------------------------
+Reference: Разлози за то су очигледни.
+Prediction:  Razvizi za to su očigledni.
+----------------------------------------
+Reference: Која је сад?
+Prediction:  과연 아이스크림이 될까요?
+----------------------------------------
+Reference: А ја ништа.
+Prediction:  Αγιάννηστο
+----------------------------------------
+Reference: Све до сада!
+Prediction:  Sve dosala.
+----------------------------------------
+Reference: Ја желим јединство.
+Prediction:  Ja želim jedinstvo.
+----------------------------------------
+Reference: Биле су велике.
+Prediction:  Bile su velike.
+----------------------------------------
+Reference: Да, још једном!
+Prediction:  Да, ещё одна.
+----------------------------------------
+Reference: Болујем за сваку убијену и рањену особу.
+Prediction:  Boluje zisvaku vbijenu i ranjenu osobu.
+----------------------------------------
+Reference: Е, па добро.
+Prediction:  É podobro.
+----------------------------------------
+Reference: Не знам, зашто!
+Prediction:  Не знам, защо?
+----------------------------------------
+Reference: И зашто би?
+Prediction:  И за что бы?
+----------------------------------------
+Reference: Знак опоравка?
+Prediction:  Знак опорамка.
+----------------------------------------
+Reference: Шта је брате?
+Prediction:  Šta je, brat?
+----------------------------------------
+Reference: Хвала вам, господине!
+Prediction:  Hvala vam, gospodine!
+----------------------------------------
+Reference: С обе стране!
+Prediction:  Słabe strane.
+----------------------------------------
+Reference: И где су?
+Prediction:  I gdje su?
+----------------------------------------
+Reference: Али ипак не могу.
+Prediction:  Ali, pac, nem ogu.
+----------------------------------------
+Reference: Можете ли опет али мало гласније? Нисам вас добро чула.
+Prediction:  Možete li opetali maloglasnije? Nisam vas dobro čula.
+----------------------------------------
+Reference: Ти си та!
+Prediction:  Ticita
+----------------------------------------
+Reference: Па шта да радимо.
+Prediction:  Pa šta da radimo?
+----------------------------------------
+Reference: И шта су радили?
+Prediction:  E o que você fez?
+----------------------------------------
+Reference: Даље промене које су неопходне захтевају дугорочну посвећеност.
+Prediction:  Dalje promene koje su neobhodne zahtevaju dugoročnu posvećenost.
+----------------------------------------
+Reference: Лет, лет бубамаро, донеси нам госте.
+Prediction:  Ljet, let, Bubamaro, donesi nam goste.
+----------------------------------------
+Reference: Не ја сам.
+Prediction:  Ne-yasam!
+----------------------------------------
+Reference: Заборави на све.
+Prediction:  Zaboravi nas ve!
+----------------------------------------
+Reference: У тим годинама?
+Prediction:  O Team Godinama
+----------------------------------------
+Reference: А тако је.
+Prediction:  Atakuje.
+----------------------------------------
+Reference: И знате то!
+Prediction:  I znate to.
+----------------------------------------
+Reference: Чујете ли ме?
+Prediction:  Kuşu etmeliyim.
+----------------------------------------
+Reference: То је забрињавајуће.
+Prediction:  To je zabreniavajúče.
+----------------------------------------
+Reference: Ма такав је он.
+Prediction:  Matakavja on.
+----------------------------------------
+Reference: Морам и ја.
+Prediction:  Moram iaa!
+----------------------------------------
+Reference: А други не.
+Prediction:  А другий не.
+----------------------------------------
+Reference: И од ње.
+Prediction:  이어 DNE
+----------------------------------------
+Reference: Сви смо се.
+Prediction:  Свис мусор!
+----------------------------------------
+Reference: О, не баш.
+Prediction:  Oh, no, that was
+----------------------------------------
+Reference: Не, знам, знам.
+Prediction:  Ne? Znam, znam.
+----------------------------------------
+Reference: У основној школи?
+Prediction:  U osnovnoj školi
+----------------------------------------
+Reference: Шта је сад?
+Prediction:  Что я сад?
+----------------------------------------
+Reference: Баш вам хвала!
+Prediction:  Башь вам хвала!
+----------------------------------------
+Reference: Па, и то.
+Prediction:  Pá, ítto.
+----------------------------------------
+Reference: То изгледа вероватно.
+Prediction:  To izgleda verovatno.
+----------------------------------------
+Reference: Ка и он.
+Prediction:  Kion
+----------------------------------------
+Reference: Како је она?
+Prediction:  Kako jona.
+----------------------------------------
+Reference: Какав је био?
+Prediction:  ¡Caca, biebío!
+----------------------------------------
+Reference: Са запада улазе у Србију гране Црногорско-Босанских планина
+Prediction:  Se zapa je dolezov Srbiju grane crnogorosku bosanskeh planina.
+----------------------------------------
+Reference: Е па добро!
+Prediction:  É mais ou menos.
+----------------------------------------
+Reference: Да ти објасним!
+Prediction:  That's your bias.
+----------------------------------------
+Reference: онај што о докторима има добро мишљење
+Prediction:  Ona jest to, do której ma i ma dobre myślenie.
+----------------------------------------
+Reference: Да ли је.
+Prediction:  Dali je.
+----------------------------------------
+Reference: Ја сам, сам.
+Prediction:  YASAM SAMH
+----------------------------------------
+Reference: Шта да радим?
+Prediction:  Stălării!
+----------------------------------------
+Reference: За ову земљу.
+Prediction:  as always
+----------------------------------------
+Reference: Српски реформисти нису ни имали свог кандидата.
+Prediction:  Serbski reformis ten įsūn įmalį suvo kandidatą.
+----------------------------------------
+Reference: Нико није одговорио.
+Prediction:  Nikoni ya dugu varia.
+----------------------------------------
+Reference: А није тако.
+Prediction:  А не так.
+----------------------------------------
+Reference: Па, да знаш.
+Prediction:  Pa, do znasz.
+----------------------------------------
+Reference: Требало би увести и учење страних језика.
+Prediction:  Trebalo bi uvesti i učenje stranih jezika.
+----------------------------------------
+Reference: Ко не зна?
+Prediction:  Who doesn't know?
+----------------------------------------
+Reference: Данас имамо своју државу.
+Prediction:  Danas imamo svoju državu.
+----------------------------------------
+Reference: За одбрану је.
+Prediction:  Zaodbranuję.
+----------------------------------------
+Reference: А у њему?
+Prediction:  A u Niemu?
+----------------------------------------
+Reference: Верујем да могу.
+Prediction:  Bear in the mucku.
+----------------------------------------
+Reference: Е тако сад.
+Prediction:  E tá, coçado!
+----------------------------------------
+Reference: А, добар дан.
+Prediction:  Α, δοκαδάνω!
+----------------------------------------
+Reference: То, си ти.
+Prediction:  Tossi T!
+----------------------------------------
+Reference: О, да ли?
+Prediction:  O, dali.
+----------------------------------------
+Reference: Млади су наша будућност.
+Prediction:  Мадисфераж и будущность.
+----------------------------------------
+Reference: Седи молим те!
+Prediction:  Sedi molito.
+----------------------------------------
+Reference: И то доста!
+Prediction:  I to dosta.
+----------------------------------------
+Reference: Пећине су подземне просторије у каменитом пределу
+Prediction:  Veći nisu pod zemne prostorije u kamenitom predalo.
+----------------------------------------
+Reference: Све дубље и дубље.
+Prediction:  Это дубль и дубль.
+----------------------------------------
+Reference: Двадесет и три године.
+Prediction:  23 godine.
+----------------------------------------
+Reference: Проблем не нестаје... него постаје прикривенији.
+Prediction:  Problem ne nestaje, nego postaje prikriveni.
+----------------------------------------
+Reference: Имате минут?
+Prediction:  Imate minuti.
+----------------------------------------
+Reference: Па шта си урадио?
+Prediction:  Pasta a ciúra, adio!
+----------------------------------------
+Reference: Благо ономе ко зна да не зна, а хоће да зна.
+Prediction:  Blago ono me ko zna da ne zna, a hoće da zna.
+----------------------------------------
+Reference: Гледа кроз прозор.
+Prediction:  Gleda kroz prozir.
+----------------------------------------
+Reference: О коме је?
+Prediction:  O como é?
+----------------------------------------
+Reference: Да, ја сам!
+Prediction:  Да, я ослабил.
+----------------------------------------
+Reference: А истина је.
+Prediction:  Aisti näin.
+----------------------------------------
+Reference: И од кога?
+Prediction:  И откуда?
+----------------------------------------
+Reference: Ма ту су.
+Prediction:  Batus
+----------------------------------------
+Reference: А не знам што.
+Prediction:  А не знам что.
+----------------------------------------
+Reference: У ствари не!
+Prediction:  U stvari ne.
+----------------------------------------
+Reference: Патке и гуске?
+Prediction:  Patkii Guske.
+----------------------------------------
+Reference: Наравно да је!
+Prediction:  narabno doje
+----------------------------------------
+Reference: Нећу да продам.
+Prediction:  Ne je čude kroda.
+----------------------------------------
+Reference: И сад ста?
+Prediction:  Il s'adsta.
+----------------------------------------
+Reference: Шапутање на уво!
+Prediction:  Szaputanie na uwo.
+----------------------------------------
+Reference: Да се одморим!
+Prediction:  да се отморим.
+----------------------------------------
+Reference: Нису успели.
+Prediction:  N'y sous-père.
+----------------------------------------
+Reference: Бар неки од њих.
+Prediction:  Барнеки от них.
+----------------------------------------
+Reference: Да ти кажем!
+Prediction:  Да ты, скажем.
+----------------------------------------
+Reference: Какав је ваш одговор?
+Prediction:  Kaka jest wasz odpowiednik?
+----------------------------------------
+Reference: Ма, шта је?
+Prediction:  Мастай!
+----------------------------------------
+Reference: А са друге стране?
+Prediction:  A są drugie strony.
+----------------------------------------
+Reference: Окрени се, да видим.
+Prediction:  Okreni se da vidimo.
+----------------------------------------
+Reference: Ма, ја сам.
+Prediction:  Maiás.
+----------------------------------------
+Reference: О, сваки дан.
+Prediction:  О, свак и дан!
+----------------------------------------
+Reference: Да ли успевате у томе?
+Prediction:  Dalje uspevate u tome?
+----------------------------------------
+Reference: Како је тужно.
+Prediction:  C'è una cosa che è tusno.
+----------------------------------------
+Reference: Не знате како је то.
+Prediction:  Не знати, како це.
+----------------------------------------
+Reference: Хрватска признаје правосудне институције и међународно право.
+Prediction:  Хрватска признає правосудно institуције и међународно право.
+----------------------------------------
+Reference: И не мора.
+Prediction:  Η νεμόρα.
+----------------------------------------
+Reference: Не може бити он.
+Prediction:  Nemože biti on.
+----------------------------------------
+Reference: Да ли је он?
+Prediction:  Valleon
+----------------------------------------
+Reference: Да ме оставиш.
+Prediction:  Damy ostawić.
+----------------------------------------
+Reference: Нисте ни ви!
+Prediction:  Nice to meet you.
+----------------------------------------
+Reference: За сада.
+Prediction:  Susada
+----------------------------------------
+Reference: Шта је љубав?
+Prediction:  Что я не убил?
+----------------------------------------
+Reference: Не, и не.
+Prediction:  네, 힘내
+----------------------------------------
+Reference: Треба да будеш?
+Prediction:  Treba da budes.
+----------------------------------------
+Reference: Зашто, шта је то?
+Prediction:  Zresztą, przytaj to.
+----------------------------------------
+Reference: Не волим те!
+Prediction:  Ne volim te.
+----------------------------------------
+Reference: Ово више не могу да издржим.
+Prediction:  O, wiesz, nie mógł dać zdarzeń.
+----------------------------------------
+Reference: И он, и он.
+Prediction:  Eon, Eon.
+----------------------------------------
+Reference: Зар не видиш.
+Prediction:  Заряной видишь.
+----------------------------------------
+Reference: Да баш овде.
+Prediction:  אתה בשוב
+----------------------------------------
+Reference: Ипак, није све тако црно.
+Prediction:  I pak nisi tak odsem.
+----------------------------------------
+Reference: Шта то имате?
+Prediction:  Co to jest?
+----------------------------------------
+Reference: Који су били главни успеси?
+Prediction:  Кои субили главные успесси?
+----------------------------------------
+Reference: Али где су?
+Prediction:  Aligdesso!
+----------------------------------------
+Reference: Као што си ти!
+Prediction:  Kao što si ti?
+----------------------------------------
+Reference: Није се јављао.
+Prediction:  Nesse ablhão.
+----------------------------------------
+Reference: Не нису још.
+Prediction: ね、にすよし
+----------------------------------------
+Reference: И, то је све.
+Prediction:  이, 도의, 스웨.
+----------------------------------------
+Reference: Зар и ти!
+Prediction:  ZARITI!
+----------------------------------------
+Reference: То је оно што жели међународна заједница.
+Prediction:  To je ono što želi međunarom na zajednica.
+----------------------------------------
+Reference: Родио сам се у једној старој кућици, у близини београдске Саборне цркве.
+Prediction:  Rodije sem se v jednoj staroj kučici, v blizini biografski sabornic reke.
+----------------------------------------
+Reference: Што не могу?
+Prediction:  Što ne mogu?
+----------------------------------------
+Reference: Његов једини син.
+Prediction:  Него в единый силь.
+----------------------------------------
+Reference: Изгледа ми као пристојан и умерен господин.
+Prediction:  Izledam i kao pristoja njih umerenj, gospodin.
+----------------------------------------
+Reference: И мало хране.
+Prediction:  e malo grane.
+----------------------------------------
+Reference: Да ли имате неки коментар?
+Prediction:  Dall'ima tenete che commentare
+----------------------------------------
+Reference: Па шта је то?
+Prediction:  To co to jest?
+----------------------------------------
+Reference: Знам ја све то!
+Prediction:  Znam ja sve to.
+----------------------------------------
+Reference: Људи су све.
+Prediction:  류의 디스세
+----------------------------------------
+Reference: Да радим, шта?
+Prediction:  Дарадим штат.
+----------------------------------------
+Reference: То ти кажем!
+Prediction:  To Ty, Kajem!
+----------------------------------------
+Reference: Не, има их.
+Prediction:  Não, não tem.
+----------------------------------------
+Reference: Што да ми каже?
+Prediction:  Što da mi kaže?
+----------------------------------------
+Reference: Како си могла?
+Prediction:  K acima o arroz
+----------------------------------------
+Reference: Боље је умети него имати.
+Prediction:  Volha a um metrô em maté.
+----------------------------------------
+Reference: Што је још горе.
+Prediction:  To jest już gore.
+----------------------------------------
+Reference: Пећина Плакардска
+Prediction:  Pecina plakartska.
+----------------------------------------
+Reference: То није довољно?
+Prediction:  Non è edovolno.
+----------------------------------------
+Reference: Двадесет и пет.
+Prediction:  975
+----------------------------------------
+Reference: Биле су ту и стране дипломате.
+Prediction:  Bile su tu i strane diplomate.
+----------------------------------------
+Reference: Веома сам оптимистичан.
+Prediction:  Vreau ma somn optimistica
+----------------------------------------
+Reference: Што не би.
+Prediction:  Što ne bi?
+----------------------------------------
+Reference: Да хвала вам.
+Prediction:  Да, хвалываем.
+----------------------------------------
+Reference: А јој, не!
+Prediction: あ、良いね
+----------------------------------------
+Reference: Мој тата је највећи на свету.
+Prediction:  Moj tato je najveći na svaj YouTube.
+----------------------------------------
+Reference: А, јеси ли?
+Prediction:  I guess silly
+----------------------------------------
+Reference: Да, ја сам.
+Prediction:  Sim, eu sou.
+----------------------------------------
+Reference: На живот и смрт!
+Prediction:  На живота, сын
+----------------------------------------
+Reference: И Пера би се одмах сетио те реч написао.
+Prediction:  I pera bi se o maksetio te reć napisao.
+----------------------------------------
+Reference: Овако, или онако.
+Prediction:  Vaako ideja nää kun?
+----------------------------------------
+Reference: О, не, не!
+Prediction:  Oh, no, no.
+----------------------------------------
+Reference: Не знам више!
+Prediction:  Nie znam wyższa.
+----------------------------------------
+Reference: То ниси ти!
+Prediction:  Tony Sitti
+----------------------------------------
+Reference: Да радимо шта?
+Prediction:  da radimo šta?
+----------------------------------------
+Reference: Будућност ове земље зависи од њих.
+Prediction:  Błodoczność towe Ziemnie zawisji od nich.
+----------------------------------------
+Reference: Па реци ми.
+Prediction:  Parecime!
+----------------------------------------
+Reference: На све стране!
+Prediction:  На все стороны.
+----------------------------------------
+Reference: Не само он!
+Prediction:  Nessamon
+----------------------------------------
+Reference: Шта то радиш.
+Prediction:  Что ты делаешь?
+----------------------------------------
+Reference: Фракционаштво је делимично узрок томе.
+Prediction:  Frakciju naštvo je delimićno uzrok tome.
+----------------------------------------
+Reference: Зар и ти.
+Prediction:  Заряти.
+----------------------------------------
+Reference: А и с њом.
+Prediction:  А и снем.
+----------------------------------------
+Reference: Не вреди овде.
+Prediction:  Never do that.
+----------------------------------------
+Reference: Добар дан, душице.
+Prediction:  Dobro dan, dusice!
+----------------------------------------
+Reference: Енергетика ће бити главна тема разговора у четвртак.
+Prediction:  Energetika će biti glavna tema razgora u četvrtak.
+----------------------------------------
+Reference: Је ли то она?
+Prediction:  Jotkona.
+----------------------------------------
+Reference: С нама је.
+Prediction:  С нами.
+----------------------------------------
+Reference: О да ли?
+Prediction:  Oh, Dali.
+----------------------------------------
+Reference: Да ти кажем.
+Prediction:  da ti kažem
+----------------------------------------
+Reference: То сам хтео да кажем!
+Prediction:  To sam hteva da kažem.
+----------------------------------------
+Reference: Волим те ствари!
+Prediction:  Valim te stvari.
+----------------------------------------
+Reference: Дете моје, не!
+Prediction:  Det är inte moenne.
+----------------------------------------
+Reference: Ми гледамо на хостеле из два аспекта.
+Prediction:  Mi gladao mohno hustele iz dva aspekta.
+----------------------------------------
+Reference: А шта то?
+Prediction:  Astato!
+----------------------------------------
+Reference: У својој земљи.
+Prediction:  У Своя Земня!
+----------------------------------------
+Reference: А, шта је с тобом?
+Prediction:  Что с тобой?
+----------------------------------------
+Reference: Молим те, не!
+Prediction:  Monimtenne.
+----------------------------------------
+Reference: Де, де, де.
+Prediction:  dead dead dead
+----------------------------------------
+Reference: Пазили смо на сваки евро...
+Prediction:  Pazili smo na svaki ebio.
+----------------------------------------
+Reference: А сада не?
+Prediction:  Asada, ne?
+----------------------------------------
+Reference: Он је пријатељ!
+Prediction:  Он и приятный.
+----------------------------------------
+Reference: Да вас послужим?
+Prediction:  Послужим.
+----------------------------------------
+Reference: Оно што произведете не можете да продате.
+Prediction:  Ono što proizvedete, ne možete da prodate.
+----------------------------------------
+Reference: Да ти кажем нешто.
+Prediction:  Da ti kažem nešto.
+----------------------------------------
+Reference: А није био?
+Prediction:  On the ebio.
+----------------------------------------
+Reference: Немојте се срамотити.
+Prediction:  Не мойте се с рамотите.
+----------------------------------------
+Reference: Како је научио?
+Prediction:  Kako je naučio?
+----------------------------------------
+Reference: На живот и смрт.
+Prediction:  на живот и смерть.
+----------------------------------------
+Reference: Исто важи за остале српске општине.
+Prediction:  Isto važi za ostale srpske opštine.
+----------------------------------------
+Reference: Не мучи се и не харчи блага!
+Prediction:  Nemući se i ne harći blaga.
+----------------------------------------
+Reference: Да бар њему главу скине,
+Prediction:  Dabarnjemu glavu skin.
+----------------------------------------
+Reference: У једном дијелу купујемо, а у другом продајемо.
+Prediction:  U jedną dielu kupujemy, a drugą – продujemy.
+----------------------------------------
+Reference: И онда глупе грешке.
+Prediction:  I onda glupe greške.
+----------------------------------------
+Reference: Некима од њих је та група упутила претње.
+Prediction:  Nekim od njih je ta grupa uputila preće.
+----------------------------------------
+Reference: Преосталих девет места заузеће независни кандидати.
+Prediction:  Preostali 9 mesta za uziće nezavisni kandidati.
+----------------------------------------
+Reference: Опозиција је напала приједлоге тог тијела.
+Prediction:  Oppozycija je napala prijedluge tok tijela.
+----------------------------------------
+Reference: И борили су се?
+Prediction:  I borili su se.
+----------------------------------------
+Reference: "Ништа се није промијенило, и тачка," изјавио је он.
+Prediction:  Ništo se nije promjenilo i tačka, izjavio je on.
+----------------------------------------
+Reference: И лепши пол учествује у мењажи.
+Prediction:  I lepsi polučistvo je u menjaži.
+----------------------------------------
+Reference: Они само настављају да раде на стари начин.
+Prediction:  Oni samo nastavljuju da radja na starim nače.
+----------------------------------------
+Reference: Ако је не добијемо, то опет не представља ништа.
+Prediction:  Ako je ne dobijemo, to uopet ne predstavlja ništa.
+----------------------------------------
+Reference: Да ли је неко против нас?
+Prediction:  Dalje je neko protiv nas?
+----------------------------------------
+Reference: Чланови одбора имаће трогодишњи мандат.
+Prediction:  Članom i odbora imat će trogodišnji mandat.
+----------------------------------------
+Reference: Храна је важан елемент рамазана...
+Prediction:  Храни важен елемент рамозан.
+----------------------------------------
+Reference: До сада није дата ниједна понуда.
+Prediction:  Dosada nije data nije jedna ponuda.
+----------------------------------------
+Reference: Аналитичари очекују измене тог услова.
+Prediction:  Analitičari očekuju izmene tog uslova.
+----------------------------------------
+Reference: Испуњавање тог циља је међутим представљало изазов.
+Prediction:  Ispunjaveni tog cilije je medjutim predstavljelo izosov.
+----------------------------------------
+Reference: Зато што је?
+Prediction:  Za to, że to ja?
+----------------------------------------
+Reference: А и деца.
+Prediction:  are ________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
+----------------------------------------
+Reference: Да л' имаш ти, чико, рупу на глави?
+Prediction:  Da li imaš ti čiko rupu na glali?
+----------------------------------------
+Reference: Шта треба да радим.
+Prediction:  Stati treaba de radini.
+----------------------------------------
+Reference: Као што се види.
+Prediction:  Kao što se vidi.
+----------------------------------------
+Reference: Како ти иде граматика?
+Prediction:  Cacco tida grammatica
+----------------------------------------
+Reference: Како да кажем?
+Prediction:  Jak to pokażę.
+----------------------------------------
+Reference: О, не могу?
+Prediction:  Oh, me mogu.
+----------------------------------------
+Reference: О, боже мој.
+Prediction:  О, Боже мой!
+----------------------------------------
+Reference: Да, још не.
+Prediction:  Da, još ne.
+----------------------------------------
+Reference: Шта знам, можда.
+Prediction:  Znowu, można.
+----------------------------------------
+Reference: Али је требало.
+Prediction:  Ali je trebalo.
+----------------------------------------
+Reference: А и они.
+Prediction:  I am me
+----------------------------------------
+Reference: То је природно.
+Prediction:  то и природно
+----------------------------------------
+Reference: О, ја сам!
+Prediction:  Oh, yes.
+----------------------------------------
+Reference: Ма не зна.
+Prediction:  Manes.
+----------------------------------------
+Reference: Па, добро, кад?
+Prediction:  Pá, dobro, cad!
+----------------------------------------
+Reference: Ако не може, не може.
+Prediction:  Ako nie może, nie może.
+----------------------------------------
+Reference: Где си брате?
+Prediction:  Gdessi, Bratti!
+----------------------------------------
+Reference: Не, не сам.
+Prediction:  No, not me.
+----------------------------------------
+Reference: Ипак ће постојати нека ограничења.
+Prediction:  I pakcie postojatki meka ograniczenia.
+----------------------------------------
+Reference: Да, имали су.
+Prediction:  Да, имолис.
+----------------------------------------
+Reference: И треба да будеш.
+Prediction:  I treba da budeš.
+----------------------------------------
+Reference: Он је слуша.
+Prediction:  On je sluša.
+----------------------------------------
+Reference: Кад бих могла.
+Prediction:  Kiedyś mogła.
+----------------------------------------
+Reference: Све на своме месту.
+Prediction:  Sve nas vom imestu.
+----------------------------------------
+Reference: Да, знаш то.
+Prediction:  Tak, zna, że to.
+----------------------------------------
+Reference: Заборавила сам да угасим шпорет.
+Prediction:  Zaborim? Vila sam da ugasim šporet.
+----------------------------------------
+Reference: На добар дан.
+Prediction:  Nada do Bartan.
+----------------------------------------
+Reference: А они не.
+Prediction: ああ、おにいね。
+----------------------------------------
+Reference: Он је твој!
+Prediction:  On jest twój.
+----------------------------------------
+Reference: То су људи.
+Prediction:  Tosso gli uodi
+----------------------------------------
+Reference: Нико не живи сам.
+Prediction:  Nikone živi sam.
+----------------------------------------
+Reference: Тако мора бити.
+Prediction:  da com'ora a vittima
+----------------------------------------
+Reference: Шта је узрок таквих супротних перцепција?
+Prediction:  Šta je uzrok tahvih suprotnih percepcija?
+----------------------------------------
+Reference: Да ти опростим.
+Prediction:  Da ti oprostim.
+----------------------------------------
+Reference: Ко сам ја.
+Prediction:  Cosa mia?
+----------------------------------------
+Reference: А, ево је!
+Prediction:  Ah, é boia!
+----------------------------------------
+Reference: Е, због тога.
+Prediction:  E. Småktålda.
+----------------------------------------
+Reference: Јавност се већином слаже са тим.
+Prediction:  jarno se vecinom slaže se tim.
+----------------------------------------
+Reference: Шта то радиш!
+Prediction:  Šta to radiš?
+----------------------------------------
+Reference: И за нас је.
+Prediction:  I za nasiem.
+----------------------------------------
+Reference: Тако је мален.
+Prediction:  Duck quail melon
+----------------------------------------
+Reference: Е, па немој!
+Prediction:  E parliamo!
+----------------------------------------
+Reference: Зашто би била?
+Prediction:  Zašto bi bilen?
+----------------------------------------
+Reference: Не знате како!
+Prediction:  Ne znate kako.
+----------------------------------------
+Reference: Не, не хвала?
+Prediction:  Ne, ne X-Valle.
+----------------------------------------
+Reference: А сада не.
+Prediction:  I'll see you then.
+----------------------------------------
+Reference: Сад не могу!
+Prediction:  Sad ne mogu.
+----------------------------------------
+Reference: Верила сам се.
+Prediction:  Very awesome, soon.
+----------------------------------------
+Reference: Заборавио си то?
+Prediction:  Zaboravio si to.
+----------------------------------------
+Reference: Да не знам.
+Prediction:  Done as them.
+----------------------------------------
+Reference: Министарство иностраних послова није открило идентитет протераних дипломата.
+Prediction:  Ministerstvo inostrenih poslova nije otkrilo indetitet proteranih diplomata.
+----------------------------------------
+Reference: И ја вас!
+Prediction:  And of us.
+----------------------------------------
+Reference: А што је?
+Prediction:  А что я?
+----------------------------------------
+Reference: А и ово!
+Prediction:  Aí, ovo!
+----------------------------------------
+Reference: Немамо кохерентне механизме.
+Prediction:  Ne imamo koherentne mehanizme.
+----------------------------------------
+Reference: Да ли је тај страх оправдан?
+Prediction:  Dalie tá istra chopravdan?
+----------------------------------------
+Reference: Јер не разумем.
+Prediction:  i jerny rozumiem.
+----------------------------------------
+Reference: Па, не можеш.
+Prediction:  Pa, nie możesz.
+----------------------------------------
+Reference: На пример како?
+Prediction:  Naprimer kako?
+----------------------------------------
+Reference: А он је?
+Prediction:  I'll on you
+----------------------------------------
+Reference: Ја сам ја!
+Prediction:  Yes, I'm ya.
+----------------------------------------
+Reference: После годину дана!
+Prediction:  Posla godinu dana.
+----------------------------------------
+Reference: Он је за.
+Prediction:  On jest za.
+----------------------------------------
+Reference: Пре него што?
+Prediction:  pre nego što
+----------------------------------------
+Reference: Смејао сам се!
+Prediction:  Smile Samseh.
+----------------------------------------
+Reference: У мојој души.
+Prediction:  com o meu e-dushe.
+----------------------------------------
+Reference: То не би.
+Prediction:  To nebi.
+----------------------------------------
+Reference: Још, још, још!
+Prediction:  Yosh, Yosh, Yosh.
+----------------------------------------
+Reference: Ха, ха, ха.
+Prediction:  Ha ha ha.
+----------------------------------------
+Reference: Више и више.
+Prediction:  Wieś i Wieś.
+----------------------------------------
+Reference: А ви знате?
+Prediction:  A vi znate.
+----------------------------------------
+Reference: Не може се ништа.
+Prediction:  Nie może są niścia.
+----------------------------------------
+Reference: Измешали су се.
+Prediction:  We smashed them all.
+----------------------------------------
+Reference: Тако не може!
+Prediction:  Tako ne može.
+----------------------------------------
+Reference: недалеко од Њу-Џерсеја
+Prediction:  Nedelékolyt nyújt sérsziá.
+----------------------------------------
+Reference: Ни ја теби.
+Prediction:  Nia tebi.
+----------------------------------------
+Reference: Ко су биле?
+Prediction:  ko su bile
+----------------------------------------
+Reference: О, да видим.
+Prediction:  О, добидим.
+----------------------------------------
+Reference: Да, па, добро.
+Prediction:  Да, по-доброму.
+----------------------------------------
+Reference: Могу ја то!
+Prediction:  Mogo ir a to.
+----------------------------------------
+Reference: То је, да?
+Prediction:  To jedna.
+----------------------------------------
+Reference: А није била.
+Prediction:  Ania Bila.
+----------------------------------------
+Reference: Било је времена када је васељена била пуна небесних тела
+Prediction:  Bilo je vremena kada je veseljena bila puna nebeskih tela.
+----------------------------------------
+Reference: Ко је ту.
+Prediction:  Coé tu.
+----------------------------------------
+Reference: Ко зна где је.
+Prediction:  Kozna GDE.
+----------------------------------------
+Reference: А цена је?
+Prediction:  Оцениваем.
+----------------------------------------
+Reference: Погрешно си ме схватио.
+Prediction:  Pogrešno si me schvatio.
+----------------------------------------
+Reference: Пилот је поплавео.
+Prediction:  Pilot je po plavev.
+----------------------------------------
+Reference: Наука о животињама.
+Prediction:  Naoko životinjama.
+----------------------------------------
+Reference: С обе стране?
+Prediction:  Sopie strane.
+----------------------------------------
+Reference: И, ко си ти?
+Prediction:  וקוסטי
+----------------------------------------
+Reference: Ми то спроводимо.
+Prediction:  Mito spravodimo.
+----------------------------------------
+Reference: Још мало лево.
+Prediction:  Już malo lewo.
+----------------------------------------
+Reference: Где и кад?
+Prediction:  Gde i kat.
+----------------------------------------
+Reference: Е па, не!
+Prediction:  E' pa, ne!
+----------------------------------------
+Reference: Поносни смо на вас.
+Prediction:  Ponnusten mona vasta.
+----------------------------------------
+Reference: Нити си ти.
+Prediction:  N'hésitez si tu!
+----------------------------------------
+Reference: Шта можемо?
+Prediction:  Co możemy?
+----------------------------------------
+Reference: А не могу?
+Prediction:  아, 안해?
+----------------------------------------
+Reference: О, под утицајем!
+Prediction:  Oh, Produkte-Time!
+----------------------------------------
+Reference: Мирно и тихо?
+Prediction:  a mirno e tijo
+----------------------------------------
+Reference: Молим те немој!
+Prediction:  Mojelim te nemoj.
+----------------------------------------
+Reference: О, тако леп!
+Prediction:  Oota kolleeep.
+----------------------------------------
+Reference: И ти седи.
+Prediction:  Είτε η σεδί.
+----------------------------------------
+Reference: Добар дан господине.
+Prediction:  Addo pertanto, spottine.
+----------------------------------------
+Reference: У данашњи дан.
+Prediction:  Udanaśni dan
+----------------------------------------
+Reference: Не и овде.
+Prediction:  نأي يوفد
+----------------------------------------
+Reference: О, тако је!
+Prediction:  O, tak sobie jest.
+----------------------------------------
+Reference: О, мој шешир.
+Prediction:  Oh, Moe Cheshir!
+----------------------------------------
+Reference: Десет пута више.
+Prediction:  10 puta više.
+----------------------------------------
+Reference: Такође је преживела и ужасну трагедију.
+Prediction:  Takođe je preživjela južasnu tragediju.
+----------------------------------------
+Reference: С десне стране!
+Prediction:  З десни сторони.
+----------------------------------------
+Reference: Никад до сад.
+Prediction:  نكتدو ساد
+----------------------------------------
+Reference: Смрт Нушковића Вука.
+Prediction:  Смрт Нушковича Вука
+----------------------------------------
+Reference: И не само они!
+Prediction:  y no solo a ellos
+----------------------------------------
+Reference: Не, знаш шта.
+Prediction:  Nie. Znasz, że tak.
+----------------------------------------
+Reference: Са својом руком?
+Prediction:  со своим руком
+----------------------------------------
+Reference: Двадесет и три!
+Prediction:  23
+----------------------------------------
+Reference: Шта он мисли!
+Prediction:  Что он мисли?
+----------------------------------------
+Reference: Само је било.
+Prediction:  Samo je bilo.
+----------------------------------------
+Reference: О, да, видим.
+Prediction:  Oh, dá! Videm!
+----------------------------------------
+Reference: Не могу тако!
+Prediction:  Nemogu tako.
+----------------------------------------
+Reference: Не знам.
+Prediction:  Naznam
+----------------------------------------
+Reference: Што да вам кажем.
+Prediction:  Что да вам, кажем?
+----------------------------------------
+Reference: Молим вас да.
+Prediction:  Molim vzda.
+----------------------------------------
+Reference: Бугарска је невина.
+Prediction:  Bugarska je nevina.
+----------------------------------------
+Reference: Не знам шта је то?
+Prediction:  Не знам, чтой ето.
+----------------------------------------
+Reference: Што бисте ви?
+Prediction:  Što biste vi?
+----------------------------------------
+Reference: О, шта је?
+Prediction:  O sztaje.
+----------------------------------------
+Reference: А ја знам.
+Prediction:  Ayağız nam
+----------------------------------------
+Reference: Ово су као сцене неке античке трагедије...
+Prediction:  Ovo su kaos cene neke antike tragedije.
+----------------------------------------
+Reference: То је превише.
+Prediction:  To jest przewyższe.
+----------------------------------------
+Reference: О, да, је.
+Prediction:  Oh, yeah. Yeah.
+----------------------------------------
+Reference: Ма ко је то?
+Prediction:  un maccoietto
+----------------------------------------
+Reference: Срамота ме је!
+Prediction:  Sramota meja.
+----------------------------------------
+Reference: То и јест.
+Prediction:  To jest.
+----------------------------------------
+Reference: И за то.
+Prediction:  E isso é tudo.
+----------------------------------------
+Reference: И од мене?
+Prediction:  і ḍᵗᵗᵗᵗᵗᵗᵗᵗᵗᵗᵗᵗᵗᵗᵗᵗᵗᵗᵗᵗᵗᵗᵗᵗᵗᵗᵗᵗᵗᵗᵗᵗᵗᵗᵗᵗᵗᵗᵗᵗᵗᵗᵗᵗᵗᵗᵗᵗᵗᵗᵗᵗᵗᵗᵗᵗᵗᵗᵗᵗᵗᵗᵗᵗᵗᵗᵗᵗᵗᵗᵗᵗᵗᵗᵗᵗᵗᵗᵗᵗᵗᵗᵗᵗᵗᵗᵗᵗᵗᵗᵗᵗᵗᵗᵗᵗᵗᵗᵗᵗᵗᵗᵗᵗᵗᵗᵗᵗᵗᵗᵗᵗᵗᵗᵗᵗᵗᵗᵗᵗᵗᵗᵗᵗᵗᵗᵗᵗᵗᵗᵗᵗᵗᵗᵗᵗᵗᵗᵗᵗᵗᵗᵗᵗᵗᵗ�
+----------------------------------------
+Reference: Па, то јесте.
+Prediction:  To jestem.
+----------------------------------------
+Reference: И било је.
+Prediction:  и белое.
+----------------------------------------
+Reference: Вратите ми га!
+Prediction:  Wroty temyka.
+----------------------------------------
+Reference: Не брините, господине!
+Prediction:  Nie brinij tego, Spodinę.
+----------------------------------------
+Reference: Знам ја то!
+Prediction:  זה נעם יד תואר
+----------------------------------------
+Reference: Борили су се?
+Prediction:  Borili su se?
+----------------------------------------
+Reference: Како је све?
+Prediction:  Какое есть все.
+----------------------------------------
+Reference: Молим вас, реците ми.
+Prediction:  Малим вас реците мені.
+----------------------------------------
+Reference: А, ко то?
+Prediction:  Accotto!
+----------------------------------------
+Reference: Јер је опасно?
+Prediction:  Jereau pasno.
+----------------------------------------
+Reference: Не од смрти.
+Prediction:  Ne od smrti.
+----------------------------------------
+Reference: И филмаџије користе тај нови тренд.
+Prediction:  I Filma G je koristet taj novih trend.
+----------------------------------------
+Reference: Па, то је оно.
+Prediction:  Pas Toriano.
+----------------------------------------
+Reference: Не, за децу.
+Prediction:  Не, задечу.
+----------------------------------------
+Reference: Хајде спреми се.
+Prediction:  High-density premise.
+----------------------------------------
+Reference: Ти, шта то радиш?
+Prediction:  Τι, τι το ράδεις?
+----------------------------------------
+Reference: То су људи!
+Prediction:  Тосу люди.
+----------------------------------------
+Reference: Како то сад?
+Prediction:  Kako dosad.
+----------------------------------------
+Reference: Одмах у собу!
+Prediction:  Отмаху собу.
+----------------------------------------
+Reference: То је на?
+Prediction:  Então é na...
+----------------------------------------
+Reference: А ја долазим.
+Prediction:  Ayağı dolasın.
+----------------------------------------
+Reference: Да ли су та очекивања реалистична?
+Prediction:  Da li su da učike ivenje realistice?
+----------------------------------------
+Reference: У међувремену се појавило и друго критично питање.
+Prediction:  U medju vremenu se pojavilo i drugo kritišno pitanje.
+----------------------------------------
+Reference: Не то је п.
+Prediction:  네, 또 해봐
+----------------------------------------
+Reference: Како је било данас у школи?
+Prediction:  Kako je bilo danas u škovi?
+----------------------------------------
+Reference: Како је то слатко!
+Prediction:  Jako jest to słatko.
+----------------------------------------
+Reference: И ми ћемо.
+Prediction:  И мичему.
+----------------------------------------
+Reference: Тако је било?
+Prediction:  Takoja biilon.
+----------------------------------------
+Reference: И ти си.
+Prediction:  EDC
+----------------------------------------
+Reference: Да ли ћете отказати буџет?
+Prediction:  Далите отказат и буджет?
+----------------------------------------
+Reference: Молим те, седи?
+Prediction:  Molim ti, sedim.
+----------------------------------------
+Reference: Могла би да уследе и нова протеривања.
+Prediction:  Mogla bi da usledaj i nova protirivanje.
+----------------------------------------
+Reference: То је наша политика.
+Prediction:  To je naša politika.
+----------------------------------------
+Reference: Берлинског филмског фестивала.
+Prediction:  Berlinskou filmskou festivalu
+----------------------------------------
+Reference: А, ево је.
+Prediction:  Ah, everywhere.
+----------------------------------------
+Reference: И, како си?
+Prediction:  E, come si?
+----------------------------------------
+Reference: Увек сам све плаћао у готовини.
+Prediction:  Uvek sam sve plajčio u gotovini.
+----------------------------------------
+Reference: А што си?
+Prediction:  А что си?
+----------------------------------------
+Reference: И ти, што?
+Prediction:  Иди, что?
+----------------------------------------
+Reference: Треба да радим.
+Prediction:  Trebbe da radim
+----------------------------------------
+Reference: Да ме остави.
+Prediction:  Damy ostry.
+----------------------------------------
+Reference: Не може бити.
+Prediction:  Ne može biti.
+----------------------------------------
+Reference: Сан још није остварен.
+Prediction:  San Joshmi Ostfallen.
+----------------------------------------
+Reference: Ко је он?
+Prediction:  Koe on.
+----------------------------------------
+Reference: Овог пута је другачије.
+Prediction:  Ołog płutaje druga czyje?
+----------------------------------------
+Reference: То је ваш.
+Prediction:  To je wasz.
+----------------------------------------
+Reference: А у средини?
+Prediction:  आव्र्ष्रे दिनी
+----------------------------------------
+Reference: То је у?
+Prediction:  To eu.
+----------------------------------------
+Reference: Само један трен.
+Prediction:  Some way don't train
+----------------------------------------
+Reference: Ти не можеш?
+Prediction:  Ti ne mouzhe sh?
+----------------------------------------
+Reference: Каже да не!
+Prediction:  Kaže da ne.
+----------------------------------------
+Reference: И људи су!
+Prediction:  И люди, су!
+----------------------------------------
+Reference: Да, како год.
+Prediction:  Да, как угодно.
+----------------------------------------
+Reference: Да видим како је то.
+Prediction:  David in cacquetto
+----------------------------------------
+Reference: Ко га је?
+Prediction:  Кого я?
+----------------------------------------
+Reference: Предстоји нам посао...
+Prediction:  Предстой нам посы.
+----------------------------------------
+Reference: Финансијски детаљи нових аранжмана још нису познати.
+Prediction:  Finansijski detalji, novi hranžmana još nisu poznati.
+----------------------------------------
+Reference: Колико дуго ће то трајати?
+Prediction:  Koliko je dugo će to treati?
+----------------------------------------
+Reference: Ни на земљи.
+Prediction:  Mino zemni.
+----------------------------------------
+Reference: Није ни њему.
+Prediction:  Nia, niemu.
+----------------------------------------
+Reference: Спава ми се и боли ме глава.
+Prediction:  Spava mi se i boljime glava.
+----------------------------------------
+Reference: То није био случај.
+Prediction:  To nije bio sluči.
+----------------------------------------
+Reference: А не то!
+Prediction:  הנה, זהו.
+----------------------------------------
+Reference: Али ти не?
+Prediction:  Alitina.
+----------------------------------------
+Reference: А ја нисам.
+Prediction:  Eure Nüsse.
+----------------------------------------
+Reference: Шта је, сад?
+Prediction:  Cztaje sady.
+----------------------------------------
+Reference: Па, не знам.
+Prediction:  Па, не знаю.
+----------------------------------------
+Reference: И овде је!
+Prediction:  И овд
+----------------------------------------
+Reference: То је сада!
+Prediction:  Tu é sada?
+----------------------------------------
+Reference: О, па да.
+Prediction:  Oh, para!
+----------------------------------------
+Reference: Ја вас не разумем.
+Prediction:  Я вас не разумен.
+----------------------------------------
+Reference: Једна ласта не чини пролеће.
+Prediction:  Jedna lastanoj čim ih prolaća.
+----------------------------------------
+Reference: То ти је све.
+Prediction:  To tje sve.
+----------------------------------------
+Reference: Па, ја не.
+Prediction:  I
+----------------------------------------
+Reference: Шта да вам кажем!
+Prediction:  Что да вам каш?
+----------------------------------------
+Reference: Знам како је.
+Prediction:  Нам, как вы.
+----------------------------------------
+Reference: Зар и ти?
+Prediction:  Zaryty.
+----------------------------------------
+Reference: Како би изгледало?
+Prediction:  Como se fossem.
+----------------------------------------
+Reference: Шта си се замислила?
+Prediction:  Co się zamisliło?
+----------------------------------------
+Reference: Да, ја не знам.
+Prediction:  da yanı znam
+----------------------------------------
+Reference: Ја не знам шта је ово.
+Prediction:  Ja nie znam, co jest w tym.
+----------------------------------------
+Reference: Ма ја сам.
+Prediction:  My awesome
+----------------------------------------
+Reference: Не, могу ја.
+Prediction:  Nie, mogę ja.
+----------------------------------------
+Reference: У првом реду.
+Prediction:  O provo em redo.
+----------------------------------------
+Reference: То је стара.
+Prediction:  To jest stara.
+----------------------------------------
+Reference: То што има.
+Prediction:  То, что им.
+----------------------------------------
+Reference: Мислите да ја?
+Prediction:  Если ты дай, а?
+----------------------------------------
+Reference: То вам је.
+Prediction:  Tova minun.
+----------------------------------------
+Reference: Затим и школа.
+Prediction:  Zatim i škola.
+----------------------------------------
+Reference: Да ти кажем?
+Prediction:  Да ты, скажем.
+----------------------------------------
+Reference: Па, шта мислите.
+Prediction:  Что вы думаете?
+----------------------------------------
+Reference: Не могу допустити!
+Prediction:  Ne mogu dopustiti.
+----------------------------------------
+Reference: Али не сам.
+Prediction:  Alineza
+----------------------------------------
+Reference: Ако те боле леђа, иди код физијатра на преглед.
+Prediction:  Ako te bolje leđe, idite kod fizijatrana pregled.
+----------------------------------------
+Reference: И могла би.
+Prediction:  E, mogo lá, bê?
+----------------------------------------
+Reference: О, мој шешир!
+Prediction:  Oh, meu eschercheir!
+----------------------------------------
+Reference: И била су!
+Prediction:  Be be lost.
+----------------------------------------
+Reference: Не знам, зашто?
+Prediction:  Не знам, за что.
+----------------------------------------
+Reference: Хајдемо дакле у гимназију!
+Prediction:  Haide ma da Cleo Gymnasium!
+----------------------------------------
+Reference: Не од овога!
+Prediction:  Nie od owoga.
+----------------------------------------
+Reference: Колико је старо?
+Prediction:  Koliko je staro?
+----------------------------------------
+Reference: Што вам говори?
+Prediction:  Что вам говори?
+----------------------------------------
+Reference: Да, зар нисмо?
+Prediction:  دا زرني اسمه
+----------------------------------------
+Reference: Зна где је!
+Prediction:  Zna, gdzie je?
+----------------------------------------
+Reference: И где си?
+Prediction:  Et, grèces.
+----------------------------------------
+Reference: Косово има устав.
+Prediction:  Kosovo ima ustal?
+----------------------------------------
+Reference: А има још нешто.
+Prediction:  A i waj oś nieszto.
+----------------------------------------
+Reference: Сине, а ти?
+Prediction:  See you in a day.
+----------------------------------------
+Reference: И у око!
+Prediction:  Iwako
+----------------------------------------
+Reference: А не би!
+Prediction:  Ah, Neveen.
+----------------------------------------
+Reference: И због нас.
+Prediction:  Izbognaz.
+----------------------------------------
+Reference: Седите, молим вас.
+Prediction:  Sedite molim vas.
+----------------------------------------
+Reference: Па јеси ли?
+Prediction:  Ah, yes silly.
+----------------------------------------
+Reference: И те какав!
+Prediction:  I te kakaw.
+----------------------------------------
+Reference: А и ја сам!
+Prediction:  I am.
+----------------------------------------
+Reference: Није био такав?
+Prediction:  Nie biutakar.
+----------------------------------------
+Reference: Верила сам се!
+Prediction:  Verila sam se.
+----------------------------------------
+Reference: Не и не.
+Prediction: ねいね
+----------------------------------------
+Reference: Да није био.
+Prediction:  Да, не идио.
+----------------------------------------
+Reference: А где си?
+Prediction:  أغدسي
+----------------------------------------
+Reference: Мора да је!
+Prediction:  Мора дае!
+----------------------------------------
+Reference: И још горе!
+Prediction:  Её ж горы.
+----------------------------------------
+Reference: Молим те немој.
+Prediction:  Mulla on te ne muu.
+----------------------------------------
+Reference: Не, били су.
+Prediction:  Ne, bjelisu.
+----------------------------------------
+Reference: И не прилази!
+Prediction:  I ne prilazi.
+----------------------------------------
+Reference: А,ко си ти?
+Prediction:  Acocity.
+----------------------------------------
+Reference: Може бити твој.
+Prediction:  Может быть и твой.
+----------------------------------------
+Reference: Дакле шта је?
+Prediction:  Dakle šta je?
+----------------------------------------
+Reference: Како је мени?
+Prediction:  Kako je meni?
+----------------------------------------
+Reference: Добро нам дошли.
+Prediction:  Dobro nam došli.
+----------------------------------------
+Reference: Бугарска га је такође добила, прошле године.
+Prediction:  Bugarska ga je takođe dobila prošla godine.
+----------------------------------------
+Reference: Дешавало се, да су се људи више пута
+Prediction:  Dešavalo se da su se ljudi više puta.
+----------------------------------------
+Reference: Је ли жив.
+Prediction:  Yéryjiv
+----------------------------------------
+Reference: Једина ствар која ме је у то доба нарочито нервирала
+Prediction:  Jedina stvar koja me je u to doba naročito nervirala.
+----------------------------------------
+Reference: Други мој рођак, опет, толико је заволео школу
+Prediction:  Drugi moj rođak, opet, toliko je za volao školu.
+----------------------------------------
+Reference: Ви сте се.
+Prediction:  Viste se!
+----------------------------------------
+Reference: Ми смо против тога.
+Prediction:  Mismo protip toga.
+----------------------------------------
+Reference: А сад не.
+Prediction:  أسدن
+----------------------------------------
+Reference: Снаге безбедности још увек нису потврдиле истинитост претњи.
+Prediction:  Snage bezbednosti još ovek nisu potvrdila istjenitost pretnji.
+----------------------------------------
+Reference: Не, мислим да.
+Prediction:  Ne mislim da.
+----------------------------------------
+Reference: Како ми је?
+Prediction:  Kacko Mie.
+----------------------------------------
+Reference: Тако да буде!
+Prediction:  Tako da bude.
+----------------------------------------
+Reference: Ох ох ох.
+Prediction:  Och, och, och.
+----------------------------------------
+Reference: Како си ми!
+Prediction:  Cacuzzi mi!
+----------------------------------------
+Reference: И још сам.
+Prediction:  I jeszcze sam.
+----------------------------------------
+Reference: Бројне наоружане особе стајале су испред хотела.
+Prediction:  Brojne naoružane osobe stale su ispred hotela.
+----------------------------------------
+Reference: Држале смо се.
+Prediction:  Držole smo se.
+----------------------------------------
+Reference: Ако ми не можеш помоћи, немој ми одмагати.
+Prediction:  Ako mi ne možeš pomoći, nemoj mi odmagati.
+----------------------------------------
+Reference: А ево је!
+Prediction:  Aê, voi!
+----------------------------------------
+Reference: Али не још.
+Prediction:  αλλά δεν είναι η Ιωσή.
+----------------------------------------
+Reference: Горе, много горе.
+Prediction:  GORE! MUNOGO GORE!
+----------------------------------------
+Reference: Нисмо изоловани.
+Prediction:  Nismo izolovani.
+----------------------------------------
+Reference: Верујте ми, то сам доживела као велику неправду.
+Prediction:  Verujte mi, to sam dođivala kao veliku neprantu.
+----------------------------------------
+Reference: Он је у праву!
+Prediction:  Oniu bravo!
+----------------------------------------
+Reference: Ипак, указују изборни званичници, резултати су задовољавајући.
+Prediction:  Ipak ukazu izbruni zvaničnici rezultati su zadovoljavajući.
+----------------------------------------
+Reference: Добро се слажемо.
+Prediction:  Dobre se slažemo.
+----------------------------------------
+Reference: Може се рећи.
+Prediction:  Može se reći.
+----------------------------------------
+Reference: О, не, не.
+Prediction:  О, нене!
+----------------------------------------
+Reference: И од себе?
+Prediction:  Ihr Zerbe.
+----------------------------------------
+Reference: Само је грчки део острва међународно признат.
+Prediction:  Samo je grčki del ostreva među narodno priznati.
+----------------------------------------
+Reference: У средини собе велики сто
+Prediction:  U sredini sope veliki sto.
+----------------------------------------
+Reference: Али не могу да издржим.
+Prediction:  Ali nemogu ti izdržim.
+----------------------------------------
+Reference: Па, видиш зашто.
+Prediction:  А, видишь, за что?
+----------------------------------------
+Reference: Не бих могао!
+Prediction:  Neb ich Mogo?
+----------------------------------------
+Reference: Хајде кажи ми.
+Prediction:  Хайде, кажеми!
+----------------------------------------
+Reference: И било је време!
+Prediction:  Ебилое время.
+----------------------------------------
+Reference: Не, ти не!
+Prediction: ね、てね
+----------------------------------------
+Reference: Нека си благословен!
+Prediction:  Не коси, Пекло Славин.
+----------------------------------------
+Reference: Никада се није вратио.
+Prediction:  Nikad da se ni je vratio.
+----------------------------------------
+Reference: Ја, не знам.
+Prediction:  Я не знаю.
+----------------------------------------
+Reference: Шта радите ви то?
+Prediction:  Что радите вито?
+----------------------------------------
+Reference: Мало по мало.
+Prediction:  Malo po' malo.
+----------------------------------------
+Reference: А шта би?
+Prediction:  Аштаби.
+----------------------------------------
+Reference: Знам, како је то.
+Prediction:  Znam kako je to.
+----------------------------------------
+Reference: Разговарате са мном.
+Prediction:  Razgovorate sam.
+----------------------------------------
+Reference: А зар ја нисам?
+Prediction:  أزرينيس
+----------------------------------------
+Reference: Где се ту уклапа глобализација?
+Prediction:  Gdje se tu klapa globalizacije?
+----------------------------------------
+Reference: Не, иза ње.
+Prediction:  Ne, izenje.
+----------------------------------------
+Reference: Каже да нема.
+Prediction:  Kaže da nema.
+----------------------------------------
+Reference: Не иде то тако.
+Prediction:  Nei detto d'acqua.
+----------------------------------------
+Reference: И ја не могу.
+Prediction:  I ja ne mogu.
+----------------------------------------
+Reference: А, о њему.
+Prediction:  A o niemu.
+----------------------------------------
+Reference: Неки људи ипак купују...
+Prediction:  Neki lüudeyi pek kupuyorum.
+----------------------------------------
+Reference: Међутим, овог лета неки од њих су отишли.
+Prediction:  Midjutim, ola gretel neki olyan nyíg szóat isre.
+----------------------------------------
+Reference: Сам закон ће брзо почети да се спроводи.
+Prediction:  Sam zakon će brzo početirje se sprovodi.
+----------------------------------------
+Reference: Косовари се боре са скоковима цијена
+Prediction:  Kosa vari se bolje sa skokojima cijena?
+----------------------------------------
+Reference: Рачанова стратегија за сада функционише.
+Prediction:  Račanova strategija za sada funkcioniše.
+----------------------------------------
+Reference: Ја ћу твоје изапрати платно,
+Prediction:  Ja ću tvoje i zaprati platno.
+----------------------------------------
+Reference: Овај потез има велики симболични значај.
+Prediction:  Ovaj potaz ima velike simbovične značaje.
+----------------------------------------
+Reference: Они су употријебили сузавац и шок-бомбе у циљу растјеривања гомиле.
+Prediction:  Oni su potrijebili suza vaci šok bombe u cilju rastjerivanja gomila.
+----------------------------------------
+Reference: Господар стратегије.
+Prediction:  Gospoda Stratikije
+----------------------------------------
+Reference: Он је одбацио наговијест да се тражи нови медијатор.
+Prediction:  On je odbacio nagovijest da se traže novim mediator.
+----------------------------------------
+Reference: Посвуда другдје у свијету је у реду.
+Prediction:  Posvoda druktje u svijetu je uredu.
+----------------------------------------
+Reference: Независност покрајине је практично једина платформа коју нуде.
+Prediction:  Nezavisnost pokrejna je praktično jedina placverma koju nude.
+----------------------------------------
+Reference: Излазност је била велика.
+Prediction:  Izloznost je bilo velika.
+----------------------------------------
+Reference: седамсто
+Prediction:  7.100
+----------------------------------------
+Reference: Сива фасада зграде.
+Prediction:  Sie war facade als grade.
+----------------------------------------
+Reference: Нисмо службено обавијештени о могућности одлагања процеса.
+Prediction:  Nismo službeno obaviješteni o mogućnosti od laganja procesa.
+----------------------------------------
+Reference: Данас је број тих распитивања знатно опао.
+Prediction:  Danes se broj tih raspitivanja znavno opal.
+----------------------------------------
+Reference: Ти ресурси уливају оптимизам.
+Prediction:  Térségek, sociolivája, optimízen.
+----------------------------------------
+Reference: Циљ амандмана је да се то промени.
+Prediction:  Sina mantemana i det här promen i.
+----------------------------------------
+Reference: Сад кад су избори готови, влада мора гледати напријед.
+Prediction:  Sad, kad je sve izberi goto, je vada mora gledati naprijet.
+----------------------------------------
+Reference: Пола оних који долазе су из различитих дијелова града.
+Prediction:  Poni koje dolaze su izrazčete i diavova grada.
+----------------------------------------
+Reference: Име америчке фирме још увек није саопштено.
+Prediction:  I meh meh ritske firme, ashuvik nyesa apshteno.
+----------------------------------------
+Reference: Готовинино хапшење изазвало је бројне реакције.
+Prediction:  Gotovini na Hapshine izazavuje brojne reakcije.
+----------------------------------------
+Reference: Тај пример може се сагледати са два аспекта.
+Prediction:  Taj primjer možete se zaglojati sa dva aspekta.
+----------------------------------------
+Reference: Постоје други приоритети, друге опасности.
+Prediction:  Postoje drugi prioriteti, drugi opasnosti.
+----------------------------------------
+Reference: Русија је у међувремену појачала своју реторику.
+Prediction:  Rusija je u među vremenu pojačala svoj retoriku.
+----------------------------------------
+Reference: Нови закон драстично се разликује од претходних.
+Prediction:  Noviji zakon rastišnosti razvikoje predkodnih.
+----------------------------------------
+Reference: Само природно.
+Prediction:  Siamo privati.
+----------------------------------------
+Reference: Ми та тржишта не сматрамо страним.
+Prediction:  Mita trżyczna na swatom stranym.
+----------------------------------------
+Reference: Резултати избора за одборнике скупштине града су слични.
+Prediction:  Resultate izbora za odpornike skupštine grade su sučni.
+----------------------------------------
+Reference: Изложба ће трајати до краја јануара.
+Prediction:  I zeszła czytracie do kraja januara.
+----------------------------------------
+Reference: Годинама се у енергетски сектор није улагало.
+Prediction:  Godinamo se onergicke sektorne je vago.
+----------------------------------------
+Reference: И, не знам.
+Prediction:  Ian as them
+----------------------------------------
+Reference: И све ово?
+Prediction:  Esferro
+----------------------------------------
+Reference: Где се сада налази?
+Prediction:  E dessa é a sua análise.
+----------------------------------------
+Reference: У оба образа!
+Prediction:  O abalbido.
+----------------------------------------
+Reference: Ипак, постоје неке назнаке напретка.
+Prediction:  І пак, постоя на кінаць на кінатрі.
+----------------------------------------
+Reference: То ти мислиш?
+Prediction:  То ты, мислиш?
+----------------------------------------
+Reference: А на коме је?
+Prediction:  Ela comeia.
+----------------------------------------
+Reference: И пуни су.
+Prediction:  e por isso
+----------------------------------------
+Reference: На више места.
+Prediction:  Na više mesto.
+----------------------------------------
+Reference: Хајде, склони се!
+Prediction:  hi this is Lonis
+----------------------------------------
+Reference: Рат и мир.
+Prediction:  راتي مير
+----------------------------------------
+Reference: Што ти је.
+Prediction:  Что тебе?
+----------------------------------------
+Reference: да ћете оправдати повјерење
+Prediction:  Da ćete oprada ti povjerenje.
+----------------------------------------
+Reference: Од када је?
+Prediction:  Откадая.
+----------------------------------------
+Reference: Не, онда не.
+Prediction:  Ne on da ne.
+----------------------------------------
+Reference: Што је повод?
+Prediction:  Что я повод?
+----------------------------------------
+Reference: Куће се издају.
+Prediction:  Corte 6Dio.
+----------------------------------------
+Reference: И како си?
+Prediction:  e carcos
+----------------------------------------
+Reference: Дубље и дубље.
+Prediction:  Дубле и дубле.
+----------------------------------------
+Reference: Боља је своја проја него туђа погача.
+Prediction:  bolje je svoje prave nego tuđe pogač
+----------------------------------------
+Reference: Ма не иде!
+Prediction:  Manade
+----------------------------------------
+Reference: То је све!
+Prediction:  To jest we.
+----------------------------------------
+Reference: Ма, добро си.
+Prediction:  Uma dobras.
+----------------------------------------
+Reference: Још десет дана.
+Prediction:  Yüzde sadağına.
+----------------------------------------
+Reference: Да ли је борба против њих завршена?
+Prediction:  Dalej borb od przeciwnich zawieszczana.
+----------------------------------------
+Reference: О тако је.
+Prediction:  Oh, da Cui
+----------------------------------------
+Reference: Зависи од вас.
+Prediction:  Sei wissjot was.
+----------------------------------------
+Reference: Не, хајде, кажи ми.
+Prediction:  Ne? Haydi, karzimi.
+----------------------------------------
+Reference: Могу да издржим.
+Prediction:  Mogu da izdržim.
+----------------------------------------
+Reference: То није тако!
+Prediction:  To ně tak.
+----------------------------------------
+Reference: Што ви то.
+Prediction:  Što vi to?
+----------------------------------------
+Reference: Или је једина реалистична могућност напета коегзистенција?
+Prediction:  ili je jedina realistična mogućost napeta koja existencija.
+----------------------------------------
+Reference: За нов живот.
+Prediction:  За нов живот.
+----------------------------------------
+Reference: Тако не може.
+Prediction:  Tako ne može.
+----------------------------------------
+Reference: Како је то?
+Prediction:  Kakuje to.
+----------------------------------------
+Reference: Да, још једном.
+Prediction:  Да, уже ядно.
+----------------------------------------
+Reference: О, да би!
+Prediction:  Oh, Dubby.
+----------------------------------------
+Reference: Одложен мир?
+Prediction:  Odlos o MIR
+----------------------------------------
+Reference: Ако си ти?
+Prediction:  OccuCity
+----------------------------------------
+Reference: А то су?
+Prediction:  A tosso.
+----------------------------------------
+Reference: О, зар не?
+Prediction:  О, зарне.
+----------------------------------------
+Reference: Ајде, кажи ми.
+Prediction:  I'd
+----------------------------------------
+Reference: А, шта сам урадио?
+Prediction:  A, stau sa ma rada?
+----------------------------------------
+Reference: Да ли се?
+Prediction:  Dalje se?
+----------------------------------------
+Reference: Боље би било.
+Prediction:  Более бибилу.
+----------------------------------------
+Reference: А ти си?
+Prediction:  А ты, если...
+----------------------------------------
+Reference: План је такође предвиђао ротирајуће председништво.
+Prediction:  Planje takođe predvijidžio rutirajuće preddesedništvo.
+----------------------------------------
+Reference: О, што каже?
+Prediction:  O, zdokarze.
+----------------------------------------
+Reference: Може се добити.
+Prediction:  Može se dobiti.
+----------------------------------------
+Reference: Да видимо, да видимо.
+Prediction:  Da vidimo, da vidimo.
+----------------------------------------
+Reference: Нека се зна.
+Prediction:  Make us a zna.
+----------------------------------------
+Reference: И овде су.
+Prediction: ... of this.
+----------------------------------------
+Reference: Па одакле ти је изветрио мозак?
+Prediction:  Pao dakle ti je izvetri o mozak.
+----------------------------------------
+Reference: Зар не видиш!
+Prediction:  Zar ne vidiš?
+----------------------------------------
+Reference: И реци ми.
+Prediction:  You're at CME.
+----------------------------------------
+Reference: Све четири се допуњавају.
+Prediction:  Wsze 40 dopuniawają.
+----------------------------------------
+Reference: Није тако велика.
+Prediction:  Nie jest tak wielka.
+----------------------------------------
+Reference: Шта човек да ради?
+Prediction:  Šta čovek da radi?
+----------------------------------------
+Reference: Ја кажем да.
+Prediction:  Ya Kacımda!
+----------------------------------------
+Reference: Ако и то.
+Prediction:  Ah, coi-to.
+----------------------------------------
+Reference: О, не не!
+Prediction: おねんね
+----------------------------------------
+Reference: Да, бога ми.
+Prediction:  Da boge mi.
+----------------------------------------
+Reference: Да ти опростим!
+Prediction:  да ти опростим.
+----------------------------------------
+Reference: Ха ха ха ха!
+Prediction:  Shush, shush, shush, shush.
+----------------------------------------
+Reference: Не може да живи без мене.
+Prediction:  Ne može da živi bez men.
+----------------------------------------
+Reference: Није ни мало.
+Prediction:  Ни анимала
+----------------------------------------
+Reference: То се десило?
+Prediction:  Досыл
+----------------------------------------
+Reference: Кад би хтео.
+Prediction:  Kupi chceo.
+----------------------------------------
+Reference: А зашто не можеш?
+Prediction:  A, zaçtı ne mırıc?
+----------------------------------------
+Reference: За овај дан.
+Prediction:  So, all the way done.
+----------------------------------------
+Reference: Ја сам ја сам!
+Prediction:  Yasım Yasım
+----------------------------------------
+Reference: То је лепо!
+Prediction:  Toa elepso.
+----------------------------------------
+Reference: И само он?
+Prediction:  You're summer on.
+----------------------------------------
+Reference: Шта је сад.
+Prediction:  Что это?
+----------------------------------------
+Reference: Шта да ти објасним?
+Prediction:  Šta da ti objesne?
+----------------------------------------
+Reference: Наша политика је јасна.
+Prediction:  Naša politike je jasta.
+----------------------------------------
+Reference: Београд нема званичан став о изборима.
+Prediction:  Belgrad nije zvanična stavu izborima.
+----------------------------------------
+Reference: Ко вам је ово?
+Prediction:  Kawałmy ją.
+----------------------------------------
+Reference: И ја то знам!
+Prediction:  Ja to znam.
+----------------------------------------
+Reference: Да видимо шта има.
+Prediction:  Da vidimo što ima.
+----------------------------------------
+Reference: И остале ствари.
+Prediction:  І остали створи.
+----------------------------------------
+Reference: Само данас не.
+Prediction:  Someone done us a name.
+----------------------------------------
+Reference: Немамо времена.
+Prediction:  name of the
+----------------------------------------
+Reference: Живот није могао бити бољи.
+Prediction:  Живот не могу убить и боль.
+----------------------------------------
+Reference: Шта сте рекли?
+Prediction:  Что с ней?
+----------------------------------------
+Reference: Каква је ово олуја?
+Prediction:  Как вы обувы?
+----------------------------------------
+Reference: То није пријатно.
+Prediction:  Tô nem o brilho.
+----------------------------------------
+Reference: После тога се шиша.
+Prediction:  Posta toga se šiše.
+----------------------------------------
+Reference: Ово је господин.
+Prediction:  Αυτό είναι ο Σπωτιν.
+----------------------------------------
+Reference: Не би он.
+Prediction:  Let me on
+----------------------------------------
+Reference: И боље је!
+Prediction:  E bolinha!
+----------------------------------------
+Reference: Како је све.
+Prediction:  Как кульса
+----------------------------------------
+Reference: Као што си ти?
+Prediction:  Kao što se ti?
+----------------------------------------
+Reference: Како се то десило?
+Prediction:  Как усы то досил?
+----------------------------------------
+Reference: Шта, ти не?
+Prediction:  Ще ти не?
+----------------------------------------
+Reference: У Дому здравља је увек гужва.
+Prediction:  U domu zdradzie uwykurzam.
+----------------------------------------
+Reference: И живота и смрти.
+Prediction:  I života je smrti.
+----------------------------------------
+Reference: И много пара.
+Prediction:  y no comparan.
+----------------------------------------
+Reference: Не разумем зашто!
+Prediction:  Не разумим, зачем?
+----------------------------------------
+Reference: Када силазите његовим степеницама нећете чути техно музику.
+Prediction:  Просилуйте негу инстаблинецам, она и читает, что ты так на музыку.
+----------------------------------------
+Reference: Тако мора бит.
+Prediction:  Tá com mora, bicho.
+----------------------------------------
+Reference: Она говори неколико страних језика.
+Prediction:  Ona govori nekoliko stranih jezika.
+----------------------------------------
+Reference: Како се узме.
+Prediction:  Как усилен?
+----------------------------------------
+Reference: Нека остане тамо!
+Prediction:  Нека остане там.
+----------------------------------------
+Reference: Кремени комади из терцијарних слојева
+Prediction:  Kremeni komadi i stercijarni svojeva.
+----------------------------------------
+Reference: Хајде, спреми се.
+Prediction:  Haj des premise.
+----------------------------------------
+Reference: Да, била је.
+Prediction:  Da, be laya.
+----------------------------------------
+Reference: О, са њим?
+Prediction:  О, с ним!
+----------------------------------------
+Reference: О, тако је.
+Prediction:  О, такое!
+----------------------------------------
+Reference: Све то време?
+Prediction:  Sve' to' vreme!
+----------------------------------------
+Reference: То су добри људи.
+Prediction:  До свидания!
+----------------------------------------
+Reference: У сваком погледу?
+Prediction:  U svakom pogledu.
+----------------------------------------
+Reference: А, хвала вам.
+Prediction:  Ah, schwallawand.
+----------------------------------------
+Reference: Да те нисам видео.
+Prediction:  Detainees on video.
+----------------------------------------
+Reference: Ми никад нисмо.
+Prediction:  Minika nismo.
+----------------------------------------
+Reference: На све стране.
+Prediction:  Nasse strade
+----------------------------------------
+Reference: Као да си плакала.
+Prediction:  Code is a block, I love.
+----------------------------------------
+Reference: О, био је.
+Prediction:  Oh, beware.
+----------------------------------------
+Reference: По који пут?
+Prediction:  Pokoj put.
+----------------------------------------
+Reference: Не и не!
+Prediction: ね、いね
+----------------------------------------
+Reference: Како сте добри!
+Prediction:  Kako ste dobri?
+----------------------------------------
+Reference: За име бога!
+Prediction:  Zajime Boga.
+----------------------------------------
+Reference: Него што је то?
+Prediction:  Negoż, co je to?
+----------------------------------------
+Reference: То сам вам говорила.
+Prediction:  To sam ho govorila.
+----------------------------------------
+Reference: Како си могла!
+Prediction:  Kakusim mogla.
+----------------------------------------
+Reference: Све због мене.
+Prediction:  Świez buk mnie.
+----------------------------------------
+Reference: Не могу без тебе да живим.
+Prediction:  ლლლლლლლლლლლლლლლლლლლლლლლლლლლლლლლლლლლლლლლლლლლლლლლლლლლლლლლლლლლლლლლლლლლლლლლლლლლლლლლლლლლლლლლლლლლლლლლლლლლლლლლლლლლლლლლლლლლლლლლლლლლლლლლლლლლლლლლლლლლლლლლლლლლლ
+----------------------------------------
+Reference: А, добро, добро.
+Prediction:  Ja, det är bra.
+----------------------------------------
+Reference: Па како је?
+Prediction:  Пока-пока!
+----------------------------------------
+Reference: Шта мислите да радите то?
+Prediction:  Što mi ste, Raidto?
+----------------------------------------
+Reference: О, ја сам.
+Prediction:  Oh, Jassen.
+----------------------------------------
+Reference: И треба да будеш!
+Prediction:  I treba da budes.
+----------------------------------------
+Reference: Шеф градилишта је онај који организује радове.
+Prediction:  Šef gradili što je ono koji organizuje radove.
+----------------------------------------
+Reference: То што имају.
+Prediction: としていまよ
+----------------------------------------
+Reference: Ми треба прво да размотримо разна земљишта
+Prediction:  Mi treba prvo da razmotrimo razna zemljišta.
+----------------------------------------
+Reference: У мојој служби?
+Prediction:  U moje službi.
+----------------------------------------
+Reference: Како се оно зваше?
+Prediction:  Acaculou o seu nos válsia.
+----------------------------------------
+Reference: О не, знам.
+Prediction:  One znam
+----------------------------------------
+Reference: То јест, ја.
+Prediction:  To jest, ja!
+----------------------------------------
+Reference: А ја вас?
+Prediction:  I have us
+----------------------------------------
+Reference: Шекеринска каже да стратегија садржи неколико главних црта.
+Prediction:  Šekjerinska kaže da strategija sadrđi nekoliko klavnih crta.
+----------------------------------------
+Reference: И у свету.
+Prediction:  Io sveito.
+----------------------------------------
+Reference: И то може.
+Prediction:  Και το μπορώ.
+----------------------------------------
+Reference: Па, то се десило.
+Prediction:  Ба, то же самое.
+----------------------------------------
+Reference: Да шта је?
+Prediction:  Zaszkaję.
+----------------------------------------
+Reference: Доста, доста је!
+Prediction:  Dosta, dosta je.
+----------------------------------------
+Reference: И то сам.
+Prediction:  I to sam.
+----------------------------------------
+Reference: У мојој служби.
+Prediction:  У моей службы.
+----------------------------------------
+Reference: То се исплатило.
+Prediction:  To se isplatilo.
+----------------------------------------
+Reference: И, још нешто.
+Prediction:  I još našto.
+----------------------------------------
+Reference: Нема војних тензија...
+Prediction:  Nema vojnih tensija.
+----------------------------------------
+Reference: Ево, овде је.
+Prediction:  Ewo, o wdeje.
+----------------------------------------
+Reference: И што сам.
+Prediction:  I što sam?
+----------------------------------------
+Reference: Ја лично нисам био толико претенциозан да што пре добијем први зуб
+Prediction:  Ja lično nisam bio toliko pretensio za da što predobjem prvi zup.
+----------------------------------------
+Reference: Потребан нам је!
+Prediction:  Potreba na mnie.
+----------------------------------------
+Reference: Људи чекају.
+Prediction:  I ludi checcaju.
+----------------------------------------
+Reference: Што је то?
+Prediction:  Co jest to?
+----------------------------------------
+Reference: Ма, не би.
+Prediction:  ma nebi
+----------------------------------------
+Reference: Нема дилеме.
+Prediction:  Namah Dilemen
+----------------------------------------
+Reference: Друге европске земље су, међутим, другачије реаговале?
+Prediction:  Druge evropske zemlje su, međutim, drugačije regovole?
+----------------------------------------
+Reference: То ти је то.
+Prediction:  Tutt'io è todo
+----------------------------------------
+Reference: Не љутиш се?
+Prediction:  Nelyötítszse.
+----------------------------------------
+Reference: На обали су.
+Prediction:  Now I'll baliso.
+----------------------------------------
+Reference: О, молим вас!
+Prediction:  Oh, molim väs.
+----------------------------------------
+Reference: Шта је све?
+Prediction:  Czta jest wej.
+----------------------------------------
+Reference: Не знате како је.
+Prediction:  Ne zna te kako je.
+----------------------------------------
+Reference: Као и сви.
+Prediction:  Call us V.
+----------------------------------------
+Reference: Добар дан, госпо.
+Prediction:  Dobardanko ospoł.
+----------------------------------------
+Reference: Бајден је послао директну поруку младој публици.
+Prediction:  Biden je poslo direktnu poruku mladoj publici.
+----------------------------------------
+Reference: Више их је?
+Prediction:  Лишеньки.
+----------------------------------------
+Reference: Ово је нечувено.
+Prediction:  o vuole trivenno?
+----------------------------------------
+Reference: Он је ста?
+Prediction:  Poniasta.
+----------------------------------------
+Reference: А било је.
+Prediction:  Abilue.
+----------------------------------------
+Reference: А зашто бих?
+Prediction:  A za, zaszto bicha.
+----------------------------------------
+Reference: Међутим, то се није догодило.
+Prediction:  Međutim to se nije dogodilo.
+----------------------------------------
+Reference: Како се осећаш?
+Prediction:  Kako się oseciesz?
+----------------------------------------
+Reference: А је ли?
+Prediction:  Aieli?
+----------------------------------------
+Reference: Тек што није.
+Prediction:  Tak, że to nie jest.
+----------------------------------------
+Reference: Тако и јесте.
+Prediction:  Da qui è.
+----------------------------------------
+Reference: А знаш ли зашто?
+Prediction:  А знаешь ли за что?
+----------------------------------------
+Reference: Ја волим да помажем људима, посебно деци.
+Prediction:  Ja volim da pomažem djudima posebno deci.
+----------------------------------------
+Reference: Ма шта је теби?
+Prediction:  Ma šta je tebi?
+----------------------------------------
+Reference: Дебата се наставља.
+Prediction:  Debata senastrovia.
+----------------------------------------
+Reference: А ја нисам то?
+Prediction:  Aí, ali, somente.
+----------------------------------------
+Reference: На градилишту су обавезни шлемови и друга заштитна опрема.
+Prediction:  Nagradilištu su obaveznišlemuvi i druga zaštitna okrema.
+----------------------------------------
+Reference: А шта то значи?
+Prediction:  A co to znaczy?
+----------------------------------------
+Reference: Не, само то.
+Prediction:  Siamo to.
+----------------------------------------
+Reference: А ми играмо?
+Prediction:  Amigamo
+----------------------------------------
+Reference: Па, не знам!
+Prediction:  Panie znam.
+----------------------------------------
+Reference: Граната је експлодирала.
+Prediction:  Granata je eksplodírala.
+----------------------------------------
+Reference: Ја сам ви.
+Prediction:  YASAM V
+----------------------------------------
+Reference: Није био уверен.
+Prediction:  Nije bi oberen.
+----------------------------------------
+Reference: А, то се десило.
+Prediction:  Ah, como se desse logo?
+----------------------------------------
+Reference: И за ово!
+Prediction:  E Zolvo?
+----------------------------------------
+Reference: И, како сте?
+Prediction:  I kakuste.
+----------------------------------------
+Reference: Мило за драго.
+Prediction:  Milo za drago!
+----------------------------------------
+Reference: Изгубила сам све.
+Prediction:  Izgubila sam sve.
+----------------------------------------
+Reference: А нису људи.
+Prediction:  Anis, sugli uodi
+----------------------------------------
+Reference: То он ради?
+Prediction:  To un'Ready
+----------------------------------------
+Reference: Еди молим те.
+Prediction:  Eddie Molinte.
+----------------------------------------
+Reference: У земљи је.
+Prediction:  Usa a milia.
+----------------------------------------
+Reference: То је вода?
+Prediction:  To jest woda.
+----------------------------------------
+Reference: Шта да разговарамо?
+Prediction:  Sztadę, rozmawiam.
+----------------------------------------
+Reference: Што је најгоре.
+Prediction:  Co jest na igory?
+----------------------------------------
+Reference: Он није одбацио могућност претраге кућа.
+Prediction:  On nije odbatio mogućnost pretragi kuća.
+----------------------------------------
+Reference: Такав је свет.
+Prediction:  Takav je svet.
+----------------------------------------
+Reference: И, и, и?
+Prediction:  E, E, E.
+----------------------------------------
+Reference: Не знам шта је то.
+Prediction:  Не знам, че ето.
+----------------------------------------
+Reference: То и ради.
+Prediction:  To i Rady.
+----------------------------------------
+Reference: Не може бити он!
+Prediction:  Nie może być on.
+----------------------------------------
+Reference: Па, добро, шта да радим?
+Prediction:  Ну, что делать?
+----------------------------------------
+Reference: Ниси више у мојој служби.
+Prediction:  Nisi više u mojoj službi.
+----------------------------------------
+Reference: А онда ништа.
+Prediction:  Und nichts.
+----------------------------------------
+Reference: Он је у праву?
+Prediction:  On your proud.
+----------------------------------------
+Reference: Молим вас реците!
+Prediction:  Molim vas recite.
+----------------------------------------
+Reference: И овде су!
+Prediction:  И я в дыску.
+----------------------------------------
+Reference: Не може бити то.
+Prediction:  Ne može biti to.
+----------------------------------------
+Reference: За акције многих компанија одређене су разумне цене.
+Prediction:  Za akcije mnogih kompanii odridzjeni su razumne cene.
+----------------------------------------
+Reference: Нагеле је прекршио ту директну инструкцију.
+Prediction:  Nagila je prekrašio tu direktnu instrukciju.
+----------------------------------------
+Reference: Тако је, то.
+Prediction:  Takuje to.
+----------------------------------------
+Reference: Само да видите.
+Prediction:  Samo dovidit.
+----------------------------------------
+Reference: Ето ти сад?
+Prediction:  Tout y sort.
+----------------------------------------
+Reference: Од кога је?
+Prediction:  Outro coga aí.
+----------------------------------------
+Reference: То је била.
+Prediction:  To je bila.
+----------------------------------------
+Reference: Реци јој да.
+Prediction:  Рець и да.
+----------------------------------------
+Reference: Немамо шта да разговарамо.
+Prediction:  Nemamo šta da razgovoramo.
+----------------------------------------
+Reference: А они су?
+Prediction:  어, 어니스
+----------------------------------------
+Reference: То мора бити!
+Prediction:  To morabiti.
+----------------------------------------
+Reference: Али молим вас.
+Prediction:  Alley Molinevers
+----------------------------------------
+Reference: Ма. пусти ме!
+Prediction:  Мы пустим.
+----------------------------------------
+Reference: Време је за потпуни препород.
+Prediction:  Време е за подплани препоради.
+----------------------------------------
+Reference: Изложба ће трајати до краја маја.
+Prediction:  Изложба читраете до края мая.
+----------------------------------------
+Reference: У целом свету.
+Prediction:  C'est tout.
+----------------------------------------
+Reference: Ја сам тај.
+Prediction:  يا سمتاي
+----------------------------------------
+Reference: Знате како је то.
+Prediction:  Знаете, какое то.
+----------------------------------------
+Reference: Ако не почнеш, нећеш ни завршити.
+Prediction:  Ako ne počneš nećeš ne završiti.
+----------------------------------------
+Reference: Е, па, немој.
+Prediction:  Epa, nemoi.
+----------------------------------------
+Reference: Измене у двојезичним пасошима су техничке природе.
+Prediction:  Izmenu dvoj jezišnjim pasošima su tehnike prirode.
+----------------------------------------
+Reference: А што су?
+Prediction:  А что сно?
+----------------------------------------
+Reference: То је то?
+Prediction:  To i to.
+----------------------------------------
+Reference: Бакља је фантастична.
+Prediction:  Baklja je fantastična.
+----------------------------------------
+Reference: Треба да будеш!
+Prediction:  Треба да будеш.
+----------------------------------------
+Reference: Али то није.
+Prediction:  Aliton NIE
+----------------------------------------
+Reference: Па, тако је.
+Prediction:  pa, tak we
+----------------------------------------
+Reference: Више или мање?
+Prediction:  Wysze i limanie.
+----------------------------------------
+Reference: И она је!
+Prediction:  И он и е.
+----------------------------------------
+Reference: Нисам била ја!
+Prediction:  Nice and billa ya
+----------------------------------------
+Reference: Кажи ми, шта?
+Prediction:  Κάζιμη, στα.
+----------------------------------------
+Reference: Ох, да, видим.
+Prediction:  О, да, видим.
+----------------------------------------
+Reference: Фабрика би производила резервне аутомобилске делове и компоненте.
+Prediction:  Fabrika bi proizvodila rezernje automobiljskje delove i komponente.
+----------------------------------------
+Reference: Па, ево је!
+Prediction:  빠이빠이
+----------------------------------------
+Reference: Не може.
+Prediction:  Nie może.
+----------------------------------------
+Reference: А ти имаш.
+Prediction:  Ati imesh.
+----------------------------------------
+Reference: Зар он долази?
+Prediction:  Зарон долази.
+----------------------------------------
+Reference: Неке од ових.
+Prediction:  neke od ovih.
+----------------------------------------
+Reference: И ништа више!
+Prediction:  И не что виш.
+----------------------------------------
+Reference: Јесте ли ви то знали?
+Prediction:  Je ste li vy to znali?
+----------------------------------------
+Reference: Знате шта је?
+Prediction:  Знатыш Тай
+----------------------------------------
+Reference: И од њих.
+Prediction:  И от них.
+----------------------------------------
+Reference: О, али би.
+Prediction:  Oh, kali B.
+----------------------------------------
+Reference: О, како то?
+Prediction:  О, как уто!
+----------------------------------------
+Reference: Знам шта је ово!
+Prediction:  Znam sztajowo.
+----------------------------------------
+Reference: А, то не.
+Prediction:  Ah, torne.
+----------------------------------------
+Reference: О да, то.
+Prediction:  О да, то.
+----------------------------------------
+Reference: Е, па немој.
+Prediction:  E, panemui.
+----------------------------------------
+Reference: Сви су исти.
+Prediction:  Свист-вист
+----------------------------------------
+Reference: Далеко од себе.
+Prediction:  Dalaj kod sebi.
+----------------------------------------
+Reference: Тако, тако, тако.
+Prediction:  Tako, tako, tako.
+----------------------------------------
+Reference: Ја мислим то.
+Prediction:  Я, я, я, я, я, я, я, я, я, я, я, я, я, я, я, я, я, я, я, я, я, я, я, я, я, я, я, я, я, я, я, я, я, я, я, я, я, я, я, я, я, я, я, я, я, я, я, я, я, я, я, я, я, я, я, я, я, я, я, я, я, я, я, я, я, я, я, я, я, я, я, я, я, я, я, я, я, я, я, я, я, я, я, я, я, я, я, я, я, я, я, я, я, я, я, я, я, я, я, я, я, я, я, я, я, я, я, я, я, я, я, я, я, я, я, я, я, я, я, я, я, я, я, я, я, я, я, я, я, я, я, я, я, я, я, я, я, я, я, я, я, я, я, я, я, я, я, я, я, я, я, я, я, я, я, я, я, я, я, я, я, я, я, я, я, я, я, я, я, я, я, я, я, я, я, я, я, я, я, я, я, я, я, я, я, я, я, я, я, я, я, я, я, я, я, я, я, я, я, я, я, я, я, я, я, я, я, я, я, я, я, я, я, я, я, я, я, я, я, я, я, я,
+----------------------------------------
+Reference: Знаш, шта је?
+Prediction:  Знаешь, что я.
+----------------------------------------
+Reference: Ви не знате?
+Prediction:  Вин е зната.
+----------------------------------------
+Reference: И то није крај.
+Prediction:  I to nie kraj.
+----------------------------------------
+Reference: И нема је!
+Prediction:  In that way.
+----------------------------------------
+Reference: Па, шта је?
+Prediction:  Po... sztaj.
+----------------------------------------
+Reference: Шта да вам кажем.
+Prediction:  Что да вам скажем?
+----------------------------------------
+Reference: Тренутно се теретни транспорт одвија искључиво великим камионима.
+Prediction:  Trenutno se teretni transport odvijeske učejov velikim kamionima.
+----------------------------------------
+Reference: Ни с ким.
+Prediction:  Misc
+----------------------------------------
+Reference: Ето ти сад!
+Prediction:  At the descent.
+----------------------------------------
+Reference: Као и пре.
+Prediction:  Kau i pre.
+----------------------------------------
+Reference: Како то коментаришете?
+Prediction:  Kako to komentarišite?
+----------------------------------------
+Reference: А и то.
+Prediction:  Aí, todo.
+----------------------------------------
+Reference: Збунили сте се.
+Prediction:  Zbuvun iliştisi.
+----------------------------------------
+Reference: Што, шта је то?
+Prediction: そうしたと
+----------------------------------------
+Reference: Од кога је.
+Prediction:  Out go there.
+----------------------------------------
+Reference: Она га је?
+Prediction:  ¿O no cae?
+----------------------------------------
+Reference: Виза или не?
+Prediction:  Visa Illiné.
+----------------------------------------
+Reference: У свом стану!
+Prediction:  Who swamps time?
+----------------------------------------
+Reference: Сви се муче.
+Prediction:  Свисемуч.
+----------------------------------------
+Reference: То је питање.
+Prediction:  To jest bitenie.
+----------------------------------------
+Reference: Шта је ли истина?
+Prediction:  Что дьявы истина?
+----------------------------------------
+Reference: На који начин?
+Prediction:  Nakoj najči?
+----------------------------------------
+Reference: А и тамо.
+Prediction:  Aí está.
+----------------------------------------
+Reference: А како то?
+Prediction:  أكار كوتو
+----------------------------------------
+Reference: Ја више не.
+Prediction:  Για βισχένε!
+----------------------------------------
+Reference: А зато је.
+Prediction:  A zantóia.
+----------------------------------------
+Reference: О томе, да.
+Prediction:  Usou meta.
+----------------------------------------
+Reference: Морамо грађанима објаснити да овде има превише оружја.
+Prediction:  Moramog rađelima objasniti da ovdje ima previše oružije.
+----------------------------------------
+Reference: Што да ми кажеш.
+Prediction:  Στο να μην κάνεις.
+----------------------------------------
+Reference: Из каменог доба.
+Prediction:  Iskame nogdopa.
+----------------------------------------
+Reference: Па, ето ти.
+Prediction:  E' tutto.
+----------------------------------------
+Reference: Избори су међутим поништени због недовољног одзива бирача.
+Prediction:  Izbori su nađutim ponešteni zbog nedovorno godziva birac.
+----------------------------------------
+Reference: То и то!
+Prediction:  Tô e tô.
+----------------------------------------
+Reference: Што ће рећи?
+Prediction:  Что черетьте?
+----------------------------------------
+Reference: Ми нисмо информисани о њима.
+Prediction:  Minis ma informi szene a gyima.
+----------------------------------------
+Reference: То је био?
+Prediction:  Para a bia.
+----------------------------------------
+Reference: Дебата о личним картама није нова.
+Prediction:  Debato o ličnim kartama nije nova.
+----------------------------------------
+Reference: Је ли та?
+Prediction:  Ya está.
+----------------------------------------
+Reference: Супер смо се провели.
+Prediction:  ¡Súper!
+----------------------------------------
+Reference: Вратите ми га.
+Prediction:  Βράτη τεμικά.
+----------------------------------------
+Reference: Шта треба да ради?
+Prediction:  Što treba da radi?
+----------------------------------------
+Reference: И с вама.
+Prediction:  İsvan
+----------------------------------------
+Reference: Него ко је.
+Prediction:  Negu koje?
+----------------------------------------
+Reference: Седите, молим вас?
+Prediction:  Set it more in less.
+----------------------------------------
+Reference: О, шта је то?
+Prediction:  Ou está isso?
+----------------------------------------
+Reference: Тако је, то!
+Prediction:  Такое тоооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооо
+----------------------------------------
+Reference: У њему су.
+Prediction:  Unie muszą.
+----------------------------------------
+Reference: Станите молим вас?
+Prediction:  Stanley Timolimus
+----------------------------------------
+Reference: А ти душо?
+Prediction:  A tout de suite!
+----------------------------------------
+Reference: Е, па немојте!
+Prediction:  Epanemos y te
+----------------------------------------
+Reference: О, а где?
+Prediction:  Oh, again.
+----------------------------------------
+Reference: Наравно, да је.
+Prediction:  Narabno to je.
+----------------------------------------
+Reference: Не би ти!
+Prediction:  Nebiti
+----------------------------------------
+Reference: Зна где је.
+Prediction:  There's no idea.
+----------------------------------------
+Reference: Ја то не могу!
+Prediction:  या तो ने मोगू
+----------------------------------------
+Reference: Да ли је то проблем?
+Prediction:  Dalje je to problem?
+----------------------------------------
+Reference: Је, био је.
+Prediction:  Yeah, be real.
+----------------------------------------
+Reference: Али он не.
+Prediction:  Aaliyo one ne
+----------------------------------------
+Reference: Који је први?
+Prediction:  Koji je prvi?
+----------------------------------------
+Reference: О, много боље.
+Prediction:  Oh,mlogo boli
+----------------------------------------
+Reference: Не би требало.
+Prediction:  Может рэбала.
+----------------------------------------
+Reference: Могу ја то.
+Prediction:  목이 엿도
+----------------------------------------
+Reference: То је врло лепо!
+Prediction:  Tu hai per l'olio e poi?
+----------------------------------------
+Reference: Да вас видим!
+Prediction:  Добро с видом!
+----------------------------------------
+Reference: Е, како је?
+Prediction:  Э, какой!
+----------------------------------------
+Reference: У свом стану.
+Prediction:  We're Swamstein.
+----------------------------------------
+Reference: Е, па онда.
+Prediction:  And ponder.
+----------------------------------------
+Reference: И те какав.
+Prediction:  І така кав.
+----------------------------------------
+Reference: Да се забавља.
+Prediction:  To se závodná.
+----------------------------------------
+Reference: Да, за све.
+Prediction:  That was a fair.
+----------------------------------------
+Reference: Има га много!
+Prediction:  И могу много.
+----------------------------------------
+Reference: две фотеље и неколико простих, трпезаријских столица
+Prediction:  Dvě fotelí je nekoliko prostých trpezadeských stolice.
+----------------------------------------
+Reference: У ово доба!
+Prediction:  У ово доба.
+----------------------------------------
+Reference: Европа нема намеру да нас чека.
+Prediction:  Evropa ne ima nameru da ne stek.
+----------------------------------------
+Reference: Али не могу ја.
+Prediction:  Pero no puedo ya.
+----------------------------------------
+Reference: Ма не може!
+Prediction:  Mané, moche!
+----------------------------------------
+Reference: Шта, је ли?
+Prediction:  J'étais hier.
+----------------------------------------
+Reference: Зидари граде кућу од темеља.
+Prediction:  Zidare grade kuću od temelja.
+----------------------------------------
+Reference: А за шта?
+Prediction:  A justa.
+----------------------------------------
+Reference: Па, била је!
+Prediction:  But be lay.
+----------------------------------------
+Reference: Три године, а?
+Prediction:  3 godine
+----------------------------------------
+Reference: Још једна брига био је свињски грип.
+Prediction:  Jochernabriga bioe svinsk grip.
+----------------------------------------
+Reference: Не знам шта је ово.
+Prediction:  Me zašta je nobo.
+----------------------------------------
+Reference: А испод њега?
+Prediction:  Espaníaga
+----------------------------------------
+Reference: Ја бих радо.
+Prediction:  Ya he fijado.
+----------------------------------------
+Reference: Добар дан господине!
+Prediction:  Ti perdiamo, Gospodine.
+----------------------------------------
+Reference: Изгледи земље су према рејтингу стабилни.
+Prediction:  Izgledi zemlje su premerejtingu stadiju.
+----------------------------------------
+Reference: Какав је био.
+Prediction:  Cacavé bio!
+----------------------------------------
+Reference: Молим те не!
+Prediction:  More internet.
+----------------------------------------
+Reference: Е, па, добро!
+Prediction:  e pa dobro
+----------------------------------------
+Reference: А ја нисам!
+Prediction:  Hayvaniz.
+----------------------------------------
+Reference: Ипак, није тако.
+Prediction:  И пока не так.
+----------------------------------------
+Reference: Мислите да ја не знам?
+Prediction:  Is it the young Ezra?
+----------------------------------------
+Reference: А, не, знам.
+Prediction:  And there, he's down.
+----------------------------------------
+Reference: Па, шта мислиш.
+Prediction:  Para, está mesmo isso.
+----------------------------------------
+Reference: А то не могу.
+Prediction:  A to ne mogu.
+----------------------------------------
+Reference: Лево, и десно.
+Prediction:  Aléma, bom e testo.
+----------------------------------------
+Reference: Али није могао.
+Prediction:  Alinear o mogão.
+----------------------------------------
+Reference: Да могло би.
+Prediction:  Da moglo bi.
+----------------------------------------
+Reference: Па не знам.
+Prediction:  And as
+----------------------------------------
+Reference: Како да нисам.
+Prediction:  Cacodanes.
+----------------------------------------
+Reference: За пет минута.
+Prediction:  за 5 минут.
+----------------------------------------
+Reference: Нисам ни ја.
+Prediction:  I need some Nia.
+----------------------------------------
+Reference: О, али не могу.
+Prediction:  Oh, a little more.
+----------------------------------------
+Reference: Повреде су честе.
+Prediction:  Povrede su česte.
+----------------------------------------
+Reference: Живели смо заједно деценијама.
+Prediction:  Živili smo zajedno decenijene.
+----------------------------------------
+Reference: Добро, нека буде.
+Prediction:  Dobro, ne go bude.
+----------------------------------------
+Reference: Не у ту.
+Prediction:  Neutro.
+----------------------------------------
+Reference: Шта даље?
+Prediction:  Что дальше?
+----------------------------------------
+Reference: Како да живим.
+Prediction:  Как удалил?
+----------------------------------------
+Reference: Хајде, кажи ми.
+Prediction:  هاي دكة ريب
+----------------------------------------
+Reference: Шта је то.
+Prediction:  Что это вы?
+----------------------------------------
+Reference: Што сам се?
+Prediction:  Что с ним с этим?
+----------------------------------------
+Reference: Остали смо сами.
+Prediction:  Hosteles Moçãs Amos.
+----------------------------------------
+Reference: У свој стан.
+Prediction:  У свой стан.
+----------------------------------------
+Reference: колико смо до сада у њу
+Prediction:  Koliko smo dosada unju?
+----------------------------------------
+Reference: Да, шта је?
+Prediction:  Там штай.
+----------------------------------------
+Reference: Живимо у сталном страху.
+Prediction:  Żywymy w stanu strachu.
+----------------------------------------
+Reference: Шта је ово?
+Prediction:  What the hell?
+----------------------------------------
+Reference: А које су?
+Prediction:  Aquais.
+----------------------------------------
+Reference: Ма пусти ме.
+Prediction:  Mă pustim.
+----------------------------------------
+Reference: Знам шта је то!
+Prediction:  Знаем что это.
+----------------------------------------
+Reference: Је ли ово?
+Prediction:  E ali ovo!
+----------------------------------------
+Reference: Само од себе.
+Prediction:  So what's happening?
+----------------------------------------
+Reference: На земљи је!
+Prediction:  Men det är en mjö.
+----------------------------------------
+Reference: Како се то каже?
+Prediction:  Kako se to kaže?
+----------------------------------------
+Reference: А па добро.
+Prediction:  Подобра.
+----------------------------------------
+Reference: На фестивалу су такође награђена три бугарска филма.
+Prediction:  Na festivalu su takođena građena tri bugarska filma.
+----------------------------------------
+Reference: Могу да поднесем.
+Prediction:  I'll go to put this.
+----------------------------------------
+Reference: Боље је, да.
+Prediction:  Błonie.
+----------------------------------------
+Reference: А на земљи?
+Prediction:  On zemli.
+----------------------------------------
+Reference: У сваком случају, биће ослабљен.
+Prediction:  W wsłagom случае bycie osłabieni.
+----------------------------------------
+Reference: Само ово овде.
+Prediction:  some of all
+----------------------------------------
+Reference: Све је лепо.
+Prediction:  It's very beautiful.
+----------------------------------------
+Reference: Нема никакве сумње.
+Prediction:  Ne ima nekakva svom nje.
+----------------------------------------
+Reference: Ти и он?
+Prediction:  See you soon.
+----------------------------------------
+Reference: А шта је?
+Prediction:  Что это?
+----------------------------------------
+Reference: О, и нисам.
+Prediction:  Oh, we need...
+----------------------------------------
+Reference: И на њега.
+Prediction:  Ilyen nyug.
+----------------------------------------
+Reference: Морам знати шта је то.
+Prediction:  Moram znaći što je to.
+----------------------------------------
+Reference: Церемонија венчања затим се одржава у цркви.
+Prediction:  Ceremonija ovinčanja zatim se održava u cerkvi.
+----------------------------------------
+Reference: Знам и сама.
+Prediction:  It's not me son.
+----------------------------------------
+Reference: Она воли децу.
+Prediction:  Well, then only that's...
+----------------------------------------
+Reference: Па била је.
+Prediction:  But be lay.
+----------------------------------------
+Reference: Они позивају на оштрију контролу.
+Prediction:  Они позивают на вострюю контролла.
+----------------------------------------
+Reference: Да ли ће судови урадити свој посао?
+Prediction:  Dole će su da vi uraditi svoj posao?
+----------------------------------------
+Reference: То је има.
+Prediction:  Toa Ema.
+----------------------------------------
+Reference: И то је све?
+Prediction:  Bitte, es war...
+----------------------------------------
+Reference: О, не бих?
+Prediction:  Oh, there we go.
+----------------------------------------
+Reference: Да, видим је.
+Prediction:  Da, vidim je.
+----------------------------------------
+Reference: Затим позовите његово удружење.
+Prediction:  Zatem pozawicie niego w udrzenie.
+----------------------------------------
+Reference: Ти не знаш!
+Prediction:  You, Nazda.
+----------------------------------------
+Reference: Одвојили смо се.
+Prediction:  Odvojili smo se.
+----------------------------------------
+Reference: Не разумем зашто?
+Prediction:  Nirgendswünsast.
+----------------------------------------
+Reference: То је оно!
+Prediction:  Tujaana.
+----------------------------------------
+Reference: Е, то је.
+Prediction:  É, doe.
+----------------------------------------
+Reference: Како могу то да му ураде?
+Prediction:  Kako mogu to da mogu red?
+----------------------------------------
+Reference: И плаво је.
+Prediction:  Iplok aboe
+----------------------------------------
+Reference: Не јављају се?
+Prediction:  They are loose.
+----------------------------------------
+Reference: То није доста.
+Prediction:  To nije dosta.
+----------------------------------------
+Reference: Ја не би!
+Prediction:  Ya ne yapayım?
+----------------------------------------
+Reference: Да, од тада.
+Prediction:  Да, вот тогда.
+----------------------------------------
+Reference: Не онда, не.
+Prediction:  No i on da.
+----------------------------------------
+Reference: А, знаш ли зашто?
+Prediction:  وزاشت وزاشت
+----------------------------------------
+Reference: А шта је ово?
+Prediction:  Что это?
+----------------------------------------
+Reference: Па,то је истина.
+Prediction:  Ah, isso é a instala.
+----------------------------------------
+Reference: Цео свет зна.
+Prediction:  So it's with no
+----------------------------------------
+Reference: Без икаквог објашњења.
+Prediction:  bez jakiegoś obieśnienia.
+----------------------------------------
+Reference: Још један месец.
+Prediction:  your shared investments.
+----------------------------------------
+Reference: Изгледа да је.
+Prediction:  І складодай.
+----------------------------------------
+Reference: Сви то знају.
+Prediction:  Света знаю.
+----------------------------------------
+Reference: Шта не иде?
+Prediction:  Wszelkie idę.
+----------------------------------------
+Reference: На северној обали.
+Prediction:  the 7th noob.
+----------------------------------------
+Reference: Како то објашњавате?
+Prediction:  Jak to wiesz, nie?
+----------------------------------------
+Reference: И не знам.
+Prediction:  In us.
+----------------------------------------
+Reference: Будалу не треба тражити, сама се јави.
+Prediction:  Будал натрат рожити, сам сеяви.
+----------------------------------------
+Reference: И молим те.
+Prediction:  You
+----------------------------------------
+Reference: Претходног викенда је било гласање.
+Prediction:  Prejde hodnom vekende je bilog lasađa.
+----------------------------------------
+Reference: Да, како је?
+Prediction:  Да, как вы.
+----------------------------------------
+Reference: Ко је то!
+Prediction:  Quetta.
+----------------------------------------
+Reference: Денкташ је рекао не.
+Prediction:  Dęgtaż i rekony.
+----------------------------------------
+Reference: Све то одговара.
+Prediction:  Svet to odgovar.
+----------------------------------------
+Reference: Друго је то.
+Prediction:  è un altro
+----------------------------------------
+Reference: Који би хтео?
+Prediction:  Koipikte.
+----------------------------------------
+Reference: Било ме је страх!
+Prediction:  Bila my strach.
+----------------------------------------
+Reference: А ваш брат?
+Prediction:  Auf alles mit dem Lack.
+----------------------------------------
+Reference: И не знаш.
+Prediction:  In the U.S.
+----------------------------------------
+Reference: Не може боље.
+Prediction:  Dajmy, że badaje.
+----------------------------------------
+Reference: У свако доба.
+Prediction:  No soco do...
+----------------------------------------
+Reference: Мислим да ради!
+Prediction:  مسلم درات
+----------------------------------------
+Reference: О, дете моје!
+Prediction:  Oh, that's good.
+----------------------------------------
+Reference: То би било добро, да.
+Prediction:  Tô bíblo, dobra, tá?
+----------------------------------------
+Reference: Као, на пример.
+Prediction:  Call, for example.
+----------------------------------------
+Reference: Разумете ли ви?
+Prediction:  رزوم التلوي
+----------------------------------------
