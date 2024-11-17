@@ -17,7 +17,7 @@ BASE_MODEL = "openai/whisper-small"
 
 # training constants
 TRAIN_BATCH_SIZE = 16
-GRAIDENT_ACCUMULATION_STEPS = 1
+GRADIENT_ACCUMULATION_STEPS = 1
 LEARNING_RATE = 1e-5
 WARMUP_STEPS = 500
 MAX_STEPS = 4000
@@ -84,6 +84,10 @@ class WhisperASR:
             self.model = WhisperForConditionalGeneration.from_pretrained(
                 self.model_name)
 
+        # set the language explicitly to avoid incorrect language prediction
+        self.model.generation_config.language = language.lower()
+        self.model.generation_config.task = "transcribe"
+        self.model.generation_config.forced_decoder_ids = None
         self.model.config.forced_decoder_ids = None
         self.model.config.suppress_tokens = []
 
@@ -105,6 +109,12 @@ class WhisperASR:
             self.dataset_name, self.language_code, split=self.train_split, token=HF_API_KEY, trust_remote_code=True)
         self.data["test"] = load_dataset(
             self.dataset_name, self.language_code, split=self.test_split, token=HF_API_KEY, trust_remote_code=True)
+
+        # only consider input audio and transcribed text to generalize dataset as much as possible
+        self.data = self.data.remove_columns(
+            ["accent", "age", "client_id", "down_votes", "gender",
+             "locale", "path", "segment", "up_votes", "variant"]
+        )
 
         print("[INFO] Structure of the loaded data:")
         print(self.data)

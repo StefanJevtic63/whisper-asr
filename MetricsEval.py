@@ -1,6 +1,5 @@
 import evaluate
 
-
 class MetricsEval:
     """Class for evaluating using certain metrics."""
 
@@ -26,7 +25,7 @@ class MetricsEval:
         pred_ids = pred.predictions
         label_ids = pred.label_ids
 
-        # Replace -100 with pad_token_id
+        # replace -100 with pad_token_id
         label_ids[label_ids == -100] = self.tokenizer.pad_token_id
 
         # Decode predictions and labels
@@ -35,7 +34,7 @@ class MetricsEval:
         label_str = self.tokenizer.batch_decode(
             label_ids, skip_special_tokens=True)
 
-        # Compute the metric
+        # compute the metric
         metric_value = 100 * self.metric.compute(
             predictions=pred_str, references=label_str)
 

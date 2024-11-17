@@ -228,6 +228,7 @@ dependencies:
       - click==8.1.7
       - datasets==3.1.0
       - dill==0.3.8
+      - docopt==0.6.2
       - evaluate==0.4.3
       - fastapi==0.115.4
       - ffmpeg-python==0.2.0
@@ -257,6 +258,7 @@ dependencies:
       - multidict==6.1.0
       - multiprocess==0.70.16
       - networkx==3.4.2
+      - num2words==0.5.13
       - numba==0.60.0
       - numpy==2.0.0
       - openai-whisper==20240930
@@ -299,6 +301,7 @@ dependencies:
       - torchvision==0.20.1
       - tqdm==4.66.6
       - transformers==4.45.2
+      - transliterate==1.10.2
       - typer==0.12.5
       - typing-extensions==4.12.2
       - tzdata==2024.2
