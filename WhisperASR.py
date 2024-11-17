@@ -88,6 +88,7 @@ class WhisperASR:
         self.model.generation_config.language = language.lower()
         self.model.generation_config.task = "transcribe"
         self.model.generation_config.forced_decoder_ids = None
+        self.model.generation_config.pad_token_id = self.tokenizer.pad_token_id  # suppress warning
         self.model.config.forced_decoder_ids = None
         self.model.config.suppress_tokens = []
 
@@ -174,6 +175,7 @@ class WhisperASR:
             metric_for_best_model="wer",
             greater_is_better=False,
             push_to_hub=self.save_to_hf,
+            save_safetensors=False
         )
 
         # initialize trainer

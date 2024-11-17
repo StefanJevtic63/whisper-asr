@@ -9,6 +9,7 @@ from transformers import pipeline
 from SerbianCyrillicNormalizer import SerbianCyrillicNormalizer
 
 HF_API_KEY = ""
+TOTAL = 100
 
 
 def transcribe(whisper_asr, audio, language_code):
@@ -24,7 +25,8 @@ def transcribe(whisper_asr, audio, language_code):
         text (str): The  model output text from the audio
     """
 
-    text = whisper_asr(audio, generate_kwargs = {"task":"transcribe", f"language":f"<|{language_code}|>"})["text"]
+    text = whisper_asr(audio, batch_size=16,
+                       generate_kwargs = {"task":"transcribe", f"language":f"<|{language_code}|>"})["text"]
     return text
 
 
@@ -46,7 +48,7 @@ def evaluation(dataset, whisper_asr, language_code):
     normalizer = SerbianCyrillicNormalizer()
 
     # loop through each sample and get the output and ref
-    for item in tqdm(dataset, desc='Evaluating Progress'):
+    for item in tqdm(dataset, desc='Evaluating Progress', total=TOTAL):
         audio_data = item["audio"]
         text = transcribe(whisper_asr, audio_data, language_code)
         predictions.append( normalizer(text) )   # normalize transcribed text
@@ -64,7 +66,7 @@ def main(args):
 
     # load model
     whisper_asr = pipeline(
-        task="automatic-speech-recognition", model=args.model_name, device=args.device
+        task="automatic-speech-recognition", model=args.model_name, device=args.device, batch_size=16
     )
 
     whisper_asr.model.config.forced_decoder_ids = (

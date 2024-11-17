@@ -8,24 +8,35 @@ class SerbianCyrillicNormalizer:
     def __init__(self):
         """Initate the normalization class."""
 
-    def __call__(self, word):
-        # remove punctuation
-        word = re.sub(r'[^\w\s]', '', word)
+    def __call__(self, text):
+        # remove punctuation from the entire text
+        text = re.sub(r'[^\w\s]', ' ', text)
 
-        # convert characters to lowercase
-        word = word.lower()
+        # convert the entire text to lowercase
+        text = text.lower()
 
-        # if the word is a number, convert it to words instead
-        if word.isdigit():
-            word = num2words(int(word), lang='sr')
-            word_parts = word.split()
-            if len(word_parts) > 1:
-                word = ' '.join(word_parts[:-1] + ['i'] + word_parts[-1:])
+        # split the text into words
+        words = text.split()
+
+        # normalize each word
+        normalized_words = []
+        for word in words:
+            # if the word is a number, convert it to words instead
+            if word.isdigit():
+                word = num2words(int(word), lang='sr')
+                word_parts = word.split()
+                if len(word_parts) > 1:
+                    word = ' '.join(word_parts[:-1] + ['i'] + word_parts[-1:])
+
+            normalized_words.append(word)
+
+        # join the normalized words back into a sentence
+        normalized_text = ' '.join(normalized_words)
 
         # convert characters to Serbian Cyrillic alphabet
-        word = translit(word, 'sr')
+        normalized_text = translit(normalized_text, 'sr')
 
         # trim the output
-        word = word.strip()
+        normalized_text = normalized_text.strip()
 
-        return word
+        return normalized_text

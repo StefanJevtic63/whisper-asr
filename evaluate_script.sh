@@ -11,4 +11,5 @@ python ./evaluation/evaluate_model.py \
 	--save_transcript \
 	--output_file eval-sr-cv-standard \
 	--dataset_name mozilla-foundation/common_voice_17_0 \
+	--cer \
 	--ref_key sentence
