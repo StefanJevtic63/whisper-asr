@@ -13,7 +13,7 @@ from MetricsEval import MetricsEval
 # change constants as applicable
 OUTPUT_DIR = "./models/whisper"
 HF_API_KEY = ""
-BASE_MODEL = "openai/whisper-small"
+BASE_MODEL = "openai/whisper-medium"
 
 # training constants
 TRAIN_BATCH_SIZE = 16

@@ -6,8 +6,8 @@ conda activate master-rad
 
 # Execute Python script
 python train.py \
-  --model_name openai/whisper-small \
+  --model_name openai/whisper-medium \
   --language Serbian \
   --language_code sr \
-  --output_dir ./models/whisper-small-sr \
+  --output_dir ./models/whisper-medium-sr \
   --save_to_hf
