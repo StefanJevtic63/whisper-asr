@@ -19,7 +19,7 @@ os.environ["CUDA_VISIBLE_DEVICES"] = "0"
 # change constants as applicable
 OUTPUT_DIR = "./models/whisper"
 HF_API_KEY = ""
-BASE_MODEL = "openai/whisper-medium"
+BASE_MODEL = "openai/whisper-large-v2"
 
 # training constants
 TRAIN_BATCH_SIZE = 8
