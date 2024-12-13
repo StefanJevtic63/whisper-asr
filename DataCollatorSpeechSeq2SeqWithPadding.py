@@ -29,4 +29,8 @@ class DataCollatorSpeechSeq2SeqWithPadding:
 
         batch["labels"] = labels
 
+        # move all tensors to gpu
+        device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+        batch = {k: v.to(device) for k, v in batch.items()}
+
         return batch

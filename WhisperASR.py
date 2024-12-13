@@ -1,12 +1,16 @@
 import os
-from datasets import Audio, DatasetDict, load_dataset
+from datetime import datetime
+import shutil
+import torch
+
 from huggingface_hub import HfFolder
+from datasets import load_from_disk
 from transformers import (
-    AutoModelForSpeechSeq2Seq, AutoProcessor,
+    AutoModelForSpeechSeq2Seq,
     Seq2SeqTrainer, Seq2SeqTrainingArguments,
     WhisperFeatureExtractor, WhisperForConditionalGeneration,
     WhisperProcessor, WhisperTokenizer,
-    BitsAndBytesConfig
+    BitsAndBytesConfig, EarlyStoppingCallback, get_scheduler
 )
 from peft import prepare_model_for_kbit_training, LoraConfig, get_peft_model
 
@@ -14,29 +18,30 @@ from DataCollatorSpeechSeq2SeqWithPadding import DataCollatorSpeechSeq2SeqWithPa
 from MetricsEval import MetricsEval
 from SavePeftModelCallback import SavePeftModelCallback
 
-os.environ["CUDA_VISIBLE_DEVICES"] = "0"
-
 # change constants as applicable
-OUTPUT_DIR = "./models/whisper"
 HF_API_KEY = ""
 BASE_MODEL = "openai/whisper-large-v2"
+DATASET_PATH = "./datasets/train_validation_dataset"
 
 # training constants
-TRAIN_BATCH_SIZE = 8
+TRAIN_BATCH_SIZE = 16
+EVAL_BATCH_SIZE = 16
+DATALOADER_NUM_WORKERS = 4
+DATALOADER_PREFETCH_FACTOR = 2
 GRADIENT_ACCUMULATION_STEPS = 1
 LEARNING_RATE = 1e-3
-WARMUP_STEPS = 50
+WARMUP_STEPS = 400
 MAX_STEPS = 4000
-EVAL_BATCH_SIZE = 8
-SAVE_STEPS = 1000
-EVAL_STEPS = 1000
+SAVE_STEPS = 500
+EVAL_STEPS = 500
 LOGGING_STEPS = 25
+PATIENCE = 2
 
 
 class WhisperASR:
     """Whisper Model for Automatic Speech Recognition (ASR) using Hugging Face's Transformers library."""
 
-    def __init__(self, model_name="openai/whisper-small", dataset_name="mozilla-foundation/common_voice_17_0", existing_model=False, language="Serbian", language_code="sr", save_to_hf=False, output_dir=OUTPUT_DIR, ref_key="sentence"):
+    def __init__(self, model_name="openai/whisper-small", dataset_name="mozilla-foundation/common_voice_17_0", existing_model=False, language="Serbian", language_code="sr", save_to_hf=False, output_dir="./models/whisper", ref_key="sentence"):
         """
         Initialize the model and load the data. 
         The default config is the small model trained on the Common Voice dataset for Serbian.
@@ -69,22 +74,20 @@ class WhisperASR:
         self.language_code = language_code
         self.existing_model = existing_model
 
-        self.train_split = "train+validation"
-        self.test_split = "test"
+        # initialize feature extractor, tokenizer and processor
+        self.feature_extractor = WhisperFeatureExtractor.from_pretrained(self.model_name)
+        self.tokenizer = WhisperTokenizer.from_pretrained(self.model_name, language=language, task="transcribe")
+        self.processor = WhisperProcessor.from_pretrained(self.model_name, language=language, task="transcribe")
 
-        # initalize feature extractor, tokenizer and processor
-        self.feature_extractor = WhisperFeatureExtractor.from_pretrained(
-            self.model_name)
-        self.tokenizer = WhisperTokenizer.from_pretrained(
-            self.model_name, language=language, task="transcribe")
-        self.processor = WhisperProcessor.from_pretrained(
-            self.model_name, language=language, task="transcribe")
+        # check if cuda is available
+        device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
         # load correct model
         if existing_model:
             print(
                 f"[INFO] Loading {self.model_name} model from existing model...")
             self.model = AutoModelForSpeechSeq2Seq.from_pretrained(model_name)
+            self.model = self.model.to(device)
         else:
             print(
                 f"[INFO] Loading {self.model_name} from hugging face library...")
@@ -104,17 +107,15 @@ class WhisperASR:
 
         # apply LORA
         lora_config = LoraConfig(r=32, lora_alpha=64, target_modules=["q_proj", "v_proj"],
-                                 lora_dropout=0.05, bias="none")
+                                 lora_dropout=0.1, bias="none")
 
         self.model = get_peft_model(self.model, lora_config)
         self.model.print_trainable_parameters()
 
         # load data
-        self.data = DatasetDict()
-        self.data_collator = DataCollatorSpeechSeq2SeqWithPadding(
-            self.processor)
         self._load_data()
-        self.OUTPUT_DIR = output_dir
+        self.data_collator = DataCollatorSpeechSeq2SeqWithPadding(self.processor)
+        self.output_dir = output_dir
 
         # this callback helps to save only the adapter weights and remove the base model weights
         self.save_peft_model_callback = SavePeftModelCallback()
@@ -122,109 +123,145 @@ class WhisperASR:
     def _load_data(self):
         """Load the data from the Common Voice dataset and prepare it for training."""
 
-        print(
-            f"[INFO] Preparing {self.dataset_name} data for training phase...")
-
-        # load data from Common Voice dataset
-        self.data["train"] = load_dataset(
-            self.dataset_name, self.language_code, split=self.train_split, token=HF_API_KEY, trust_remote_code=True)
-        self.data["test"] = load_dataset(
-            self.dataset_name, self.language_code, split=self.test_split, token=HF_API_KEY, trust_remote_code=True)
-
-        # only consider input audio and transcribed text to generalize dataset as much as possible
-        self.data = self.data.remove_columns(
-            ["accent", "age", "client_id", "down_votes", "gender",
-             "locale", "path", "segment", "up_votes", "variant"]
-        )
-
+        print(f"[INFO] Preparing data for training phase...")
+        self.data = load_from_disk(dataset_path=DATASET_PATH)
         print("[INFO] Structure of the loaded data:")
         print(self.data)
 
-        print("[INFO] Sample entry from the training dataset: ")
-        print(self.data["train"][0])
-
-        # downsample audio data to 16kHz
-        self.data = self.data.cast_column("audio", Audio(sampling_rate=16000))
-        self.data = self.data.map(
-            self._prepare_data, remove_columns=self.data.column_names["train"], num_proc=1)
-
-    def _prepare_data(self, batch):
-        """Converts audio files to the model's input feature format and encodes the target texts.
+    def _log(self, text):
+        """Logs the given text to log.txt file.
 
         Args:
-            batch (dict): A batch of audio and text data.
+            text (str): The text to be logged
         """
 
-        # load and resample audio data from 48kHz to 16kHz
-        audio = batch["audio"]
-
-        # compute log-Mel input features from input audio array
-        batch["input_features"] = self.feature_extractor(
-            audio["array"], sampling_rate=audio["sampling_rate"]).input_features[0]
-
-        # encode target text to label ids
-        batch["labels"] = self.tokenizer(batch[self.ref_key]).input_ids
-        return batch
+        current_time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+        with open("log.txt", "a+") as file:
+            file.write(f"[{current_time}] " + text + "\n")
 
     def train(self):
-        """Train the model. Set the training arguments here and using Seq2SeqTrainer. 
+        """Train the model for different values of hyperparameter grid_search.
+        Set the training arguments using Seq2SeqTrainer.
         After training, save the model to the specified directory.
         """
 
-        # metric evaluation for training
-        eval_fn = MetricsEval(self.tokenizer)
+        # set different values of hyperparameter weight_decay for grid search
+        weight_decay_values = [0.001, 0.01, 0.1, 0.5]
+        best_eval_loss = float("inf")
+        best_model_dir = ""
+        best_trainer = None
 
-        # configure training arguments
-        training_args = Seq2SeqTrainingArguments(
-            output_dir=self.OUTPUT_DIR,
-            per_device_train_batch_size=TRAIN_BATCH_SIZE,
-            gradient_accumulation_steps=2,  # increase by 2x for every 2x decrease in batch size
-            learning_rate=LEARNING_RATE,
-            warmup_steps=WARMUP_STEPS,
-            max_steps=MAX_STEPS,
-            gradient_checkpointing=True,
-            fp16=True,
-            num_train_epochs=1,
-            eval_strategy="steps",
-            save_strategy="steps",
-            per_device_eval_batch_size=EVAL_BATCH_SIZE,
-            predict_with_generate=True,
-            generation_max_length=128,
-            save_steps=SAVE_STEPS,
-            eval_steps=EVAL_STEPS,
-            logging_steps=LOGGING_STEPS,
-            report_to=["tensorboard"],
-            load_best_model_at_end=True,
-            #metric_for_best_model="wer", # because compute_metrics is not provided
-            greater_is_better=False,
-            push_to_hub=self.save_to_hf,
-            save_safetensors=False,
-            remove_unused_columns=False, # required as the PeftModel forward doesn't have the signature of the wrapped model's forward
-            label_names=["labels"],  # same reason as above
-        )
+        # perform grid search
+        for weight_decay in weight_decay_values:
+            # set the current output directory
+            output_dir = f"{self.output_dir}-weight-decay-{weight_decay}"
 
-        # initialize trainer
-        trainer = Seq2SeqTrainer(
-            args=training_args,
-            model=self.model,
-            train_dataset=self.data["train"],
-            eval_dataset=self.data["test"],
-            data_collator=self.data_collator,
-            # compute_metrics=eval_fn.compute, # removed because we cannot autocast
-            processing_class=self.processor.feature_extractor,
-            callbacks=[self.save_peft_model_callback],
-        )
+            # configure training arguments
+            training_args = Seq2SeqTrainingArguments(
+                output_dir=output_dir,
+                per_device_train_batch_size=TRAIN_BATCH_SIZE,
+                per_device_eval_batch_size=EVAL_BATCH_SIZE,
+                dataloader_num_workers=DATALOADER_NUM_WORKERS,
+                dataloader_prefetch_factor=DATALOADER_PREFETCH_FACTOR,
+                gradient_accumulation_steps=2,  # increase by 2x for every 2x decrease in batch size
+                learning_rate=LEARNING_RATE,
+                lr_scheduler_type="linear",
+                warmup_steps=WARMUP_STEPS,
+                max_steps=MAX_STEPS,
+                gradient_checkpointing=True,
+                fp16=True,
+                eval_strategy="steps",
+                save_strategy="steps",
+                predict_with_generate=True,
+                generation_max_length=128,
+                save_steps=SAVE_STEPS,
+                eval_steps=EVAL_STEPS,
+                logging_steps=LOGGING_STEPS,
+                report_to=["tensorboard"],
+                metric_for_best_model="eval_loss",
+                greater_is_better=False,
+                load_best_model_at_end=True,
+                push_to_hub=self.save_to_hf,
+                save_safetensors=False,
+                remove_unused_columns=False, # required as the PeftModel forward doesn't have the signature of the wrapped model's forward
+                label_names=["labels"],  # same reason as above
+                dataloader_pin_memory=False,
+            )
 
-        self.model.config.use_cache = False  # silence the warnings
-        self.processor.save_pretrained(training_args.output_dir)
+            # initialize optimizer
+            optimizer = torch.optim.AdamW(self.model.parameters(), lr=LEARNING_RATE, weight_decay=weight_decay)
 
-        # start training
-        print("[INFO] Starting training...: ")
-        trainer.train()
+            # initiate learning rate scheduler with weight decay
+            lr_scheduler = get_scheduler(
+                name=training_args.lr_scheduler_type,
+                optimizer=optimizer,
+                num_warmup_steps=WARMUP_STEPS, num_training_steps=MAX_STEPS,
+            )
 
-        # training finished and save model to model directory
-        print(f"[INFO] Training finished and model saved to {self.OUTPUT_DIR}")
+            # metric evaluation for training
+            eval_fn = MetricsEval(self.tokenizer)
 
+            # initialize trainer
+            trainer = Seq2SeqTrainer(
+                args=training_args,
+                model=self.model,
+                train_dataset=self.data["train"],
+                eval_dataset=self.data["validation"],
+                data_collator=self.data_collator,
+                processing_class=self.processor.feature_extractor,
+                # compute_metrics=eval_fn.compute, # removed because we cannot autocast
+
+                # optimizer with weight decay and learning scheduler
+                optimizers=(optimizer, lr_scheduler),
+
+                # set callbacks
+                callbacks=[self.save_peft_model_callback,
+                           EarlyStoppingCallback(early_stopping_patience=PATIENCE),
+                           ],
+            )
+
+            self.model.config.use_cache = False  # silence the warnings
+
+            # start training
+            print("[INFO] Starting training...: ")
+
+            # resume training from the last checkpoint if it exists
+            checkpoint_dirs = [d for d in os.listdir(output_dir) if d.startswith("checkpoint")]
+            if checkpoint_dirs:
+                trainer.train(resume_from_checkpoint=True)
+            else:
+                trainer.train()
+
+            # training finished and save model to model directory
+            print(f"[INFO] Training finished and model saved to {output_dir}")
+
+            # get the eval_loss for the current model
+            eval_loss = trainer.state.best_metric
+            self._log(f"Eval loss for model with weight_decay = {weight_decay} is {eval_loss}")
+
+            if eval_loss is not None and eval_loss < best_eval_loss:
+                best_eval_loss = eval_loss
+                best_model_dir = output_dir
+                best_trainer = trainer
+
+        # standardize best output directory name
+        if best_model_dir:
+            # delete the output directory if it already exists
+            if os.path.exists(self.output_dir):
+                shutil.rmtree(self.output_dir)
+
+            # save the best model in the output directory
+            os.rename(best_model_dir, self.output_dir)
+            self.processor.save_pretrained(self.output_dir)
+            self._log(f"\nBest eval_loss: {best_eval_loss} for model {best_model_dir}")
+
+        # remove the other directories created during grid search
+        for weight_decay in weight_decay_values:
+            dir_to_delete = f"{self.output_dir}-weight-decay-{weight_decay}"
+            if os.path.exists(dir_to_delete):
+                shutil.rmtree(dir_to_delete)
+
+        # save model to hugging face
         if self.save_to_hf:
             kwargs = {
                 "language": f"{self.language_code}",
@@ -233,5 +270,5 @@ class WhisperASR:
                 "tasks": "automatic-speech-recognition",
             }
 
-            trainer.push_to_hub(**kwargs)
+            best_trainer.push_to_hub(**kwargs)
             print(f"[INFO] Model saved to Hugging Face Hub")

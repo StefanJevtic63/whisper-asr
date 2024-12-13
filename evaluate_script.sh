@@ -11,6 +11,6 @@ python ./evaluation/evaluate_model_lora.py \
 	--config sr \
 	--save_transcript \
 	--output_file eval-sr-large-v2-lora.txt \
-	--dataset_name mozilla-foundation/common_voice_17_0 \
+	--dataset_name ParlaSpeechSR+Fleurs+CommonVoice \
 	--cer \
-	--ref_key sentence
+	--ref_key transcription

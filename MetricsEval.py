@@ -22,8 +22,8 @@ class MetricsEval:
             pred (dict): The predictions
         """
 
-        pred_ids = pred.predictions
-        label_ids = pred.label_ids
+        pred_ids = pred["predictions"]
+        label_ids = pred["label_ids"]
 
         # replace -100 with pad_token_id
         label_ids[label_ids == -100] = self.tokenizer.pad_token_id

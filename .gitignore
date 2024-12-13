@@ -1,5 +1,7 @@
 .idea/
 models/
+datasets/
 __pycache__/
 
 log.txt
+evaluation/result_data.txt

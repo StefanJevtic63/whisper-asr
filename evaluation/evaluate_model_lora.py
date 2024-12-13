@@ -5,10 +5,13 @@ import sys
 import numpy as np
 import gc
 import torch
+import json
 
-from datasets import load_dataset, Audio
 from peft import PeftModel, PeftConfig
-from transformers import WhisperForConditionalGeneration, WhisperProcessor, BitsAndBytesConfig
+from datasets import load_from_disk
+from transformers import (
+    WhisperProcessor, WhisperForConditionalGeneration, BitsAndBytesConfig
+)
 from torch.utils.data import DataLoader
 from tqdm import tqdm
 
@@ -18,7 +21,25 @@ from SerbianCyrillicNormalizer import SerbianCyrillicNormalizer
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..', 'ASR')))
 from DataCollatorSpeechSeq2SeqWithPadding import DataCollatorSpeechSeq2SeqWithPadding
 
-HF_API_KEY = ""
+def save_results(references, predictions, output_file):
+    with open(output_file, 'w', encoding='utf-8') as f:
+        json.dump({'references': references, 'predictions': predictions}, f, ensure_ascii=False, indent=4)
+
+def load_results(input_file):
+    with open(input_file, 'r', encoding='utf-8') as f:
+        data = json.load(f)
+        references = data['references']
+        predictions = data['predictions']
+
+        return references, predictions
+
+
+# change constants accordingly
+TASK = "transcribe"
+DATASET_PATH = "./datasets/test_dataset"
+SERIALIZE_OUTPUT_FILE = "evaluation/result_data.txt"
+OUTPUT_DIR = "./evaluation/evaluation-results"
+BATCH_SIZE = 16
 
 def main(args):
     print(
@@ -30,34 +51,23 @@ def main(args):
     cer_metric = evaluate.load("cer")
 
     # load processor
-    processor = WhisperProcessor.from_pretrained(args.model_name, language=args.language, task="transcribe")
+    processor = WhisperProcessor.from_pretrained(
+        "openai/whisper-large-v2", language=args.language, task=TASK)
 
     # load data collator
     data_collator = DataCollatorSpeechSeq2SeqWithPadding(processor=processor)
 
-    def prepare_data(batch):
-        audio = batch["audio"]
-        batch["input_features"] = processor.feature_extractor(
-            audio["array"], sampling_rate=audio["sampling_rate"]).input_features[0]
-        batch["labels"] = processor.tokenizer(batch[args.ref_key]).input_ids
-        return batch
-
     # load the dataset
-    dataset = load_dataset(args.dataset_name, args.config,
-                           split="test", token=HF_API_KEY, trust_remote_code=True)
+    print(f"[INFO] Preparing data for testing phase...")
+    dataset = load_from_disk(dataset_path=DATASET_PATH)
 
-    # only consider input audio and transcribed text to generalize dataset as much as possible
-    dataset = dataset.remove_columns(
-        ["accent", "age", "client_id", "down_votes", "gender",
-         "locale", "path", "segment", "up_votes", "variant"]
-    )
+    print("[INFO] Structure of the loaded data:")
+    print(dataset)
 
-    # downsample audio data to 16kHz
-    dataset = dataset.cast_column("audio", Audio(sampling_rate=16000))
-    dataset = dataset.map(prepare_data, remove_columns=dataset.column_names, num_proc=2)
+    dataset = dataset["test"]
 
-    eval_dataloader = DataLoader(dataset, batch_size=8, collate_fn=data_collator)
-    forced_decoder_ids = processor.get_decoder_prompt_ids(language=args.language, task="transcribe")
+    eval_dataloader = DataLoader(dataset, batch_size=BATCH_SIZE, collate_fn=data_collator)
+    forced_decoder_ids = processor.get_decoder_prompt_ids(language=args.language, task=TASK)
     normalizer = SerbianCyrillicNormalizer()
 
     # load model
@@ -71,6 +81,9 @@ def main(args):
 
     predictions = []
     references = []
+
+    # start testing
+    print("[INFO] Starting testing...: ")
 
     model.eval()
     for step, batch in enumerate(tqdm(eval_dataloader)):
@@ -95,20 +108,31 @@ def main(args):
             del generated_tokens, labels, batch
             gc.collect()
 
+    # filter out any empty references
+    filtered_predictions = [pred for pred, ref in zip(predictions, references) if ref.strip()]
+    filtered_references = [ref for ref in references if ref.strip()]
+
+    # save the results if there's an error while calculating wer, so the results aren't lost
+    save_results(references=filtered_references,
+                 predictions=filtered_predictions, 
+                 output_file=SERIALIZE_OUTPUT_FILE)
+
+    print(f"[INFO] References and prefictions saved to {SERIALIZE_OUTPUT_FILE}")
+
     # evaluate
-    wer = wer_metric.compute(predictions=predictions, references=references)
+    wer = wer_metric.compute(predictions=filtered_predictions, references=filtered_references)
 
     # determine whether to calculate additional metrics
     if args.cer:
-        cer = cer_metric.compute(
-            references=references, predictions=predictions)
+        cer = cer_metric.compute(references=filtered_references, predictions=filtered_predictions)
 
-    os.makedirs("./evaluation/evaluation-results", exist_ok=True)
+    os.makedirs(OUTPUT_DIR, exist_ok=True)
 
     # output results to a file
-    with open(os.path.join("./evaluation/evaluation-results", args.output_file), 'w', encoding="utf-8") as file:
-        file.write(
-            f"[INFO] Evaluated {args.model_name} with {args.dataset_name} with language {args.language}/{args.config}\n\n")
+    output_file = os.path.join(OUTPUT_DIR, args.output_file)
+    with open(output_file, 'w', encoding="utf-8") as file:
+        file.write(f"[INFO] Evaluated {args.model_name} with {args.dataset_name} "
+                   f"with language {args.language}/{args.config}\n\n")
         file.write(f"WER : {round(100 * wer, 4)}\n\n")
 
         # determine whether to print additional metrics
@@ -116,10 +140,11 @@ def main(args):
             file.write(f"CER : {round(100 * cer, 4)}\n\n")
 
         if args.save_transcript:
-            for ref, pred in zip(references, predictions):
-                file.write(
-                    f"Reference: {ref}\nPrediction: {pred}\n{'-' * 40}\n")
+            for ref, pred in zip(filtered_references, filtered_predictions):
+                file.write(f"Reference: {ref}\nPrediction: {pred}\n{'-' * 40}\n")
 
+    # testing finished
+    print(f"[INFO] Testing finished and model was evaluated at {output_file}")
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Whisper ASR Evaluation")
