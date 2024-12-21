@@ -26,15 +26,15 @@ DATASET_PATH = "./datasets/train_validation_dataset"
 # training constants
 TRAIN_BATCH_SIZE = 16
 EVAL_BATCH_SIZE = 16
-DATALOADER_NUM_WORKERS = 4
-DATALOADER_PREFETCH_FACTOR = 2
-GRADIENT_ACCUMULATION_STEPS = 1
+GRADIENT_ACCUMULATION_STEPS = 2
+GENERATION_MAX_LENGTH=128
 LEARNING_RATE = 1e-3
 WARMUP_STEPS = 400
 MAX_STEPS = 4000
 SAVE_STEPS = 500
 EVAL_STEPS = 500
 LOGGING_STEPS = 25
+WEIGHT_DECAY = 0.001
 PATIENCE = 2
 
 
@@ -145,26 +145,24 @@ class WhisperASR:
         After training, save the model to the specified directory.
         """
 
-        # set different values of hyperparameter weight_decay for grid search
-        weight_decay_values = [0.001, 0.01, 0.1, 0.5]
+        # set different values of hyperparameter learning_rate for grid search
+        learning_rate_values = [5e-4, 7e-4, 9e-4]
         best_eval_loss = float("inf")
         best_model_dir = ""
         best_trainer = None
 
         # perform grid search
-        for weight_decay in weight_decay_values:
+        for learning_rate in learning_rate_values:
             # set the current output directory
-            output_dir = f"{self.output_dir}-weight-decay-{weight_decay}"
+            output_dir = f"{self.output_dir}-learning-rate-{learning_rate}"
 
             # configure training arguments
             training_args = Seq2SeqTrainingArguments(
                 output_dir=output_dir,
                 per_device_train_batch_size=TRAIN_BATCH_SIZE,
                 per_device_eval_batch_size=EVAL_BATCH_SIZE,
-                dataloader_num_workers=DATALOADER_NUM_WORKERS,
-                dataloader_prefetch_factor=DATALOADER_PREFETCH_FACTOR,
-                gradient_accumulation_steps=2,  # increase by 2x for every 2x decrease in batch size
-                learning_rate=LEARNING_RATE,
+                gradient_accumulation_steps=GRADIENT_ACCUMULATION_STEPS,
+                learning_rate=learning_rate,
                 lr_scheduler_type="linear",
                 warmup_steps=WARMUP_STEPS,
                 max_steps=MAX_STEPS,
@@ -173,7 +171,7 @@ class WhisperASR:
                 eval_strategy="steps",
                 save_strategy="steps",
                 predict_with_generate=True,
-                generation_max_length=128,
+                generation_max_length=GENERATION_MAX_LENGTH,
                 save_steps=SAVE_STEPS,
                 eval_steps=EVAL_STEPS,
                 logging_steps=LOGGING_STEPS,
@@ -189,7 +187,7 @@ class WhisperASR:
             )
 
             # initialize optimizer
-            optimizer = torch.optim.AdamW(self.model.parameters(), lr=LEARNING_RATE, weight_decay=weight_decay)
+            optimizer = torch.optim.AdamW(self.model.parameters(), lr=learning_rate, weight_decay=WEIGHT_DECAY)
 
             # initiate learning rate scheduler with weight decay
             lr_scheduler = get_scheduler(
@@ -237,29 +235,15 @@ class WhisperASR:
 
             # get the eval_loss for the current model
             eval_loss = trainer.state.best_metric
-            self._log(f"Eval loss for model with weight_decay = {weight_decay} is {eval_loss}")
+            self._log(f"Eval loss for model with learning_rate = {learning_rate} is {eval_loss}")
 
             if eval_loss is not None and eval_loss < best_eval_loss:
                 best_eval_loss = eval_loss
                 best_model_dir = output_dir
                 best_trainer = trainer
 
-        # standardize best output directory name
-        if best_model_dir:
-            # delete the output directory if it already exists
-            if os.path.exists(self.output_dir):
-                shutil.rmtree(self.output_dir)
 
-            # save the best model in the output directory
-            os.rename(best_model_dir, self.output_dir)
-            self.processor.save_pretrained(self.output_dir)
-            self._log(f"\nBest eval_loss: {best_eval_loss} for model {best_model_dir}")
-
-        # remove the other directories created during grid search
-        for weight_decay in weight_decay_values:
-            dir_to_delete = f"{self.output_dir}-weight-decay-{weight_decay}"
-            if os.path.exists(dir_to_delete):
-                shutil.rmtree(dir_to_delete)
+        self._log(f"Best eval_loss: {best_eval_loss} for model {best_model_dir}")
 
         # save model to hugging face
         if self.save_to_hf:
