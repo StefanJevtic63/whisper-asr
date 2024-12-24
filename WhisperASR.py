@@ -1,6 +1,5 @@
 import os
 from datetime import datetime
-import shutil
 import torch
 
 from huggingface_hub import HfFolder
@@ -27,14 +26,14 @@ DATASET_PATH = "./datasets/train_validation_dataset"
 TRAIN_BATCH_SIZE = 16
 EVAL_BATCH_SIZE = 16
 GRADIENT_ACCUMULATION_STEPS = 2
-GENERATION_MAX_LENGTH=128
-LEARNING_RATE = 1e-3
+GENERATION_MAX_LENGTH = 128
+LEARNING_RATE = 9e-4
 WARMUP_STEPS = 400
-MAX_STEPS = 4000
-SAVE_STEPS = 500
-EVAL_STEPS = 500
-LOGGING_STEPS = 25
-WEIGHT_DECAY = 0.001
+MAX_STEPS = 16000
+SAVE_STEPS = 2000
+EVAL_STEPS = 2000
+LOGGING_STEPS = 100
+WEIGHT_DECAY = 1e-3
 PATIENCE = 2
 
 
@@ -86,7 +85,7 @@ class WhisperASR:
         if existing_model:
             print(
                 f"[INFO] Loading {self.model_name} model from existing model...")
-            self.model = AutoModelForSpeechSeq2Seq.from_pretrained(model_name)
+            self.model = AutoModelForSpeechSeq2Seq.from_pretrained(self.model_name)
             self.model = self.model.to(device)
         else:
             print(
@@ -145,105 +144,86 @@ class WhisperASR:
         After training, save the model to the specified directory.
         """
 
-        # set different values of hyperparameter learning_rate for grid search
-        learning_rate_values = [5e-4, 7e-4, 9e-4]
-        best_eval_loss = float("inf")
-        best_model_dir = ""
-        best_trainer = None
+        # configure training arguments
+        training_args = Seq2SeqTrainingArguments(
+            output_dir=self.output_dir,
+            per_device_train_batch_size=TRAIN_BATCH_SIZE,
+            per_device_eval_batch_size=EVAL_BATCH_SIZE,
+            gradient_accumulation_steps=GRADIENT_ACCUMULATION_STEPS,
+            learning_rate=LEARNING_RATE,
+            lr_scheduler_type="linear",
+            warmup_steps=WARMUP_STEPS,
+            max_steps=MAX_STEPS,
+            gradient_checkpointing=True,
+            fp16=True,
+            eval_strategy="steps",
+            save_strategy="steps",
+            predict_with_generate=True,
+            generation_max_length=GENERATION_MAX_LENGTH,
+            save_steps=SAVE_STEPS,
+            eval_steps=EVAL_STEPS,
+            logging_steps=LOGGING_STEPS,
+            report_to=["tensorboard"],
+            metric_for_best_model="eval_loss",
+            greater_is_better=False,
+            load_best_model_at_end=True,
+            push_to_hub=self.save_to_hf,
+            save_safetensors=False,
+            remove_unused_columns=False, # required as the PeftModel forward doesn't have the signature of the wrapped model's forward
+            label_names=["labels"],  # same reason as above
+            dataloader_pin_memory=False,
+        )
 
-        # perform grid search
-        for learning_rate in learning_rate_values:
-            # set the current output directory
-            output_dir = f"{self.output_dir}-learning-rate-{learning_rate}"
+        # initialize optimizer
+        optimizer = torch.optim.AdamW(self.model.parameters(), lr=LEARNING_RATE, weight_decay=WEIGHT_DECAY)
 
-            # configure training arguments
-            training_args = Seq2SeqTrainingArguments(
-                output_dir=output_dir,
-                per_device_train_batch_size=TRAIN_BATCH_SIZE,
-                per_device_eval_batch_size=EVAL_BATCH_SIZE,
-                gradient_accumulation_steps=GRADIENT_ACCUMULATION_STEPS,
-                learning_rate=learning_rate,
-                lr_scheduler_type="linear",
-                warmup_steps=WARMUP_STEPS,
-                max_steps=MAX_STEPS,
-                gradient_checkpointing=True,
-                fp16=True,
-                eval_strategy="steps",
-                save_strategy="steps",
-                predict_with_generate=True,
-                generation_max_length=GENERATION_MAX_LENGTH,
-                save_steps=SAVE_STEPS,
-                eval_steps=EVAL_STEPS,
-                logging_steps=LOGGING_STEPS,
-                report_to=["tensorboard"],
-                metric_for_best_model="eval_loss",
-                greater_is_better=False,
-                load_best_model_at_end=True,
-                push_to_hub=self.save_to_hf,
-                save_safetensors=False,
-                remove_unused_columns=False, # required as the PeftModel forward doesn't have the signature of the wrapped model's forward
-                label_names=["labels"],  # same reason as above
-                dataloader_pin_memory=False,
-            )
+        # initiate learning rate scheduler with weight decay
+        lr_scheduler = get_scheduler(
+            name=training_args.lr_scheduler_type,
+            optimizer=optimizer,
+            num_warmup_steps=WARMUP_STEPS, num_training_steps=MAX_STEPS,
+        )
 
-            # initialize optimizer
-            optimizer = torch.optim.AdamW(self.model.parameters(), lr=learning_rate, weight_decay=WEIGHT_DECAY)
+        # metric evaluation for training
+        eval_fn = MetricsEval(self.tokenizer)
 
-            # initiate learning rate scheduler with weight decay
-            lr_scheduler = get_scheduler(
-                name=training_args.lr_scheduler_type,
-                optimizer=optimizer,
-                num_warmup_steps=WARMUP_STEPS, num_training_steps=MAX_STEPS,
-            )
+        # initialize trainer
+        trainer = Seq2SeqTrainer(
+            args=training_args,
+            model=self.model,
+            train_dataset=self.data["train"],
+            eval_dataset=self.data["validation"],
+            data_collator=self.data_collator,
+            processing_class=self.processor.feature_extractor,
+            # compute_metrics=eval_fn.compute, # removed because we cannot autocast
 
-            # metric evaluation for training
-            eval_fn = MetricsEval(self.tokenizer)
+            # optimizer with weight decay and learning scheduler
+            optimizers=(optimizer, lr_scheduler),
 
-            # initialize trainer
-            trainer = Seq2SeqTrainer(
-                args=training_args,
-                model=self.model,
-                train_dataset=self.data["train"],
-                eval_dataset=self.data["validation"],
-                data_collator=self.data_collator,
-                processing_class=self.processor.feature_extractor,
-                # compute_metrics=eval_fn.compute, # removed because we cannot autocast
+            # set callbacks
+            callbacks=[self.save_peft_model_callback,
+                       EarlyStoppingCallback(early_stopping_patience=PATIENCE),
+                       ],
+        )
 
-                # optimizer with weight decay and learning scheduler
-                optimizers=(optimizer, lr_scheduler),
+        self.model.config.use_cache = False  # silence the warnings
 
-                # set callbacks
-                callbacks=[self.save_peft_model_callback,
-                           EarlyStoppingCallback(early_stopping_patience=PATIENCE),
-                           ],
-            )
+        # start training
+        print("[INFO] Starting training...: ")
 
-            self.model.config.use_cache = False  # silence the warnings
+        # resume training from the last checkpoint if it exists
+        checkpoint_dirs = [d for d in os.listdir(self.output_dir) if d.startswith("checkpoint")]
+        if checkpoint_dirs:
+            trainer.train(resume_from_checkpoint=True)
+        else:
+            trainer.train()
 
-            # start training
-            print("[INFO] Starting training...: ")
+        # training finished and save model to model directory
+        print(f"[INFO] Training finished and model saved to {self.output_dir}")
 
-            # resume training from the last checkpoint if it exists
-            checkpoint_dirs = [d for d in os.listdir(output_dir) if d.startswith("checkpoint")]
-            if checkpoint_dirs:
-                trainer.train(resume_from_checkpoint=True)
-            else:
-                trainer.train()
-
-            # training finished and save model to model directory
-            print(f"[INFO] Training finished and model saved to {output_dir}")
-
-            # get the eval_loss for the current model
-            eval_loss = trainer.state.best_metric
-            self._log(f"Eval loss for model with learning_rate = {learning_rate} is {eval_loss}")
-
-            if eval_loss is not None and eval_loss < best_eval_loss:
-                best_eval_loss = eval_loss
-                best_model_dir = output_dir
-                best_trainer = trainer
-
-
-        self._log(f"Best eval_loss: {best_eval_loss} for model {best_model_dir}")
+        # get the eval_loss for the current model
+        eval_loss = trainer.state.best_metric
+        self._log(f"Eval loss for model with learning_rate = {LEARNING_RATE} is {eval_loss}")
 
         # save model to hugging face
         if self.save_to_hf:
@@ -254,5 +234,5 @@ class WhisperASR:
                 "tasks": "automatic-speech-recognition",
             }
 
-            best_trainer.push_to_hub(**kwargs)
+            trainer.push_to_hub(**kwargs)
             print(f"[INFO] Model saved to Hugging Face Hub")
