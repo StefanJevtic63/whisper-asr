@@ -16,10 +16,27 @@ from torch.utils.data import DataLoader
 from tqdm import tqdm
 
 from SerbianCyrillicNormalizer import SerbianCyrillicNormalizer
+from srbai.SintaktickiOperatori.spellcheck import SpellCheck
 
 # add root directory to sys.path
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..', 'ASR')))
 from DataCollatorSpeechSeq2SeqWithPadding import DataCollatorSpeechSeq2SeqWithPadding
+
+
+def spell_check(predictions):
+    sc = SpellCheck('sr-cyrillic')
+    result = []
+
+    for line in predictions:
+        words = []
+        for word in line.split():
+            correction = sc.spellcheck(word)
+            words.append(correction if correction else word)
+
+        corrected_sentence = ' '.join(words)
+        result.append(corrected_sentence)
+
+    return result
 
 def save_results(references, predictions, output_file):
     with open(output_file, 'w', encoding='utf-8') as f:
@@ -33,6 +50,43 @@ def load_results(input_file):
 
         return references, predictions
 
+def evaluate_model(predictions, references, args, output_dir, is_spell_check):
+    # load metrics
+    wer_metric = evaluate.load("wer")
+    cer_metric = evaluate.load("cer")
+
+    wer = wer_metric.compute(references=references, predictions=predictions)
+
+    # determine whether to calculate additional metrics
+    if args.cer:
+        cer = cer_metric.compute(references=references, predictions=predictions)
+
+    os.makedirs(output_dir, exist_ok=True)
+
+    # output results to a file
+    output_file = args.output_file
+    if is_spell_check:
+        output_file = output_file.removesuffix(".txt")
+        output_file += "-spell-check.txt"
+
+    output_file = os.path.join(output_dir, output_file)
+
+    with open(output_file, 'w', encoding="utf-8") as file:
+        file.write(f"[INFO] Evaluated {args.model_name} with {args.dataset_name} "
+                   f"with language {args.language}/{args.config}\n\n")
+        file.write(f"WER : {round(100 * wer, 4)}\n\n")
+
+        # determine whether to print additional metrics
+        if args.cer:
+            file.write(f"CER : {round(100 * cer, 4)}\n\n")
+
+        if args.save_transcript:
+            for ref, pred in zip(references, predictions):
+                file.write(f"Reference: {ref}\nPrediction: {pred}\n{'-' * 40}\n")
+
+    # testing finished
+    print(f"[INFO] Testing finished and model was evaluated at {output_file}")
+
 
 # change constants accordingly
 TASK = "transcribe"
@@ -45,10 +99,6 @@ def main(args):
     print(
         f"[INFO] Evaluting {args.model_name} with {args.dataset_name} with language {args.language}/{args.config}"
     )
-
-    # load metrics
-    wer_metric = evaluate.load("wer")
-    cer_metric = evaluate.load("cer")
 
     # load processor
     processor = WhisperProcessor.from_pretrained(
@@ -109,42 +159,22 @@ def main(args):
             gc.collect()
 
     # filter out any empty references
-    filtered_predictions = [pred for pred, ref in zip(predictions, references) if ref.strip()]
-    filtered_references = [ref for ref in references if ref.strip()]
+    predictions = [pred for pred, ref in zip(predictions, references) if ref.strip()]
+    references = [ref for ref in references if ref.strip()]
 
-    # save the results if there's an error while calculating wer, so the results aren't lost
-    save_results(references=filtered_references,
-                 predictions=filtered_predictions, 
+    # save the results so they aren't lost if there's an error while calculating wer
+    save_results(references=references,
+                 predictions=predictions,
                  output_file=SERIALIZE_OUTPUT_FILE)
 
     print(f"[INFO] References and prefictions saved to {SERIALIZE_OUTPUT_FILE}")
 
-    # evaluate
-    wer = wer_metric.compute(predictions=filtered_predictions, references=filtered_references)
+    # perform spell checking
+    spell_checked_predictions = spell_check(predictions)
 
-    # determine whether to calculate additional metrics
-    if args.cer:
-        cer = cer_metric.compute(references=filtered_references, predictions=filtered_predictions)
-
-    os.makedirs(OUTPUT_DIR, exist_ok=True)
-
-    # output results to a file
-    output_file = os.path.join(OUTPUT_DIR, args.output_file)
-    with open(output_file, 'w', encoding="utf-8") as file:
-        file.write(f"[INFO] Evaluated {args.model_name} with {args.dataset_name} "
-                   f"with language {args.language}/{args.config}\n\n")
-        file.write(f"WER : {round(100 * wer, 4)}\n\n")
-
-        # determine whether to print additional metrics
-        if args.cer:
-            file.write(f"CER : {round(100 * cer, 4)}\n\n")
-
-        if args.save_transcript:
-            for ref, pred in zip(filtered_references, filtered_predictions):
-                file.write(f"Reference: {ref}\nPrediction: {pred}\n{'-' * 40}\n")
-
-    # testing finished
-    print(f"[INFO] Testing finished and model was evaluated at {output_file}")
+    # evaluate the predictions before and after spell checking
+    evaluate_model(predictions, references, args, OUTPUT_DIR, False)
+    evaluate_model(spell_checked_predictions, references, args, OUTPUT_DIR, True)
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Whisper ASR Evaluation")
