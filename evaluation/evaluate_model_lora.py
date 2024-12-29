@@ -16,27 +16,11 @@ from torch.utils.data import DataLoader
 from tqdm import tqdm
 
 from SerbianCyrillicNormalizer import SerbianCyrillicNormalizer
-from srbai.SintaktickiOperatori.spellcheck import SpellCheck
+from SerbianSpellChecker import SerbianSpellChecker
 
 # add root directory to sys.path
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..', 'ASR')))
 from DataCollatorSpeechSeq2SeqWithPadding import DataCollatorSpeechSeq2SeqWithPadding
-
-
-def spell_check(predictions):
-    sc = SpellCheck('sr-cyrillic')
-    result = []
-
-    for line in predictions:
-        words = []
-        for word in line.split():
-            correction = sc.spellcheck(word)
-            words.append(correction if correction else word)
-
-        corrected_sentence = ' '.join(words)
-        result.append(corrected_sentence)
-
-    return result
 
 def save_results(references, predictions, output_file):
     with open(output_file, 'w', encoding='utf-8') as f:
@@ -170,11 +154,12 @@ def main(args):
     print(f"[INFO] References and prefictions saved to {SERIALIZE_OUTPUT_FILE}")
 
     # perform spell checking
-    spell_checked_predictions = spell_check(predictions)
+    spell_checker = SerbianSpellChecker(predictions)
+    predictions_spell_check = spell_checker.spell_check()
 
     # evaluate the predictions before and after spell checking
     evaluate_model(predictions, references, args, OUTPUT_DIR, False)
-    evaluate_model(spell_checked_predictions, references, args, OUTPUT_DIR, True)
+    evaluate_model(predictions_spell_check, references, args, OUTPUT_DIR, True)
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Whisper ASR Evaluation")
