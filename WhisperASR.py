@@ -13,14 +13,14 @@ from transformers import (
 )
 from peft import prepare_model_for_kbit_training, LoraConfig, get_peft_model
 
-from DataCollatorSpeechSeq2SeqWithPadding import DataCollatorSpeechSeq2SeqWithPadding
-from MetricsEval import MetricsEval
-from SavePeftModelCallback import SavePeftModelCallback
+from data.train_data.DataCollatorSpeechSeq2SeqWithPadding import DataCollatorSpeechSeq2SeqWithPadding
+from data.train_data.SavePeftModelCallback import SavePeftModelCallback
 
 # change constants as applicable
 HF_API_KEY = ""
 BASE_MODEL = "openai/whisper-large-v2"
-DATASET_PATH = "./datasets/train_validation_dataset"
+DIR_PATH = os.path.dirname(os.path.abspath(__file__))
+DATASET_PATH = os.path.join(DIR_PATH, "data/datasets/train_validation_dataset")
 
 # training constants
 TRAIN_BATCH_SIZE = 16
@@ -184,9 +184,6 @@ class WhisperASR:
             num_warmup_steps=WARMUP_STEPS, num_training_steps=MAX_STEPS,
         )
 
-        # metric evaluation for training
-        eval_fn = MetricsEval(self.tokenizer)
-
         # initialize trainer
         trainer = Seq2SeqTrainer(
             args=training_args,
@@ -195,7 +192,6 @@ class WhisperASR:
             eval_dataset=self.data["validation"],
             data_collator=self.data_collator,
             processing_class=self.processor.feature_extractor,
-            # compute_metrics=eval_fn.compute, # removed because we cannot autocast
 
             # optimizer with weight decay and learning scheduler
             optimizers=(optimizer, lr_scheduler),

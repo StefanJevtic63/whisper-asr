@@ -175,9 +175,12 @@ dependencies:
       - bitsandbytes==0.44.1
       - bleach==6.2.0
       - brotli==1.1.0
+      - build==1.2.2.post1
       - charset-normalizer==3.4.0
+      - classla==1.1.0
       - click==8.1.7
       - comm==0.2.2
+      - dataclasses==0.6
       - datasets==3.0.0
       - debugpy==1.8.9
       - dill==0.3.8
@@ -221,6 +224,7 @@ dependencies:
       - lazy-loader==0.4
       - librosa==0.10.2.post1
       - llvmlite==0.43.0
+      - lxml==5.3.0
       - markdown==3.7
       - markdown-it-py==3.0.0
       - markupsafe==2.1.5
@@ -235,10 +239,13 @@ dependencies:
       - multiprocess==0.70.16
       - nbclient==0.10.1
       - networkx==3.4.2
+      - nltk==3.9.1
+      - nlu==5.4.1
       - notebook-shim==0.2.4
       - num2words==0.5.13
       - numba==0.60.0
       - numpy==2.0.0
+      - obeliks==1.1.6
       - openai-whisper==20240930
       - orjson==3.10.12
       - overrides==7.7.0
@@ -265,6 +272,7 @@ dependencies:
       - pydub==0.25.1
       - pyee==12.1.1
       - pygments==2.18.0
+      - pyproject-hooks==1.2.0
       - python-ffmpeg==2.0.12
       - python-multipart==0.0.12
       - pytz==2024.2
@@ -274,6 +282,7 @@ dependencies:
       - rapidfuzz==3.10.1
       - referencing==0.35.1
       - regex==2024.11.6
+      - reldi-tokeniser==1.0.3
       - rich==13.9.4
       - rpds-py==0.21.0
       - ruff==0.8.1
@@ -289,6 +298,7 @@ dependencies:
       - soundfile==0.12.1
       - soupsieve==2.6
       - soxr==0.5.0.post1
+      - spark-nlp==5.5.2
       - stack-data==0.6.3
       - starlette==0.41.3
       - sympy==1.13.1

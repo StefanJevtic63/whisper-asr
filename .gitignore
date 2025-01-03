@@ -1,7 +1,9 @@
 .idea/
-models/
-datasets/
 __pycache__/
+models/
+data/datasets/train_validation_dataset
+data/datasets/train_validation_dataset_transcription
+data/datasets/test_dataset
 
-log.txt
-evaluation/result_data.txt
+data/evaluation_data/serbian-cyrillic.dic
+evaluation/result-data.txt
