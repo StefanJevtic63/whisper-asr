@@ -1,3 +1,4 @@
+import os
 from datasets import Audio, load_dataset, concatenate_datasets, DatasetDict
 from transformers import WhisperFeatureExtractor, WhisperTokenizer
 
@@ -54,7 +55,6 @@ class Datasets:
         Returns:
             DatasetDict
         """
-
 
         # only consider input audio and transcribed text to generalize dataset as much as possible
         parlaspeech = parlaspeech.remove_columns(
@@ -333,9 +333,16 @@ class Datasets:
 
         return data
 
+
+CURRENT_DIRECTORY_PATH = os.path.dirname(os.path.abspath(__file__))
+TRAIN_VAL_PATH_V2 = os.path.join(CURRENT_DIRECTORY_PATH, "train_validation_dataset")
+TEST_PATH_V2 = os.path.join(CURRENT_DIRECTORY_PATH, "test_dataset")
+TRAIN_VAL_PATH_V3 = os.path.join(CURRENT_DIRECTORY_PATH, "train_validation_dataset_v3")
+TEST_PATH_V3 = os.path.join(CURRENT_DIRECTORY_PATH, "test_dataset_v3")
+
 if __name__ == "__main__":
     # initiate parameters
-    model_name = "openai/whisper-large-v2"
+    model_name = "openai/whisper-large-v3"
     feature_extractor = WhisperFeatureExtractor.from_pretrained(model_name)
     tokenizer = WhisperTokenizer.from_pretrained(
         model_name, language="Serbian", task="transcribe")
@@ -346,8 +353,5 @@ if __name__ == "__main__":
     test_dataset = datasets.combine_datasets_test()
 
     # save datasets for future use
-    path_to_train_val_dataset = "train_validation_dataset"
-    path_to_test_dataset = "test_dataset"
-
-    train_val_dataset.save_to_disk(path_to_train_val_dataset)
-    test_dataset.save_to_disk(path_to_test_dataset)
+    train_val_dataset.save_to_disk(TRAIN_VAL_PATH_V3)
+    test_dataset.save_to_disk(TEST_PATH_V3)

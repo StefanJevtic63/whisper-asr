@@ -1,12 +1,12 @@
 #!/bin/bash
 
 # Execute Python script
-python ../evaluation/evaluate-model-lora.py \
-  --model_name ../models/whisper-large-v2-sr-lora \
+python ../evaluation/evaluate-model.py \
+  --model_name openai/whisper-large-v3 \
 	--language Serbian \
 	--config sr \
 	--save_transcript \
-	--output_file eval-large-v2-sr-lora-500-eval-steps.txt \
+	--output_file eval-large-v3-sr-lora.txt \
 	--dataset_name ParlaSpeechSR+Fleurs+CommonVoice \
 	--cer \
 	--ref_key transcription

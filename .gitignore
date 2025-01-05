@@ -2,8 +2,11 @@
 __pycache__/
 models/
 data/datasets/train_validation_dataset
+data/datasets/train_validation_dataset_v3
 data/datasets/train_validation_dataset_transcription
 data/datasets/test_dataset
+data/datasets/test_dataset_v3
 
 data/evaluation_data/serbian-cyrillic.dic
 evaluation/result-data.txt
+evaluation/result-data-whisper-v3.txt
