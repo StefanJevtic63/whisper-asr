@@ -6,7 +6,7 @@ python ../evaluation/evaluate-model.py \
 	--language Serbian \
 	--config sr \
 	--save_transcript \
-	--output_file eval-large-v3-sr-lora.txt \
+	--output_file eval-large-v3-sr.txt \
 	--dataset_name ParlaSpeechSR+Fleurs+CommonVoice \
 	--cer \
 	--ref_key transcription
