@@ -335,14 +335,14 @@ class Datasets:
 
 
 CURRENT_DIRECTORY_PATH = os.path.dirname(os.path.abspath(__file__))
-TRAIN_VAL_PATH_V2 = os.path.join(CURRENT_DIRECTORY_PATH, "train_validation_dataset")
-TEST_PATH_V2 = os.path.join(CURRENT_DIRECTORY_PATH, "test_dataset")
+TRAIN_VAL_PATH_V2 = os.path.join(CURRENT_DIRECTORY_PATH, "train_validation_dataset_v2")
+TEST_PATH_V2 = os.path.join(CURRENT_DIRECTORY_PATH, "test_dataset_v2")
 TRAIN_VAL_PATH_V3 = os.path.join(CURRENT_DIRECTORY_PATH, "train_validation_dataset_v3")
 TEST_PATH_V3 = os.path.join(CURRENT_DIRECTORY_PATH, "test_dataset_v3")
 
 if __name__ == "__main__":
     # initiate parameters
-    model_name = "openai/whisper-large-v3"
+    model_name = "openai/whisper-large-v2"
     feature_extractor = WhisperFeatureExtractor.from_pretrained(model_name)
     tokenizer = WhisperTokenizer.from_pretrained(
         model_name, language="Serbian", task="transcribe")
@@ -353,5 +353,5 @@ if __name__ == "__main__":
     test_dataset = datasets.combine_datasets_test()
 
     # save datasets for future use
-    train_val_dataset.save_to_disk(TRAIN_VAL_PATH_V3)
-    test_dataset.save_to_disk(TEST_PATH_V3)
+    train_val_dataset.save_to_disk(TRAIN_VAL_PATH_V2)
+    test_dataset.save_to_disk(TEST_PATH_V2)

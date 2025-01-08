@@ -74,9 +74,9 @@ def evaluate_model(references, predictions, args, output_dir, is_spell_check):
 # change constants accordingly
 TASK = "transcribe"
 CURRENT_DIRECTORY_PATH = os.path.dirname(os.path.abspath(__file__))
-DATASET_PATH = os.path.join(CURRENT_DIRECTORY_PATH, "../data/datasets/test_dataset_v3")
+DATASET_PATH = os.path.join(CURRENT_DIRECTORY_PATH, "../data/datasets/test_dataset_v2")
 DICTIONARY_PATH = os.path.join(CURRENT_DIRECTORY_PATH, "../data/evaluation_data/serbian-cyrillic.dic")
-SERIALIZE_OUTPUT_FILE = os.path.join(CURRENT_DIRECTORY_PATH, "result-data-whisper-v3.txt")
+SERIALIZE_OUTPUT_FILE = os.path.join(CURRENT_DIRECTORY_PATH, "result-data-whisper-v2.txt")
 OUTPUT_DIR = os.path.join(CURRENT_DIRECTORY_PATH, "evaluation_results")
 BATCH_SIZE = 16
 
@@ -159,7 +159,7 @@ def main(args):
         output_file=SERIALIZE_OUTPUT_FILE
     )
 
-    print(f"[INFO] References and prefictions saved to {SERIALIZE_OUTPUT_FILE}")
+    print(f"[INFO] References and predictions saved to {SERIALIZE_OUTPUT_FILE}")
 
     # perform spell checking
     word_frequencies = WordFrequencies().calculate()
@@ -211,4 +211,35 @@ if __name__ == "__main__":
                         help="Flag to calculate the Character Error Rate (default: False)")
     args = parser.parse_args()
 
-    main(args)
+    #################################################################################################
+
+    references, predictions = load_results(SERIALIZE_OUTPUT_FILE)
+
+    # perform spell checking
+    word_frequencies = WordFrequencies().calculate()
+    spell_checker = SpellChecker(
+        predictions=predictions,
+        word_frequencies=word_frequencies,
+        dictionary_path=DICTIONARY_PATH
+    )
+    predictions_spell_check = spell_checker.spell_check()
+
+    # evaluate the predictions before and after spell checking
+    evaluate_model(
+        references=references,
+        predictions=predictions,
+        args=args,
+        output_dir=OUTPUT_DIR,
+        is_spell_check=False
+    )
+    evaluate_model(
+        references=references,
+        predictions=predictions_spell_check,
+        args=args,
+        output_dir=OUTPUT_DIR,
+        is_spell_check=True
+    )
+
+    #################################################################################################
+
+    #main(args)

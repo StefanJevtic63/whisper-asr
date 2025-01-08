@@ -4,7 +4,7 @@ from datasets import load_from_disk
 from data.evaluation_data.SerbianCyrillicNormalizer import SerbianCyrillicNormalizer
 
 CURRENT_DIRECTORY_PATH = os.path.dirname(os.path.abspath(__file__))
-DATASET_PATH = os.path.join(CURRENT_DIRECTORY_PATH, "../datasets/train_validation_dataset_transcription")
+DATASET_PATH = os.path.join(CURRENT_DIRECTORY_PATH, "../datasets/train_validation_dataset_transcription_v2")
 
 class WordFrequencies:
     def __init__(self):
