@@ -6,20 +6,29 @@ from data.evaluation_data.SerbianCyrillicNormalizer import SerbianCyrillicNormal
 CURRENT_DIRECTORY_PATH = os.path.dirname(os.path.abspath(__file__))
 DATASET_PATH = os.path.join(CURRENT_DIRECTORY_PATH, "../datasets/train_validation_dataset_transcription_v2")
 
+
 class WordFrequencies:
+    """
+    A class to compute the frequency of word occurrences within a dataset.
+
+    This class loads a dataset, normalizes the text, and computes word frequency distributions for given datasets.
+    """
+
     def __init__(self):
         self.dataset = load_from_disk(DATASET_PATH)
         self.normalizer = SerbianCyrillicNormalizer()
 
     def add_words(self, dictionary, dataset):
-        """Calculates the number of word occurrences in the given dataset.
+        """
+        Computes the frequency of word occurrences within the specified dataset.
 
-        Args:
-            dictionary (dict): The dictionary representing word occurrences
-            dataset (Dataset, DatasetDict): The given dataset
+        :param dictionary: The dictionary representing word occurrences
+        :type dictionary: dict
+        :param dataset: The given dataset
+        :type dataset: Dataset
 
-        Returns
-            dict
+        :return: Updated dictionary with the count of word occurrences
+        :rtype: dict
         """
 
         for row in dataset:
@@ -29,12 +38,14 @@ class WordFrequencies:
                     dictionary[word] += 1
                 else:
                     dictionary[word] = 1
+        return dictionary
 
     def calculate(self):
-        """Calculates the number of word occurrences in train and validation datasets.
+        """
+        Computes the frequency of word occurrences within the train and validation datasets.
 
-        Returns:
-            dict
+        :return:Dictionary with the count of word occurrences from both datasets
+        :rtype: dict
         """
 
         result = {}
@@ -42,7 +53,6 @@ class WordFrequencies:
         train_dataset = self.dataset["train"]
         self.add_words(result, train_dataset["transcription"])
 
-        # validation dataset
         validation_dataset = self.dataset["validation"]
         self.add_words(result, validation_dataset["transcription"])
 

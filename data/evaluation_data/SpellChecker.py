@@ -2,7 +2,16 @@ import numpy as np
 import multiprocessing
 
 class SpellChecker:
-    def __init__(self, predictions, word_frequencies, dictionary_path, max_cost = 2):
+    """
+    A class for performing spell checking on a set of predictions using a trie-based dictionary.
+
+    :param list[str] predictions: List of predictions to be spell checked
+    :param dict word_frequencies: Dictionary of word frequencies
+    :param str dictionary_path: Path to the text file containing the dictionary of words
+    :param int max_cost: Maximum allowed cost for edit distance (default is 2)
+    """
+
+    def __init__(self, predictions, word_frequencies, dictionary_path, max_cost=2):
         self.trie = {}
         self.max_cost = max_cost
         self.word_frequencies = word_frequencies
@@ -11,11 +20,23 @@ class SpellChecker:
         self.num_workers = 10
 
     def load_dictionary(self, dictionary):
+        """
+        Load words from a dictionary file into the trie structure.
+
+        :param str dictionary: Path to the dictionary file containing words
+        """
+
         with open(dictionary, 'r', encoding='utf-8') as f:
             for line in f:
                 self.add_word(line.strip())
 
     def add_word(self, word):
+        """
+        Add a word to the trie structure.
+
+        :param str word: Word to be added to the trie
+        """
+
         node = self.trie
         for char in word:
             if char not in node:
@@ -24,6 +45,14 @@ class SpellChecker:
         node['$'] = word
 
     def find(self, word):
+        """
+        Checks if a word exists in the trie structure.
+
+        :param str word: Word to be checked
+        :return: True if the word exists, False otherwise
+        :rtype: bool
+        """
+
         node = self.trie
         for char in word:
             if char not in node:
@@ -33,6 +62,16 @@ class SpellChecker:
         return '$' in node
 
     def search_trie(self, node, word, original_word_len, cost, results):
+        """
+        Search for corrections in the trie that are within the maximum allowed cost.
+
+        :param dict node: Current node in the trie
+        :param str word: Word being searched
+        :param int original_word_len: Length of the original word
+        :param int cost: Current edit distance cost
+        :param list[str] results: List to store found corrections
+        """
+
         if cost > self.max_cost:
             return
 
@@ -62,6 +101,15 @@ class SpellChecker:
                     self.search_trie(node[c], word, original_word_len, cost + 1, results)
 
     def lev_distance(self, s, t):
+        """
+        Calculate the Levenshtein distance between two strings.
+
+        :param str s: First string
+        :param str t: Second string
+        :return: The Levenshtein distance between the two strings
+        :rtype: int
+        """
+
         m, n = len(s), len(t)
         d = np.zeros((m+1, n+1), dtype=int)
 
@@ -81,12 +129,21 @@ class SpellChecker:
                     substitution_cost = 1
 
                 d[i,j] = min(d[i-1,j] + 1,                   # delete
-                             d[i,j-1] + 1,                   # insert
-                             d[i-1,j-1] + substitution_cost) # substitute
+                            d[i,j-1] + 1,                   # insert
+                            d[i-1,j-1] + substitution_cost) # substitute
 
         return d[m,n]
 
     def find_closest(self, word, candidates):
+        """
+        Find the closest word from the list of candidates using Levenshtein distance.
+
+        :param str word: The original word
+        :param list[str] candidates: List of candidate words
+        :return: The closest word from the candidates
+        :rtype: str
+        """
+
         min_distance = float('inf')
         closest_words = []
         for candidate in candidates:
@@ -97,7 +154,6 @@ class SpellChecker:
             elif distance == min_distance:
                 closest_words.append(candidate)
 
-        # no correction is needed
         if not closest_words:
             return word
 
@@ -111,6 +167,14 @@ class SpellChecker:
         return max(closest_words_frequencies, key=closest_words_frequencies.get)
 
     def spell_check_word(self, word):
+        """
+        Perform spell check for a given word.
+
+        :param str word: The word to be checked
+        :return: The corrected word
+        :rtype: str
+        """
+
         results = []
         self.search_trie(self.trie, word, len(word), 0, results)
         results = list(set(val for val in results))
@@ -126,6 +190,15 @@ class SpellChecker:
         return self.find_closest(word, results)
 
     def combine_adjacent_words(self, word1, word2):
+        """
+        Combine two adjacent words if they form a valid word in the dictionary.
+
+        :param str word1: The first word
+        :param str word2: The second word
+        :return: The combined word if valid, None otherwise
+        :rtype: str or None
+        """
+
         result = word1 + " " + word2
         if self.find(result):
             return result
@@ -133,6 +206,14 @@ class SpellChecker:
             return None
 
     def process_lines(self, lines):
+        """
+        Process lines of text, performing spell checks on each word.
+
+        :param list[str] lines: List of lines to be processed
+        :return: List of processed lines with corrected words
+        :rtype: list[str]
+        """
+
         result = []
         for line in lines:
             words = []
@@ -143,7 +224,13 @@ class SpellChecker:
         return result
 
     def spell_check(self):
-        # equally divide amount of work
+        """
+        Perform spell check on all predictions using multiprocessing.
+
+        :return: List of spell-checked predictions
+        :rtype: list[str]
+        """
+
         predictions_len = len(self.predictions)
         if self.num_workers > predictions_len:
             self.num_workers = predictions_len

@@ -22,27 +22,25 @@ from data.evaluation_data.SerbianCyrillicNormalizer import SerbianCyrillicNormal
 from data.evaluation_data.SpellChecker import SpellChecker
 from data.evaluation_data.WordFrequencies import WordFrequencies
 
+
 def save_results(references, predictions, output_file):
-    """Saves references and predictions to an output file after testing phase.
-
-    Params: 
-        predictions (List): The predictions of a model
-        references (List): The annotations of the dataset
-        output_file (str): The path to a file where references and predictions will be stored
     """
+    Saves references and predictions to an output file.
 
+    :param list[str] references: List of ground truth annotations for the dataset
+    :param list[str] predictions: List of model predictions
+    :param str output_file: The path to a file where references and predictions will be stored
+    """
 
     with open(output_file, 'w', encoding='utf-8') as f:
         json.dump({'references': references, 'predictions': predictions}, f, ensure_ascii=False, indent=4)
 
+
 def load_results(input_file):
-    """Loads references and predictions after testing phase.
+    """
+    Loads references and predictions from a file.
 
-    Params:
-        input_file (str): The path to a file containing references and predictions
-
-    Returns:
-        [List, List]
+    :param str input_file: The path to a file containing references and predictions
     """
 
     with open(input_file, 'r', encoding='utf-8') as f:
@@ -52,15 +50,16 @@ def load_results(input_file):
 
         return references, predictions
 
-def evaluate_model(predictions, references, args, output_dir, is_spell_check):
-    """Evaluates the model based on WER and CER metrics.
 
-    Params:
-        predictions (List): The predictions of a model
-        references (List): The annotations of the dataset
-        args (dict): The arguments provided by evaluation script
-        output_dir (str): The path to output directory of evaluation results
-        is_spell_check (bool): The flag for annotating whether spell checking was previously performed on predictions
+def evaluate_model(references, predictions, args, output_dir, is_spell_check):
+    """
+    Evaluates the model based on WER and CER metrics and writes the references and predictions to provided file.
+
+    :param list[str] references: List of ground truth annotations for the dataset
+    :param list[str] predictions: List of model predictions
+    :param args: Additional arguments required for model evaluation
+    :param str output_dir: Directory where the evaluation results and files will be saved
+    :param bool is_spell_check: Flag indicating whether spell checking should be performed on the predictions
     """
 
     # load metrics
@@ -108,6 +107,7 @@ DICTIONARY_PATH = os.path.join(DIR_PATH, "../data/evaluation_data/serbian-cyrill
 SERIALIZE_OUTPUT_FILE = os.path.join(DIR_PATH, "result-data-whisper-v3.txt")
 OUTPUT_DIR = os.path.join(DIR_PATH, "evaluation_results")
 BATCH_SIZE = 16
+
 
 def main(args):
     print(
@@ -209,6 +209,7 @@ def main(args):
         output_dir=OUTPUT_DIR,
         is_spell_check=True
     )
+
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Whisper ASR Evaluation")

@@ -7,9 +7,8 @@ import gc
 import torch
 import json
 
-from peft import PeftModel, PeftConfig
 from datasets import load_from_disk
-from transformers import AutoModelForSpeechSeq2Seq, AutoProcessor, WhisperProcessor
+from transformers import AutoModelForSpeechSeq2Seq, WhisperProcessor
 
 from torch.utils.data import DataLoader
 from tqdm import tqdm
@@ -21,11 +20,27 @@ from data.evaluation_data.SerbianCyrillicNormalizer import SerbianCyrillicNormal
 from data.evaluation_data.SpellChecker import SpellChecker
 from data.evaluation_data.WordFrequencies import WordFrequencies
 
+
 def save_results(references, predictions, output_file):
+    """
+    Saves references and predictions to an output file.
+
+    :param list[str] references: List of ground truth annotations for the dataset
+    :param list[str] predictions: List of model predictions
+    :param str output_file: The path to a file where references and predictions will be stored
+    """
+
     with open(output_file, 'w', encoding='utf-8') as f:
         json.dump({'references': references, 'predictions': predictions}, f, ensure_ascii=False, indent=4)
 
+
 def load_results(input_file):
+    """
+    Loads references and predictions from a file.
+
+    :param str input_file: The path to a file containing references and predictions
+    """
+
     with open(input_file, 'r', encoding='utf-8') as f:
         data = json.load(f)
         references = data['references']
@@ -33,7 +48,18 @@ def load_results(input_file):
 
         return references, predictions
 
+
 def evaluate_model(references, predictions, args, output_dir, is_spell_check):
+    """
+    Evaluates the model based on WER and CER metrics and writes the references and predictions to provided file.
+
+    :param list[str] references: List of ground truth annotations for the dataset
+    :param list[str] predictions: List of model predictions
+    :param args: Additional arguments required for model evaluation
+    :param str output_dir: Directory where the evaluation results and files will be saved
+    :param bool is_spell_check: Flag indicating whether spell checking should be performed on the predictions
+    """
+
     # load metrics
     wer_metric = evaluate.load("wer")
     cer_metric = evaluate.load("cer")
@@ -79,6 +105,7 @@ DICTIONARY_PATH = os.path.join(CURRENT_DIRECTORY_PATH, "../data/evaluation_data/
 SERIALIZE_OUTPUT_FILE = os.path.join(CURRENT_DIRECTORY_PATH, "result-data-whisper-v2.txt")
 OUTPUT_DIR = os.path.join(CURRENT_DIRECTORY_PATH, "evaluation_results")
 BATCH_SIZE = 16
+
 
 def main(args):
     print(
@@ -186,6 +213,7 @@ def main(args):
         is_spell_check=True
     )
 
+
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Whisper ASR Evaluation")
 
@@ -211,35 +239,4 @@ if __name__ == "__main__":
                         help="Flag to calculate the Character Error Rate (default: False)")
     args = parser.parse_args()
 
-    #################################################################################################
-
-    references, predictions = load_results(SERIALIZE_OUTPUT_FILE)
-
-    # perform spell checking
-    word_frequencies = WordFrequencies().calculate()
-    spell_checker = SpellChecker(
-        predictions=predictions,
-        word_frequencies=word_frequencies,
-        dictionary_path=DICTIONARY_PATH
-    )
-    predictions_spell_check = spell_checker.spell_check()
-
-    # evaluate the predictions before and after spell checking
-    evaluate_model(
-        references=references,
-        predictions=predictions,
-        args=args,
-        output_dir=OUTPUT_DIR,
-        is_spell_check=False
-    )
-    evaluate_model(
-        references=references,
-        predictions=predictions_spell_check,
-        args=args,
-        output_dir=OUTPUT_DIR,
-        is_spell_check=True
-    )
-
-    #################################################################################################
-
-    #main(args)
+    main(args)

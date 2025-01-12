@@ -7,6 +7,8 @@ from WhisperASR import WhisperASR
 
 
 def env_check():
+    """Checks if the GPU is available and prints the corresponding information."""
+
     # check if GPU is available
     print(torch.__version__)
     print('CUDA available:', torch.cuda.is_available())

@@ -5,18 +5,17 @@ from transformers import WhisperFeatureExtractor, WhisperTokenizer
 from WhisperASR import HF_API_KEY
 
 class Datasets:
-    """Class for merging multiple datasets."""
+    """
+    Class for merging multiple datasets.
+
+    :param FeatureExtractor feature_extractor: Whisper feature extractor
+    :param Tokenizer tokenizer: Whisper tokenizer
+    :param str hf_api_key: The HuggingFace API key
+    :param str ref_key: The key to the reference data in the dataset
+
+    """
 
     def __init__(self, feature_extractor, tokenizer, hf_api_key, ref_key):
-        """Initiate the dataset merging class.
-
-        Args:
-            feature_extractor (FeatureExtractor): Whisper feature extractor
-            tokenizer (Tokenizer): Whisper tokenizer
-            hf_api_key (str): The HuggingFace API key
-            ref_key (str): The key to the reference data in the dataset
-        """
-
         self.feature_extractor = feature_extractor
         self.tokenizer = tokenizer
         self.hf_api_key = hf_api_key
@@ -28,10 +27,12 @@ class Datasets:
         self.common_voice = self._common_voice()
 
     def _prepare_data(self, batch):
-        """Converts audio files to the model's input feature format and encodes the target texts.
+        """
+        Converts audio files to the model's input feature format and encodes the target texts.
 
-        Args:
-            batch (dict): A batch of audio and text data.
+        :param dict batch: A batch of audio and text data.
+
+        :return: Prepared batch of audio and text data
         """
 
         # load and resample audio data from 48kHz to 16kHz
@@ -47,13 +48,13 @@ class Datasets:
         return batch
 
     def _generalize_parlaspeech(self, parlaspeech):
-        """Generalizes ParlaSpeech-SR dataset.
+        """
+        Generalizes ParlaSpeech-SR dataset.
 
-        Args:
-            parlaspeech (DatasetDict): The dataset to be generalized
+        :param DatasetDict parlaspeech: The dataset to be generalized
 
-        Returns:
-            DatasetDict
+        :return: Generalized ParlaSpeech-SR dataset
+        :rtype: DatasetDict
         """
 
         # only consider input audio and transcribed text to generalize dataset as much as possible
@@ -68,13 +69,13 @@ class Datasets:
         return parlaspeech
 
     def _generalize_fleurs(self, fleurs):
-        """Generalizes Google/Fleurs dataset.
+        """
+        Generalizes Google/Fleurs dataset.
 
-        Args:
-            fleurs (DatasetDict): The dataset to be generalized
+        :param DatasetDict fleurs: The dataset to be generalized
 
-        Returns:
-            DatasetDict
+        :return: Generalized Fleurs dataset
+        :rtype: DatasetDict
         """
 
         # only consider input audio and transcribed text to generalize dataset as much as possible
@@ -84,13 +85,13 @@ class Datasets:
         )
 
     def _generalize_common_voice(self, common_voice):
-        """Generalizes Common Voice dataset.
+        """
+        Generalizes Common Voice dataset.
 
-        Args:
-            common_voice (DatasetDict): The dataset to be generalized
+        :param DatasetDict common_voice: The dataset to be generalized
 
-        Returns:
-            DatasetDict
+        :return: Generalized Common Voice dataset
+        :rtype: DatasetDict
         """
 
         # only consider input audio and transcribed text to generalize dataset as much as possible
@@ -104,14 +105,14 @@ class Datasets:
         return common_voice
 
     def _generalize(self, dataset, dataset_name):
-        """Generalizes a custom dataset.
+        """
+        Generalizes a custom dataset.
 
-        Args:
-            dataset (DatasetDict): The dataset to be generalized
-            dataset_name (str): The name of the custom dataset
+        :param DatasetDict dataset: The dataset to be generalized
+        :param str dataset_name: The name of the custom dataset
 
-        Returns:
-            DatasetDict
+        :return: Generalized dataset
+        :rtype: DatasetDict
         """
 
         if dataset_name == "classla/ParlaSpeech-RS":
@@ -122,14 +123,14 @@ class Datasets:
             return self._generalize_common_voice(dataset)
 
     def _downsample(self, dataset, split):
-        """Downsamples audio data to 16kHz.
+        """
+        Downsamples audio data to 16kHz.
 
-        Args:
-            dataset (DatasetDict): The dataset to be downsampled
-            split (str): The split of a dataset
+        :param DatasetDict dataset: The dataset to be downsampled
+        :param str split: The split of a dataset
 
-        Returns:
-            DatasetDict
+        :return: Downsampled dataset to 16 kHz
+        :rtype: DatasetDict
         """
 
         dataset = dataset.cast_column("audio", Audio(sampling_rate=16000))
@@ -137,33 +138,33 @@ class Datasets:
         return dataset
 
     def _load_dataset(self, path, name = None, split = None):
-        """Load a custom dataset.
+        """
+        Loads a custom dataset.
 
-        Args:
-            path (str): The name of the dataset
-            name (str): The language code
-            split (str): The dataset split
+        :param str path: The name of the dataset
+        :param str name: The language code
+        :param str split: The dataset split
 
-        Returns:
-            Dataset if split is not None or DatasetDict with each split if split is None
+        :return: Provided dataset
+        :rtype: Dataset if split is not None or DatasetDict with each split if split is None
         """
 
         return load_dataset(path, name, token=self.hf_api_key, split=split, trust_remote_code=True)
 
     def _fill_dataset(self, split, train_dataset = None, validation_dataset = None, test_dataset = None,
                       path = None, name = None):
-        """Initializes a dataset by a split.
+        """
+        Initializes a dataset by a split.
 
-        Args:
-            split (str): The dataset split
-            train_dataset (Dataset, DatasetDict): The train dataset
-            validation_dataset (Dataset, DatasetDict): The validation dataset
-            test_dataset (Dataset, DatasetDict): The test dataset
-            path (str): The name of the dataset
-            name (str): The language code
+        :param str split: The dataset split
+        :param Dataset, DatasetDict train_dataset: The train dataset
+        :param Dataset, DatasetDict validation_dataset: The validation dataset
+        :param Dataset, DatasetDict test_dataset: The test dataset
+        :param str path: The name of the dataset
+        :param str name: The language code
 
-        Returns:
-              DatasetDict
+        :return: Dataset according to the phase (train or test)
+        :rtype: DatasetDict
         """
 
 
@@ -181,18 +182,18 @@ class Datasets:
 
     def _load_and_generalize_split(self, split, train_dataset = None, validation_dataset = None, test_dataset = None,
                                      path = None, name = None):
-        """Loads and generalizes custom dataset by a split.
+        """
+        Loads and generalizes custom dataset by a split.
 
-        Args:
-            split (str): The dataset split
-            train_dataset (Dataset, DatasetDict): The train dataset
-            validation_dataset (Dataset, DatasetDict): The validation dataset
-            test_dataset (Dataset, DatasetDict): The test dataset
-            path (str): The name of the dataset
-            name (str): The language code
+        :param str split: The dataset split
+        :param Dataset, DatasetDict train_dataset: The train dataset
+        :param Dataset, DatasetDict validation_dataset: The validation dataset
+        :param Dataset, DatasetDict test_dataset: The test dataset
+        :param str path: The name of the dataset
+        :param str name: The language code
 
-        Returns:
-            DatasetDict
+        :return: Generalized split of a dataset
+        :rtype: DatasetDict
         """
 
         dataset = self._fill_dataset(
@@ -210,17 +211,17 @@ class Datasets:
 
     def _load_and_generalize_dataset(self, train_dataset = None, validation_dataset = None, test_dataset = None,
                                      path = None, name = None):
-        """Loads and generalizes custom dataset.
+        """
+        Loads and generalizes custom dataset.
 
-        Args:
-            train_dataset (Dataset, DatasetDict): The train dataset
-            validation_dataset (Dataset, DatasetDict): The validation dataset
-            test_dataset (Dataset, DatasetDict): The test dataset
-            path (str): The name of the dataset
-            name (str): The language code
+        :param Dataset, DatasetDict train_dataset: The train dataset
+        :param Dataset, DatasetDict validation_dataset: The validation dataset
+        :param Dataset, DatasetDict test_dataset: The test dataset
+        :param str path: The name of the dataset
+        :param str name: The language code
 
-        Returns:
-            DatasetDict
+        :return: Generalized dataset
+        :rtype: DatasetDict
         """
 
         # load and generalize the dataset for train split
@@ -247,7 +248,12 @@ class Datasets:
         })
 
     def _parlaspeech(self):
-        """Prepare ParlaSpeech-RS dataset."""
+        """
+        Prepare ParlaSpeech-RS dataset.
+
+        :return: Generalized ParlaSpeech-RS dataset
+        :rtype: DatasetDict
+        """
 
         # features: ['id', 'audio', 'text', 'text_cyrillic', 'text_normalised', 'text_cyrillic_normalised',
         #            'words', 'audio_length', 'date', 'speaker_name', 'speaker_gender', 'speaker_birth',
@@ -272,8 +278,8 @@ class Datasets:
     def _fleurs(self):
         """Prepare Fleurs dataset.
 
-        Returns:
-            DatasetDict
+        :return: Generalized Fleurs dataset
+        :rtype: DatasetDict
         """
 
         # features: ['id', 'num_samples', 'path', 'audio', 'transcription', 'raw_transcription', 'gender',
@@ -282,22 +288,23 @@ class Datasets:
         return self._load_and_generalize_dataset(path="google/fleurs", name="sr_rs")
 
     def _common_voice(self):
-        """Prepare Common Voice dataset for training and validation.
+        """
+        Prepare Common Voice dataset for training and validation.
 
-        Returns:
-            DatasetDict
+        :return: Generalized Common Voice dataset
+        :rtype: DatasetDict
         """
 
         return self._load_and_generalize_dataset(path="mozilla-foundation/common_voice_17_0", name="sr")
 
     def _combine_datasets_by_split(self, split):
-        """Combines datasets for a certain split.
+        """
+        Combines datasets for a certain split.
 
-        Args:
-            split (str): The dataset split
+        :param str split: The dataset split
 
-        Returns:
-            [Dataset]
+        :returns: List of datasets with the same split
+        :rtype: list[Dataset]
         """
 
         combined_dataset = concatenate_datasets([
@@ -309,10 +316,11 @@ class Datasets:
         return combined_dataset
 
     def combine_datasets_train_val(self):
-        """Creates a combined dataset with train and validation splits.
+        """
+        Creates a combined dataset with train and validation splits.
 
-        Returns:
-            DatasetDict
+        :return: List of datasets with train and validation splits
+        :rtype: DatasetDict
         """
 
         data = DatasetDict()

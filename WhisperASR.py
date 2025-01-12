@@ -46,18 +46,18 @@ class WhisperASR:
         Initialize the model and load the data. 
         The default config is the small model trained on the Common Voice dataset for Serbian.
 
-        Args:
-            model_name (str): The model name from Hugging Face or custom path
-            If 'existing_model' is True, this should be the path to the pre-trained model. Ex: "openai/whisper-small"
+        :param str model_name: The model name from Hugging Face or custom path
+            If 'existing_model' is True, this should be the path to the pre-trained model.
+            Ex: "openai/whisper-small"
 
-            existing_model (bool): Flag to indicate whether to load an existing model from the specified 
+        :param bool existing_model: Flag to indicate whether to load an existing model from the specified
             'model_name' path. If False, a new model is initialized
 
-            language (str): The language of the model. Ex: "Serbian"
-            language_code (str): The language code of the model. Must match the language. Ex: "sr"
-            output_dir (str): The output directory of the model to save to
-            save_to_hf (bool): Whether to push to Hugging Face Repo
-            ref_key (str): The key to the reference data in the dataset
+        :param str language: The language of the model. Ex: "Serbian"
+        :param str language_code: The language code of the model. Must match the language. Ex: "sr"
+        :param str output_dir: The output directory of the model to save to
+        :param bool save_to_hf: Whether to push to Hugging Face Repo
+        :param str ref_key: The key to the reference data in the dataset
         """
 
         # setting up to save to hugging face repo
@@ -129,10 +129,10 @@ class WhisperASR:
         print(self.data)
 
     def _log(self, text):
-        """Logs the given text to log.txt file.
+        """
+        Logs the given text to log.txt file.
 
-        Args:
-            text (str): The text to be logged
+        :param str text: The text to be logged
         """
 
         current_time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
@@ -140,7 +140,8 @@ class WhisperASR:
             file.write(f"[{current_time}] " + text + "\n")
 
     def train(self):
-        """Train the model for different values of hyperparameter grid_search.
+        """
+        Train the model for different values of hyperparameter grid_search.
         Set the training arguments using Seq2SeqTrainer.
         After training, save the model to the specified directory.
         """

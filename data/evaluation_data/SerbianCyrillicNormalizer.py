@@ -2,13 +2,29 @@ import re
 from num2words import num2words
 from transliterate import translit
 
+
 class SerbianCyrillicNormalizer:
     """Class for normalizing the text in Serbian language written in Cyrillic alphabet."""
 
-    def __init__(self):
-        """Initate the normalization class."""
-
     def __call__(self, text):
+        """
+        Normalize the given text in the Serbian Cyrillic alphabet.
+
+        The method performs the following steps:
+            - Removes punctuation from the text
+            - Converts the text to lowercase
+            - Splits the text into words
+            - Normalizes each word by converting any numerical words to their Serbian textual representation
+            - Joins the normalized words into a sentence
+            - Converts characters to Serbian Cyrillic alphabet
+            - Trims the resulting text
+
+        :param str text: The input text to be normalized
+
+        :return: The normalized text in Serbian Cyrillic alphabet
+        :rtype: str
+        """
+
         # remove punctuation from the entire text
         text = re.sub(r'[^\w\s]', ' ', text)
 
