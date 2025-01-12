@@ -12,6 +12,16 @@ class WordFrequencies:
         self.normalizer = SerbianCyrillicNormalizer()
 
     def add_words(self, dictionary, dataset):
+        """Calculates the number of word occurrences in the given dataset.
+
+        Args:
+            dictionary (dict): The dictionary representing word occurrences
+            dataset (Dataset, DatasetDict): The given dataset
+
+        Returns
+            dict
+        """
+
         for row in dataset:
             sentence = self.normalizer(row)
             for word in sentence.split():
@@ -21,11 +31,16 @@ class WordFrequencies:
                     dictionary[word] = 1
 
     def calculate(self):
+        """Calculates the number of word occurrences in train and validation datasets.
+
+        Returns:
+            dict
+        """
+
         result = {}
 
         train_dataset = self.dataset["train"]
         self.add_words(result, train_dataset["transcription"])
-
 
         # validation dataset
         validation_dataset = self.dataset["validation"]

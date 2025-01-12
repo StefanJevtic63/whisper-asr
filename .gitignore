@@ -11,3 +11,5 @@ data/evaluation_data/serbian-cyrillic.dic
 evaluation/result-data.txt
 evaluation/result-data-whisper-v2.txt
 evaluation/result-data-whisper-v3.txt
+
+log.txt

@@ -18,9 +18,10 @@ from data.train_data.SavePeftModelCallback import SavePeftModelCallback
 
 # change constants as applicable
 HF_API_KEY = ""
-BASE_MODEL = "openai/whisper-large-v2"
+BASE_MODEL = "openai/whisper-large-v3"
 DIR_PATH = os.path.dirname(os.path.abspath(__file__))
-DATASET_PATH = os.path.join(DIR_PATH, "data/datasets/train_validation_dataset")
+DATASET_PATH = os.path.join(DIR_PATH, "data/datasets/train_validation_dataset_v3")
+LOG_FILE_PATH = os.path.join(DIR_PATH, "log.txt")
 
 # training constants
 TRAIN_BATCH_SIZE = 16
@@ -135,7 +136,7 @@ class WhisperASR:
         """
 
         current_time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-        with open("log.txt", "a+") as file:
+        with open(LOG_FILE_PATH, "a+") as file:
             file.write(f"[{current_time}] " + text + "\n")
 
     def train(self):
