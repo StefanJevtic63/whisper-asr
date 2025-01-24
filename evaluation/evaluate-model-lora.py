@@ -20,7 +20,6 @@ sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '.
 from data.train_data.DataCollatorSpeechSeq2SeqWithPadding import DataCollatorSpeechSeq2SeqWithPadding
 from data.evaluation_data.SerbianCyrillicNormalizer import SerbianCyrillicNormalizer
 from data.evaluation_data.SpellChecker import SpellChecker
-from data.evaluation_data.WordFrequencies import WordFrequencies
 
 
 def save_results(references, predictions, output_file):
@@ -49,6 +48,18 @@ def load_results(input_file):
         predictions = data['predictions']
 
         return references, predictions
+
+
+def load_frequencies(input_file):
+    """
+    Loads words and their frequencies from a file.
+
+    :param str input_file: The path to a file containing words and their frequencies
+    """
+
+    with open(input_file, 'r', encoding='utf-8') as f:
+        data = json.load(f)
+        return data
 
 
 def evaluate_model(references, predictions, args, output_dir, is_spell_check):
@@ -104,7 +115,8 @@ TASK = "transcribe"
 DIR_PATH = os.path.dirname(os.path.abspath(__file__))
 DATASET_PATH = os.path.join(DIR_PATH, "../data/datasets/test_dataset_v3")
 DICTIONARY_PATH = os.path.join(DIR_PATH, "../data/evaluation_data/serbian-cyrillic.dic")
-SERIALIZE_OUTPUT_FILE = os.path.join(DIR_PATH, "result-data-whisper-v3.txt")
+REFERENCES_PREDICTIONS_PATH = os.path.join(DIR_PATH, "result-data-whisper-v3.json")
+DATASET_FREQUENCIES_PATH = os.path.join(DIR_PATH, "../data/evaluation_data/dataset-word-frequencies.json")
 OUTPUT_DIR = os.path.join(DIR_PATH, "evaluation_results")
 BATCH_SIZE = 16
 
@@ -179,12 +191,12 @@ def main(args):
     # save the results so they aren't lost if there's an error while calculating wer
     save_results(references=references,
                  predictions=predictions,
-                 output_file=SERIALIZE_OUTPUT_FILE)
+                 output_file=REFERENCES_PREDICTIONS_PATH)
 
-    print(f"[INFO] References and predictions saved to {SERIALIZE_OUTPUT_FILE}")
+    print(f"[INFO] References and predictions saved to {REFERENCES_PREDICTIONS_PATH}")
 
     # perform spell checking
-    word_frequencies = WordFrequencies().calculate()
+    word_frequencies = load_frequencies(DATASET_FREQUENCIES_PATH)
     spell_checker = SpellChecker(
         predictions=predictions,
         word_frequencies=word_frequencies,
@@ -236,4 +248,33 @@ if __name__ == "__main__":
                         help="Flag to calculate the Character Error Rate (default: False)")
     args = parser.parse_args()
 
-    main(args)
+    references, predictions = load_results(REFERENCES_PREDICTIONS_PATH)
+
+    # perform spell checking
+    word_frequencies = load_frequencies(DATASET_FREQUENCIES_PATH)
+    spell_checker = SpellChecker(
+        predictions=predictions,
+        word_frequencies=word_frequencies,
+        dictionary_path=DICTIONARY_PATH
+    )
+    predictions_spell_check = spell_checker.spell_check()
+
+    # evaluate the predictions before spell checking
+    evaluate_model(
+        references=references,
+        predictions=predictions,
+        args=args,
+        output_dir=OUTPUT_DIR,
+        is_spell_check=False
+    )
+
+    # evaluate the predictions after spell checking
+    evaluate_model(
+        references=references,
+        predictions=predictions_spell_check,
+        args=args,
+        output_dir=OUTPUT_DIR,
+        is_spell_check=True
+    )
+
+    #main(args)

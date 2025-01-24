@@ -61,7 +61,7 @@ class Datasets:
         parlaspeech = parlaspeech.remove_columns(
             ['id', 'text', 'text_cyrillic', 'text_normalised', 'words',
              'audio_length', 'date', 'speaker_name', 'speaker_gender', 'speaker_birth',
-             'speaker_party', 'party_orientation', 'party_status']
+             'speaker_party', 'party_orientation', 'party_status', 'audio']
         )
 
         # generalize the transcription column name
@@ -81,7 +81,7 @@ class Datasets:
         # only consider input audio and transcribed text to generalize dataset as much as possible
         return fleurs.remove_columns(
             ['id', 'num_samples', 'path', 'raw_transcription',
-             'gender', 'lang_id', 'language', 'lang_group_id']
+             'gender', 'lang_id', 'language', 'lang_group_id', 'audio']
         )
 
     def _generalize_common_voice(self, common_voice):
@@ -97,7 +97,7 @@ class Datasets:
         # only consider input audio and transcribed text to generalize dataset as much as possible
         common_voice = common_voice.remove_columns(
             ["accent", "age", "client_id", "down_votes", "gender",
-             "locale", "path", "segment", "up_votes", "variant"]
+             "locale", "path", "segment", "up_votes", "variant", "audio"]
         )
 
         # generalize the transcription column name
@@ -206,7 +206,7 @@ class Datasets:
         )
 
         dataset = self._generalize(dataset, path)
-        dataset = self._downsample(dataset, split)
+        #dataset = self._downsample(dataset, split)
         return dataset
 
     def _load_and_generalize_dataset(self, train_dataset = None, validation_dataset = None, test_dataset = None,
@@ -347,10 +347,11 @@ TRAIN_VAL_PATH_V2 = os.path.join(CURRENT_DIRECTORY_PATH, "train_validation_datas
 TEST_PATH_V2 = os.path.join(CURRENT_DIRECTORY_PATH, "test_dataset_v2")
 TRAIN_VAL_PATH_V3 = os.path.join(CURRENT_DIRECTORY_PATH, "train_validation_dataset_v3")
 TEST_PATH_V3 = os.path.join(CURRENT_DIRECTORY_PATH, "test_dataset_v3")
+TRAIN_VAL_TRANSCRIPTION_PATH_V3 = os.path.join(CURRENT_DIRECTORY_PATH, "train_validation_transcription_v3")
 
 if __name__ == "__main__":
     # initiate parameters
-    model_name = "openai/whisper-large-v2"
+    model_name = "openai/whisper-large-v3"
     feature_extractor = WhisperFeatureExtractor.from_pretrained(model_name)
     tokenizer = WhisperTokenizer.from_pretrained(
         model_name, language="Serbian", task="transcribe")
@@ -358,8 +359,8 @@ if __name__ == "__main__":
     # load datasets
     datasets = Datasets(feature_extractor, tokenizer, HF_API_KEY, "transcription")
     train_val_dataset = datasets.combine_datasets_train_val()
-    test_dataset = datasets.combine_datasets_test()
+    # test_dataset = datasets.combine_datasets_test()
 
     # save datasets for future use
-    train_val_dataset.save_to_disk(TRAIN_VAL_PATH_V2)
-    test_dataset.save_to_disk(TEST_PATH_V2)
+    train_val_dataset.save_to_disk(TRAIN_VAL_TRANSCRIPTION_PATH_V3)
+    # test_dataset.save_to_disk(TEST_PATH_V2)
