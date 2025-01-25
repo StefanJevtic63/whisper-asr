@@ -117,7 +117,7 @@ DATASET_PATH = os.path.join(DIR_PATH, "../data/datasets/test_dataset_v3")
 DICTIONARY_PATH = os.path.join(DIR_PATH, "../data/evaluation_data/serbian-cyrillic.dic")
 REFERENCES_PREDICTIONS_PATH = os.path.join(DIR_PATH, "result-data-whisper-v3.json")
 DATASET_FREQUENCIES_PATH = os.path.join(DIR_PATH, "../data/evaluation_data/dataset-word-frequencies.json")
-OUTPUT_DIR = os.path.join(DIR_PATH, "evaluation_results")
+OUTPUT_DIR = os.path.join(DIR_PATH, "evaluation_results/whisper-large-v3")
 BATCH_SIZE = 16
 
 
