@@ -1,4 +1,4 @@
-name: master-rad
+name: whisper-asr
 channels:
   - pytorch
   - nvidia
