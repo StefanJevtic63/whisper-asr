@@ -20,6 +20,13 @@ The project includes the following activities:
 - Implementing custom normalizer and language-specific configurations
 - Performing grid search on hyperparameters such as learning rate and weight decay
 
+### Datasets
+Training, validation, and test splits from each dataset were merged to create a dataset of unified training, validation, and test splits. <br>
+
+Datasets used:
+- [ParlaSpeech-RS](https://huggingface.co/datasets/classla/ParlaSpeech-RS) <br>
+- [Fleurs](https://huggingface.co/datasets/google/fleurs) <br>
+- [Common Voice 17](https://huggingface.co/datasets/mozilla-foundation/common_voice_17_0) <br>
 
 ## Getting Started
 ### Cloning the repository
