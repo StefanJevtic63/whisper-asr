@@ -28,6 +28,10 @@ Datasets used:
 - [Fleurs](https://huggingface.co/datasets/google/fleurs) <br>
 - [Common Voice 17](https://huggingface.co/datasets/mozilla-foundation/common_voice_17_0) <br>
 
+### Dictionary
+The Serbian dictionary is available from the releases section. <br>
+It was acquired from [turanjanin/spisak-srpskih-reci](https://github.com/turanjanin/spisak-srpskih-reci) repo. <br>
+
 ## Getting Started
 ### Cloning the repository
 Clone the repository to a desired directory:
