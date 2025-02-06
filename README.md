@@ -56,7 +56,17 @@ pip install -r requirements.txt
 
 ```
 
-<br>
+### Scripts for training and testing
+Before running the scripts, please modify them according to the specific model or language being used. <br>
+To run the training script, use the following command:
+```bash
+./scripts/train-script.sh
+```
+
+Likewise, to run the script for testing (evaluation), use the following command:
+```bash
+./scripts/evaluate-script.sh
+```
 
 ## Training and Evaluation
 The following sections describe the key experiments and activities performed during the project:
