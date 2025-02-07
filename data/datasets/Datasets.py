@@ -206,7 +206,7 @@ class Datasets:
         )
 
         dataset = self._generalize(dataset, path)
-        #dataset = self._downsample(dataset, split)
+        dataset = self._downsample(dataset, split)
         return dataset
 
     def _load_and_generalize_dataset(self, train_dataset = None, validation_dataset = None, test_dataset = None,
