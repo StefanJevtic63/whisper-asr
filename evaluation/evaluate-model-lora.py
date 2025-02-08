@@ -248,33 +248,4 @@ if __name__ == "__main__":
                         help="Flag to calculate the Character Error Rate (default: False)")
     args = parser.parse_args()
 
-    references, predictions = load_results(REFERENCES_PREDICTIONS_PATH)
-
-    # perform spell checking
-    word_frequencies = load_frequencies(DATASET_FREQUENCIES_PATH)
-    spell_checker = SpellChecker(
-        predictions=predictions,
-        word_frequencies=word_frequencies,
-        dictionary_path=DICTIONARY_PATH
-    )
-    predictions_spell_check = spell_checker.spell_check()
-
-    # evaluate the predictions before spell checking
-    evaluate_model(
-        references=references,
-        predictions=predictions,
-        args=args,
-        output_dir=OUTPUT_DIR,
-        is_spell_check=False
-    )
-
-    # evaluate the predictions after spell checking
-    evaluate_model(
-        references=references,
-        predictions=predictions_spell_check,
-        args=args,
-        output_dir=OUTPUT_DIR,
-        is_spell_check=True
-    )
-
-    #main(args)
+    main(args)
